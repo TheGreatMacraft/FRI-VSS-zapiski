@@ -5,11 +5,11 @@ def razporedi(teze, standardna_nosilnost):
         nosilnost = standardna_nosilnost
         teze_na_ladji = []
 
-        for i in teze[:]:
-            if nosilnost - i > 0:
-                nosilnost -= i
-                teze_na_ladji.append(i)
-                teze.remove(i)
+        for t in teze[:]:
+            if nosilnost - t >= 0:
+                nosilnost -= t
+                teze_na_ladji.append(t)
+                teze.remove(t)
 
         odgovor.append(teze_na_ladji)
 

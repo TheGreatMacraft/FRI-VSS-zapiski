@@ -34,3 +34,4 @@ DevOps - sprotno nadgrajevanje sistema, brez da bi ta nehal delovati
 ## Zdravje
 
 - glej powerpoint
+# Analiza zahtev

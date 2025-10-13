@@ -1,22 +1,12 @@
-def paketov(teze,nosilnost):
-
-    st_ladji = 0
-    index = 0
-
-    for ta_nosilnost in nosilnost:
-        if index >= len(teze):
+def paketov(teze, nosilnost):
+    tmp = nosilnost
+    st_paketov = 0
+    for paket in teze:
+        if tmp - paket >= 0:
+            tmp -= paket
+            st_paketov += 1
+        else:
             break
-        if ta_nosilnost < teze[index]:
-            continue
-        while index < len(teze) and ta_nosilnost - teze[index] >= 0:
-            ta_nosilnost -= teze[index]
-            index += 1
-        st_ladji += 1
+    return st_paketov
 
-    return st_ladji
-
-teze = [5,10,2,6,7,3,41,15,18,24,2,7,34]
-nosilnost = [50,25,75,100,50,24]
-
-print(paketov(teze,nosilnost))
-
+print(paketov([5, 3, 8, 1, 2, 3, 5, 4, 2, 4], 9))
