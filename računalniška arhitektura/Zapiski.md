@@ -96,4 +96,78 @@ $745,13_{[10]}$ = $7*10^2 + 4*10^1 + 5*10^0 + 1*10^{-1} + 3*10^{-2} = \Sigma_{-p
 V pomnilniku: 1bit ima le dve možni števili {0,1}.
 
 $101011,011_{[2]} = 1*2^5+1*2^3+1*2+1*2^0+1*2^{-2}+1*2^{-3} = 32 + 8 + 2 + 1 + 0,25 + 0.125 = 43.375$
+## Zapis celih predznačenih števil
+
+1. Predznak & velikost (sign $ magnitude)
+Ideja: Najvišji bit pri n-bitnem celem številu določimo za predznak: $0 \implies +, 1 \implies -$
+
+**$b_{N-1}$** - naj bo predznak$,b_{N-2},b_{N-3} ... b_2, b_1, b_0$
+$V = (-1)^{b_N-1} * \Sigma^{N-2}_{i=0} bi*2^i$
+
+
+Poskusimo seštet pozitivno in neg število:
+3 + (-3) = 0011 + 1011 = 1110 **NAROBE**
+
+2. Zapis z odmikom
+Predpostavimo, da je N = 3
+![[Drawing 2025-10-14 17.53.13.excalidraw]]
+
+Vsaka od teh binarnih števil vsebuje v sebi enak odmik od vrednosti, ki jo želimo kodirati.
+Odmik določimo po formuli: $O = \frac{2^N}{2}$, kjer je N število bitov
+
+**Full dobro**: Če gledam od leve proti desni nam prvi bit, pri katerem se dve števili razlikujeta pove, katero je večje/manjše $\implies$ *Leksikografsko primerjanje*
+
+3. Eniški komplement
+Predpostavimo N=3
+![[Drawing 2025-10-14 18.22.32.excalidraw|500]]
+
+Naj bo negativna vrednost nekega pozitivnega števila zapisana tako, da enostavno invertiram bite.
+Težava: 2 Ničli (pozitivna in negativna) $\implies$ razdalja med 1 in -1 je 3, morala pa bi biti 2.
+
+**Rešitev:** vsa negativna števila zamaknemo za 1.
+
+4. Dvojiški komplement
+
+![[Drawing 2025-10-14 18.33.20.excalidraw]]
+
+3 + (-3) = 011 + 101 = 000 *štima*
+2 + (-3) = 010 + 101 = 111 *tudi štima*
+
+Dajmo seštet dve dovolj veliki pozitivni števili:
+
+1 + 3 = 001 + 011 = 100 (-4)  je preliv, ni prenosa | Rezultat presega maksimalno vrednost pozitivnih števil. (*preliv*) Zgodi se pri seštevanju dveh enako predznačenih števil. 
+-2 + (-3) = 110 + 101 = *1(prenos/carry)* 011 (3)  je preliv, je prenos
+3 + (-3) = 011 + 101 = 1 000 $\implies$ ni preliva, je prenos
+
+Kadarkoli računamo s predznačenimi celimi števili nam **le preliv** pove, da je rezultat napačen.
+
+Predpostavimo nepredznačena števila in predpostavimo, da je N=3:
+3 + 5 = 011 + 101 = 1 000 $\implies$ Prenos nam pove, da imamo premajhno število bitov za zapis rezultata.
+
+Pri nepredznačenih številih nam le prenos pove, da je rezultat napačen.
+
+$V = \Sigma^{N-1}_{i=0} bi*2^i*b_{N-1}*2^N$
+
+Zgled:
+
+00101111 = 47 - $0^8$
+10110001 = (128+32+16+1) - 1*$2^8$ = -79
+
+0011 = 3
+00011 = 3
+000011 = 3
+0...00011 = 3
+
+*Če pozitivnim številom dodam 0 na levi ne spremenim velikosti.*
+
+10 = -2
+110 = -2
+1110 = -2
+11110 = -2
+1...1110 = -2
+
+*Če negativnim številom dodam 1 na levi ne spremenim velikosti.*
+
+Temu pravimo **razširitev predznaka**.
+
 

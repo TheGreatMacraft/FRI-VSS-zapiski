@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1121c2806ac8e6bc",
+        "id": "1d5a29813640ad5e",
         "type": "tabs",
         "children": [
           {
-            "id": "e5bf0acdf28f0bdf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "uvod v računalništvo/Zapiski.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Zapiski"
-            }
-          },
-          {
-            "id": "c615042a3d6199d7",
+            "id": "4411475caa2a62c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,18 +22,54 @@
             }
           },
           {
-            "id": "75bb6fdbab9f5963",
+            "id": "71fe0d283297e091",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Drawing 2025-10-13 13.39.45.excalidraw.md"
+                "file": "Excalidraw/Drawing 2025-10-17 08.46.09.excalidraw.md"
               },
               "icon": "excalidraw-icon",
-              "title": "Drawing 2025-10-13 13.39.45.excalidraw"
+              "title": "Drawing 2025-10-17 08.46.09.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "78b8cea2cc45c5b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f2fca0cadbfa589",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "diskretne strukture/Zapiski.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Zapiski"
+            }
+          },
+          {
+            "id": "b82982c7dc1fa074",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "diskretne strukture/Vaje.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vaje"
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +126,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
+    "width": 298.5,
+    "collapsed": true
   },
   "right": {
     "id": "d9a70bc77a48a68c",
@@ -196,45 +219,53 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e5bf0acdf28f0bdf",
+  "active": "71fe0d283297e091",
   "lastOpenFiles": [
     "diskretne strukture/Vaje.md",
-    "Excalidraw/Drawing 2025-10-13 13.39.45.excalidraw.md",
-    "uvod v računalništvo/Zapiski.md",
-    "Excalidraw/Drawing 2025-10-13 13.01.55.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-13 10.51.28.excalidraw.md",
-    "uvod v računalništvo/2024 - UR Pametna specializacija in analiza zahtev.pdf",
+    "Excalidraw/Drawing 2025-10-17 08.46.09.excalidraw.md",
     "diskretne strukture/Zapiski.md",
-    "Excalidraw/Drawing 2025-10-13 10.44.36.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-13 10.09.06.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-13 09.53.01.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-13 09.38.02.excalidraw.md",
-    "matematika/Zapiski.md",
+    "Excalidraw/Drawing 2025-10-17 08.36.10.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-17 08.22.40.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-17 08.11.56.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-17 07.48.54.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-17 07.46.58.excalidraw.md",
     "matematika/Vaje.md",
-    "Excalidraw/Drawing 2025-10-12 18.03.14.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 17.53.58.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 17.42.01.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 15.18.17.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 15.10.57.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 14.52.21.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 14.35.04.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 14.26.01.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 14.19.18.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 13.57.44.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-12 13.36.55.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-11 11.04.11.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-11 10.59.17.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-11 10.49.15.excalidraw 1.md",
+    "DnD/Dungeon Master's Guide.md",
+    "DnD/SRD_CC_v5.2.pdf",
+    "uvod v računalništvo/Zapiski.md",
+    "slikice/Pasted image 20251016151508.png",
+    "slikice/Pasted image 20251016151207.png",
+    "slikice/Pasted image 20251016150001.png",
+    "slikice/Pasted image 20251016145846.png",
+    "slikice/Pasted image 20251016145255.png",
+    "slikice/Pasted image 20251016144951.png",
+    "Excalidraw/Drawing 2025-10-16 13.51.50.excalidraw.md",
+    "diskretne strukture/literatura/dsvsp-predavanja.pdf",
+    "Excalidraw/Drawing 2025-10-16 12.04.29.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 12.01.58.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 11.55.40.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 11.34.11.excalidraw.md",
+    "matematika/Zapiski.md",
+    "Excalidraw/Drawing 2025-10-16 10.59.20.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 10.54.00.excalidraw.md",
+    "slikice/Pasted image 20251016105253.png",
+    "Excalidraw/Drawing 2025-10-16 10.50.16.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 10.44.48.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 10.32.24.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 10.23.07.excalidraw.md",
     "matematika/Matematika_RI_VS_e_handout.pdf",
-    "slikice/Pasted image 20251009092847.png",
+    "Excalidraw/Drawing 2025-10-16 08.59.31.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 08.54.07.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-16 08.42.53.excalidraw.md",
+    "slikice/Pasted image 20251016081641.png",
+    "slikice/Pasted Image 20251014135513_283.png",
+    "slikice/Pasted Image 20251014134544_203.png",
+    "uvod v računalništvo/2024 - UR Pametna specializacija in analiza zahtev.pdf",
     "programiranje/izpiti/izpit 22-01-17-13.00/izpit 22-01-17-13.00.pdf",
     "programiranje/izpiti/izpit 22-01-17-13.00/1.py~",
     "programiranje/domače naloge/1.py~",
     "programiranje/domače naloge/1.py",
     "programiranje/domače naloge/lep_soncen_pozdrav.py",
-    "programiranje/domače naloge",
-    "diskretne strukture/literatura/ds.pdf",
-    "diskretne strukture/literatura",
-    "slikice/Pasted image 20251002104845.png"
+    "programiranje/domače naloge"
   ]
 }

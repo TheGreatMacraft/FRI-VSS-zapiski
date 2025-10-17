@@ -100,3 +100,69 @@ $r_s = \sqrt[356*24*60*60]{1.04} = 1.000.000.001,244 \cdots$
 ```spoiler-markdown
 ![[Drawing 2025-10-12 18.03.14.excalidraw]]
 ```
+
+# Vaje 3. ura
+
+1. $z +\overline{z} = 5$
+```spoiler-markdown
+![[Drawing 2025-10-16 08.27.11.excalidraw]]
+```
+
+2. $zi + 1-i = 2(z-i)$
+```spoiler-markdown
+![[Drawing 2025-10-16 08.30.37.excalidraw]]
+```
+
+3. Nariši: $|z-1-i|^2=2$
+```spoiler-markdown
+![[Drawing 2025-10-16 08.36.17.excalidraw]]
+```
+
+4. $|z-1|+|z+1| = 4$
+```spoiler-markdown
+![[Drawing 2025-10-16 08.42.53.excalidraw]]
+```
+
+# Hitri test 3
+
+1. Katero izmed spodnjih kompleksnih števil ustreza enačbi $|z-5+3i|=4$
+- 1-7i
+- 9-7i
+- 9+i
+- 9-7i
+- 5+i
+- 5-i
+
+```spoiler-markdown
+![[Drawing 2025-10-16 10.44.48.excalidraw]]
+```
+
+2. Koliko je $\frac{1+i}{1-i}$
+```spoiler-markdown
+![[Drawing 2025-10-16 10.50.16.excalidraw]]
+```
+
+3. Na sliki je prikazano kompleksno število z. Kako število zapišemo s klasično realno in imaginarno komponento?
+
+![[Pasted image 20251016105253.png]]
+
+```spoiler-markdown
+$\sqrt{3}+1$
+```
+
+4. Kako kompleksno število z iz prejšnje naloge zapišemo v polarni obliki?
+```spoiler-markdown
+![[Drawing 2025-10-16 10.54.00.excalidraw]]
+```
+
+5. Če je z kompleksno število iz tretje naloge, katero izmed spodnjih kompleksnih števil je enako $16(-\sqrt{3}+i)$
+- $32z^{-1}$
+- $16z$
+- $8z^2$
+- $4z^3$
+- $2z^4$
+- $z^5$
+
+```spoiler-markdown
+![[Drawing 2025-10-16 10.59.20.excalidraw]]
+```

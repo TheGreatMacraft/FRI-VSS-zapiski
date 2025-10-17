@@ -1,4 +1,4 @@
-/1. Nariši resničnostno tabelo izjavnega izraza $(p \implies q) \vee (\neg q \implies p)$.
+1. Nariši resničnostno tabelo izjavnega izraza $(p \implies q) \vee (\neg q \implies p)$.
 Pomoč: [[diskretne strukture/Zapiski#Resničnostna tabela|Resničnostna tabela]]
 
 Rešitev:
@@ -100,6 +100,23 @@ Namig:
 ![[Drawing 2025-10-11 11.04.11.excalidraw|1500]]
 ```
 
+# 2. Domača naloga
+
+1. Za izjavni izraz $J = (p \vee \neg r \implies p \land q) \vee (p \vee q \implies p \vee \neg r)$
+```spoiler-markdown
+![[Drawing 2025-10-14 17.17.24.excalidraw]]
+```
+
+2. Na otoku vitezov in oprod srečamo domačine A,B,C,D in E, ki podajajo naslednje izjave:
+- A: "D je vitez ali pa je E oproda."  
+- B: "Jaz in E sva različna."  
+- C: "Jaz sem vitez ali pa je E oproda."  
+- D: "A je vitez ali pa je E vitez."  
+- E: "B je oproda ali pa sem jaz vitez."
+
+```spoiler-markdown
+![[Drawing 2025-10-14 17.53.13.excalidraw]]
+```
 # Vaje 2. teden
 
 1. S pomočjo matematične indukcije dokaži, da za vse $n  \in \mathbb{N}$ velja:
@@ -139,6 +156,41 @@ Nerešeno:
 ```
 
 - da ima vsaka triangulacija konveksnega n-kotnika (brez dodatnih oglišč) natanko $n-2$ trikotnikov.
+```spoiler-markdown
+![[Drawing 2025-10-13 13.39.45.excalidraw]]
+```
+
+4. Zaporedje Fibonaccijevih števil $(f_n)_{n \in N}$ je definirano z začetnima členoma, $f_0 = 0, f_1 = 1$, in rekurzivno zvezo $f_n = f_{n−1} + f_{n−2}$ za $n \ge 2$. S pomočjo matematične indukcije dokaži, da je za vsak n število $f_{4n}$ deljivo s 3.
+```spoiler-markdown
+
+```
+
+# 3. Domača naloga
+
+1. Za naslednje izjavne izraze odloči, ali so tavtologije, protislovja ali nevtralni izjavni izrazi.
+- $p \Longleftrightarrow \neg p$
+```spoiler-markdown
+![[Drawing 2025-10-17 07.46.58.excalidraw]]
+```
+- $(p \implies q) \land (q \implies r)  \implies (p \implies r)$
+```spoiler-markdown
+![[Drawing 2025-10-17 07.48.54.excalidraw]]
+```
+- $(p \land q \implies r) \land \neg(p \implies (q \implies r))$
+```spoiler-markdown
+![[Drawing 2025-10-17 08.11.56.excalidraw]]
+```
+- $\neg p \implies \neg q$
+```spoiler-markdown
+![[Drawing 2025-10-17 08.22.40.excalidraw]]
+```
+- $\neg (p \implies p \land q)$
+ ```spoiler-markdown
+ ![[Drawing 2025-10-17 08.36.10.excalidraw]]
+ ```
+
+2. Izberi pravilen odgovor.
+- Ali sta izraza $p \Longleftrightarrow r \vee q$ in $\neg p \vee q \implies ((p \vee r \vee q ) \implies p \land r)$ enakovredna?
 ```spoiler-markdown
 
 ```

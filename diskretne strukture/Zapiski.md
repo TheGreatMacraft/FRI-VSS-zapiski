@@ -120,17 +120,21 @@ Izjavna izraza $p \implies q$ in $\neg p \vee q$ sta **enakovredna** ($p \implie
 ## Zakoni izjavnega računa
 Nekateri pari enakovrednih izjavnih izrazov imajo posebna imena. To so **zakoni izjavnega računa**:
 1. Zakon dvojne negacije: $\neg \neg A \sim A$
-2. Idempotenca: $A \land A \sim A$     $A \vee A \sim A$
+2. Idempotenca:
+- $A \land A \sim A$     
+- $A \vee A \sim A$
 3. Komutativnost: $A \land B \sim B \land A$     $A \vee B \sim B \vee A$     $A \Longleftrightarrow B \sim B \Longleftrightarrow A$
 4. Asociativnost: $(A \land B) \land C \sim A  \land (B \land C)$     $(A \vee B) \vee C \sim A  \vee (B \vee C)$     $(A \Longleftrightarrow B) \Longleftrightarrow C \sim A  \Longleftrightarrow (B \Longleftrightarrow C)$
 5. Absorpcija: $A \land (A \vee B) \sim A$    $A \vee (A \land B) \sim A$
 6. Distributivnost: $(A \vee B) \land C \sim (A\land C) \vee (B \land C)$     $(A \land B) \vee C \sim (A\vee C) \land (B \vee C)$
-7. de Morganova zakona: $(A \vee B) \sim \neg A \land \neg B$     $(A \land B) \sim \neg A \vee \neg B$
+7. de Morganova zakona: $\neg (A \vee B) \sim \neg A \land \neg B$     $\neg (A \land B) \sim \neg A \vee \neg B$
 8. Kontrapozicija: $A \implies B \sim \neg B \implies \neg A$
 9. Lastnosti 0 in 1: $A \implies A \sim 1$     $A \Longleftrightarrow A \sim 1$     $A \vee \neg A \sim 1$     $A \land \neg A \sim 0$
 10. Še lastnosti 0 in 1: $A \land 0 \sim 0$     $A \vee 0 \sim A$     $A \land 1 \sim A$     $A \vee 1 \sim 1$     $A \implies 0 \sim \neg A$     $0 \implies A \sim 1$     $A \implies 1 \sim 1$     $1 \implies A \sim A$
-11. Lastnosti implikacije: $A \implies B \sim \neg A \vee B$     $\neg(A \implies B) \sim A \vee \neg B$
+11. Lastnosti implikacije: $A \implies B \sim \neg A \vee B$  ;  $\neg(A \implies B) \sim A \land \neg B$
 12. Lastnosti ekvivalence: $A \Longleftrightarrow B \sim (A \implies B) \land (B \implies A)$     $A \Longleftrightarrow B \sim (A \land B) \vee (\neg A \land \neg B)$     $\neg (A \Longleftrightarrow B) \sim \neg A \Longleftrightarrow B$
+
+13. Kastelicovo pravilo: $(\neg A \land B) \vee (A \land \neg B) = A \veebar B$
 
 $\land$ in $\vee$ nastopata "dualno"
 
@@ -175,3 +179,161 @@ $p \land q \sim \neg \neg (p \land q) \sim \neg (\neg p \vee \neg q)$
 Kako v praksi pokazati, da je nabor izjavnih veznikov $\mathcal{N}$ poln?
 1. Izberemo znan poln nabor izjavnih veznikov $\mathcal{Z}$.
 2. Vsak veznik iz znanega nabora $\mathcal{Z}$ izrazimo samo z uporabo veznikov iz $\mathcal{N}$.
+
+Kako pokazati, da nabor izjavnih izrazov ni poln?
+Lahko poiščemo ovire (nabor {$\implies,\land$} ohranja vrednost 1, zato ni sposoben opisati negacije)
+
+**Trditev:** Izraz $A_1 \veebar A_2 \veebar A_3 \veebar ... \veebar A_n$ je *ne glede na to, kako so postavljeni oklepaji* resničen natanko tedaj, ko je *liho mnogo* členov izmed $A_1,A_2,A_3,...,A_n$ resničnih.
+
+![[Drawing 2025-10-16 11.34.11.excalidraw]]
+
+## Sklepanje v izjavnem računu
+Predpostavki: 
+1. Če dežuje, je oblačno (Če A, potem B -> $A\implies B$)
+2.  Dežuje (A = 1)
+Zaključek:
+3. Oblačno je (B = 1)
+
+Predpostavke:
+1. Ta žival ima krila ali pa ni ptič ($k\vee \neg p$)
+2. Če je ta žival ptič, potem leže jajca ($p \implies j$)
+3. Ta žival nima kril ($\neg k$)
+Zaključek:
+4. Ta žival ne leže jajc. ($\neg j$)
+
+### Pravilen sklep
+
+Zaporedje izjavnih izrazov $A_1.A_2....,A_n,B$ je *pravilen sklep* s *predpostavkami* $A_1,A_2,...,A_n$ in *zaključkom* B, če je zaključek B resničen pri vseh naborih vrednosti izjavnih spremenljivk, pri katerih so resnične vse predpostavke.
+
+Pišemo $A_1,A_2,...,A_n$ |= B
+in beremo: Iz predpostavk $A_1,A_2,...,A_n$ logično sledi zaključek B.
+
+Zgled:
+Predpostavke:
+1. Šel bom na tekmo, zvečer pa bom naredil domačo nalogo
+2. Če grem na tekmo in nato še v kino, zvečer ne bom mogel narediti domače naloge.
+Zaključek:
+3. Ne morem iti v kino.
+
+![[Drawing 2025-10-16 11.55.40.excalidraw]]
+
+Dokaz $A_1,A_2,...,A_n$ |= B, "vedno", ko so resnične vse $A_1,...,A_n$, je resničen B. Vedno, ko je resničen $A_1 \land A_2 \land ... \land ... A_n$, je resničen tudi B.
+
+$(A_1 \land A_2 \land ... \land A_n) \implies B$ je "vedno" red (tavtologija)
+
+#### Pravila sklepanja (osnovni pravilni sklepi)
+
+$A,A\implies B \models B$   modus ponens (MP)
+$A \implies B, \neg B \models  \neg A$   modus tollens (MT)
+$A \vee B, \neg B \models A$   disjunktivni silogizem (DS)
+$A \implies B, B \implies C \models A \implies C$   hipotetični sigolizem (HS)
+$A,B \models A \land B$   združitev (Zd)
+$A \land B \models A$   poenostavitev (Po)
+$A \models A \vee B$   pridružitev (Pr)
+
+#### Dokaz pravilnosti sklepa
+
+Pravilnost sklepa $A_1,A_2,...,A_n \models B$ pokažemo tako, da sestavimo zaporedje izjavnih izrazov $C_1,C_2$
+
+Ali iz predpostavk $p\implies q, p \vee r, q \implies s, r \implies t, \neg s$ sledi t?
+1. $p \implies q$ predpostavka
+2. $p \vee r$ predpostavka
+3. $q \implies s$ predpostavka
+4. $r \implies t$ predpostavka
+5. $\neg s$ predpostavka
+6. $p \implies s$ HS(1,3)
+7. $\neg p$ MT(6,5)
+8. r DS(2,7)
+9. t MP(8,4)
+
+Ali iz predpostavk:
+1. Če sije sonce, nosim sončna očala.
+2. Nosim kapo ali sončna očala.
+3. Sončnih očal ne nosim.
+sledi zaključek
+4. Nosim kapo in sonce ne sije. ($k \land \neg s$)
+
+s...sije sonce
+k...nosim kapo
+o...nosim očala
+
+1. $s \implies o$
+2. $k \vee o$
+3. $\neg o$
+4. k DS(2,3)
+5. $\neg s$ MT(1,3)
+6. $k \land \neg s$ Zd(4,5)
+
+Z dvema protislovnima izjavama lahko sklepamo na karkoli:
+1. $p$
+2. $\neg p$
+3. $p \land \neg p$ Zd(1,2)
+4. 0 $\sim 3.$
+5. $0 \vee q$ Pr(4)
+6. $q \sim 5.$
+
+#### Pomožni sklepi
+
+**Pogojni sklep (PS)** uporabljamo, kadar ima zaključek sklepa obliko implikacije.
+Izrek: $A_1,A_2,...,A_k \models B \implies C$ natanko tedaj, ko $A_1,A_2,...,A_k,B \models C$.
+Če $A=A_1 \land A_2 \land ... \land A_n$, potem $A \implies (B \implies C)$ tavtologija, natanko tedaj, ko $(A \land B) \implies C$ tavtologija.
+
+$A \implies (B \implies C) \sim \neg \vee (\neg B \vee C) \sim$$(\neg A \vee \neg B) \vee C \sim \neg (A \land B) \vee C \sim (A \land B) \implies C$
+
+Zgled:
+Predpostavke:
+1. $p \implies q \vee r$
+2. $\neg r$
+3. 
+	 1. p pred PS
+	 2. $q \vee r$ MP(1,3.1)
+	 3. q DS(2,3.2)
+3 $p \implies q$ PS(3.1,3.3)3
+
+Po zaključku protiprimira, ne smemo več uporabljati *notranjih vrstic*.
+
+---
+
+**Sklep s protislovjem (RA)** lahko uporabljamo kadarkoli.
+Izrek: $A_1,A_2,...,A_k \models B$ natanko tedaj, ko $A_1,A_2,...,A_k, \neg B \models 0$.
+$A \implies B$ tavtologija, natanko tedaj, ko $(A \land \neg B) \implies 0$ tavtologija.
+
+$(A\land \neg B) \implies 0 \sim \neg(A \land \neg B) \vee 0 \sim$
+$\sim \neg (A\land \neg B) \sim \neg A \vee B \sim A \implies B$
+
+Zgled: Pokaži, da iz $p \implies \neg(q \implies r), s \land q \implies r$ in s sledi $\neg p$
+1. $p \implies \neg(q\implies r)$ predpostavka
+2. $s\land q \implies r$ predpostavka
+3. $\neg p$ predpostavka
+4.1 $\neg \neg p$ predpostavka RA
+4.2 p $\sim 4.1$
+4.3 $\neg (q \implies r)$MP(1,4.2)
+4.4 $q \land \neg r \sim 4.3$
+4.5 q Po(4.4)
+4.6 $\neg r$ Po(4.4)
+4.7 $s\land q$ Zd(3,4.5)
+4.8 r MP(2,4.7)
+4.9 $r \land \neg r \sim 0$ Zd(4.8,4.6)
+4. $\neg p$ RA(4.1,4.9)
+
+![[Drawing 2025-10-16 13.51.50.excalidraw]]
+
+---
+
+**Analiza primerov (AP)** lahko uporabljamo, kadar ima ena od predpostavk obliko disjunkcije.
+
+Izrek:
+$A_1,A_2,...,A_k.B_1 \vee B_2 \models C$ natanko tedaj, ko
+$A_1,A_2,...,A_k,B_1 \models C$ in
+$A_1,A_2$
+### Nepravilen sklep
+
+Kako pokažemo, da sklep ni pravilen?
+Poiščemo *protiprimer*, nabor vrednosti izjavnih spremenljivk, pri katerem so vse predpostavke resnične, zaključek pa ne.
+
+![[Drawing 2025-10-16 12.01.58.excalidraw]]
+
+Sklep:
+
+![[Drawing 2025-10-16 12.04.29.excalidraw]]
+

@@ -127,3 +127,82 @@ Določimo množico realnih števil x, za katere velja $|x-3| \le 2$.
 	- y = Im (z) **imaginarni del**
 
 ![[Drawing 2025-10-09 10.36.50.excalidraw]]
+
+**Absolutna vrednost** kompleksnega števila z je $|z| = \sqrt{x^2+y^2}$. Kot pri realnih številih pomeni razdaljo od izhodišča. Absolutna vrednost razlike dveh kompleksnih števil pomeni razdaljo med številoma. $\implies$ Enačbo $|z-\frac{1}{2}| = \frac{1}{4}$ rešijo vsa števila $z \in C$, ki ležijo na krožnici s središčem v $\frac{1}{2}$ in radijem $\frac{1}{4}$.
+
+### Konjugiranje
+
+- Konjugirano število dobimo tako, da spremenimo predznak imaginarnega dela.
+- $\overline{x+yi}$ = $x-yi$ je **konjugirano število**. Primer: $\overline{3+2i} = 3-2i$
+![[Pasted image 20251016081641.png]]
+- Seštevanje & odštevanje: $(x+yi) + (u+vi) = (x+u) + (y+v)i$
+	Primer: $(3+2i) + (1-i) = (3+1) + (2-1)i = 4+i$
+- Množenje: $(x+yi)(u+vi)$ = $(xu-yv) + (xv + yu)i$
+	Primer: $(3+2i)(1-i) = (3+2)+(-3+2)i = 5 - i$
+- Deljenje: $\frac{z}{w} = \frac{z*\overline{w}}{w*w} = \frac{z*\overline{w}}{|x|^2}$
+
+Kompleksni števili sta enaki, kadar imata enaka realna in imaginarna dela.
+- $z = \overline{z}$
+- $\overline{z+w} = \overline{z}+w$
+- $\overline{z-w} = \overline{z}*\overline{w}$
+- $z + \overline{z} = 2Re(z)$, $z - \overline{z} = 2Im(z)$
+- $|\overline{z}| = |z|$
+- $|z*w| = |z|*|w|$
+- $|z+w| \le |z| + |w|$ **trikotniška neenakost**
+
+### Polarni zapis kompleksnega števila
+
+Zakaj so radiani boljši:
+![[Drawing 2025-10-16 08.54.07.excalidraw]]
+
+- $|z| = \sqrt{x^2+y^2}$
+- $\gamma = \arctan{\frac{y}{w}}$
+- $x = |z|\cos{\gamma}$ in $y=|z| \sin{\gamma}$
+- **Polarni zapis** števila $z = x+yi$ je$|z| * (\cos{\gamma} + i\sin{\gamma}) = |z| * e^{i*\gamma}$
+- **Eulerjeva identiteta**: ($e^{i\pi}+1=0$)
+![[Drawing 2025-10-16 08.59.31.excalidraw]]
+Kompleksno število z opišemo z dvema parametroma:
+- dolžina od izhodišča (r)
+- kot ($\gamma$)
+*Slabost*: Kot ni enolično določen
+z = 0 (r=0, $\gamma$ kar koli)
+- $\gamma = Arg(z)$ imenujemo **polarni kot** ali **argument**. Argument je določen samo do mnogokratnika celega kota $2\pi^{rd} = 360^o$ natanko.
+
+#### Množenje v polarni obliki
+
+$z_1 = r(\cos\gamma + i \sin\gamma)$
+$z_2 = q(\cos\psi + i \sin\psi)$
+
+$z_1*z_2 = r*q[(\cos\gamma * \cos\psi - \sin\gamma * \sin\psi) + i(\cos\gamma * \sin\psi + \sin\gamma * \cos\psi)] =$$rq[\cos(\gamma + \psi) + i \sin(\gamma + \psi)]$  $\implies$ razdalja se zmnoži, kot pa se sešteje.
+
+*Eulerjev zapis:* $e^{i\gamma} = \cos\gamma + i \sin\gamma$, polarni zapis se poenostavi $z=|z|*e^{i\gamma}$
+
+Kaj se zgodi če množimo realna števila?
+	
+	$3*2 = 6$
+	Polarno: $|3| * (\cos0 + \sin0) * |2| * (\cos0 + \sin0) = 6$
+	Euler: $|3|*e^{i*0}*|2|*e^{i*0} = |6|*e^0 = 6$
+	
+	$(-3)(-2) = 6$
+	Polarno: $|3|*(\cos\pi + \sin\pi) * |2| * (\cos\pi + \sin\pi) =$$|6| * (\cos(2\pi)+\sin(2\pi)) = |6| * (\cos0 + \sin0) = 6$
+
+Množenje se poenostavi: $z_1z_2 = |z_1||z_2|e^{i(\gamma_1+\gamma_2)}$
+-  množenje: absolutni vrednosti se zmnožita, argumenta se seštejeta
+- potenciranje: $z = |z|e^{i\gamma} \implies z^n = |z|^ne^{i\gamma n}$ (*De Moivrova formula*)
+- korenjenje: $z = |z|e^{i\gamma} \implies z^{\frac{1}{n}} = |z|^{\frac{1}{n}}e^{i\frac{\gamma}{n}}$ (*De Moivrova formula*)
+Velja:
+
+
+#### Zapišemo v polarni obliki
+- $1 = |1|*e^{i*0}$
+- $-1 = |-1|*e^{i\pi0}$
+- $i = |i|*e^{i\frac{\pi}{2}}$
+- $-i = |-i|*e^{i\frac{3\pi}{2}}$
+- $1+i = \sqrt{2}e^{i\frac{\pi}{4}}$
+- $-1-i = \sqrt{2}e^{i\frac{5\pi}{4}}$
+
+Vse vrednosti, na enotski krožnici imajo absolutno vrednost 1.
+
+Izračunajmo $(\frac{\sqrt{2}}{2}+\frac{1}{2}i)^{12}$
+![[Drawing 2025-10-16 10.23.07.excalidraw]]
+
