@@ -66,7 +66,7 @@ DevOps - sprotno nadgrajevanje sistema, brez da bi ta nehal delovati
 - končne uporabnike postavimo v središče pogovora
 - ko razvijalska ekipa prebere uporabniško zgodbo, bo vedela, zakaj nekaj razvijajo
 - Kaj kdo hoče? 
-Kot [vloga], hočem [cilj], da bom lahko [motivacija].
+Kot [vloga uporabnika], želim [cilj ali funkcijo], da [korist ali razlog].
 
 | Končni uporabnik | Funkcionalne zahteve         | Nefunkcionalne zahteve |
 | ---------------- | ---------------------------- | ---------------------- |

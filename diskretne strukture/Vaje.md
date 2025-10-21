@@ -160,10 +160,20 @@ Nerešeno:
 ![[Drawing 2025-10-13 13.39.45.excalidraw]]
 ```
 
-4. Zaporedje Fibonaccijevih števil $(f_n)_{n \in N}$ je definirano z začetnima členoma, $f_0 = 0, f_1 = 1$, in rekurzivno zvezo $f_n = f_{n−1} + f_{n−2}$ za $n \ge 2$. S pomočjo matematične indukcije dokaži, da je za vsak n število $f_{4n}$ deljivo s 3.
+4. Zaporedje Fibonaccijevih števil $(f_n)_{n \in N}$ je definirano z začetnima členoma, $f_0 = 0, f_1 = 1$, in rekurzivno zvezo $f_n = f_{n−1} + f_{n−2}$ za $n \ge 2$. S pomočjo matematične indukcije dokaži, da je za vsak n število $f_{4n}$ deljivo s 3. #NeZnam
 ```spoiler-markdown
 
 ```
+
+5. V danem izjavnem izrazu z oklepaji nakažite vrstni red računanja (glede na prednost izjavnih veznikov):
+- $\neg A \vee B \vee C \Longleftrightarrow \neg B \Longleftrightarrow A \land B$
+- $A \implies B \implies C \implies \neg A \Longleftrightarrow \neg B$
+- $\neg B \Leftrightarrow A \implies C \implies \neg B \land C \vee A$
+```spoiler-markdown
+![[Drawing 2025-10-18 12.55.34.excalidraw]]
+```
+
+6. Določi logične vrednosti enostavnih izjav p,q, r, s, nato pa še logične vrednosti iz njih dobljenih sestavljenih izjav A, B, C.
 
 # 3. Domača naloga
 
@@ -178,7 +188,7 @@ Nerešeno:
 ```
 - $(p \land q \implies r) \land \neg(p \implies (q \implies r))$
 ```spoiler-markdown
-![[Drawing 2025-10-17 08.11.56.excalidraw]]
+![[Drawing 2025-10-17 08.11.56.excalidraw|1500]]
 ```
 - $\neg p \implies \neg q$
 ```spoiler-markdown
@@ -192,5 +202,97 @@ Nerešeno:
 2. Izberi pravilen odgovor.
 - Ali sta izraza $p \Longleftrightarrow r \vee q$ in $\neg p \vee q \implies ((p \vee r \vee q ) \implies p \land r)$ enakovredna?
 ```spoiler-markdown
+![[Drawing 2025-10-18 11.40.08.excalidraw]]
+```
+- Ali sta izraza $\neg p \land (r \Longleftrightarrow q)$ in $(p \vee r \vee q) \implies (p \land r \land \neg q)$ enakovredna?
+```spoiler-markdown
+![[Drawing 2025-10-18 12.11.57.excalidraw]]
+```
+- Ali sta izraza $\neg p \land (r \Longleftrightarrow q)$ in $(p \vee r \vee q) \implies (\neg p \land r \land q)$ enakovredna?
+```spoiler-markdown
+![[Drawing 2025-10-18 12.21.41.excalidraw]]
+```
+# Vaje 2. teden
 
+1. Kateri od naslednjih izjavnih izrazov so tavtologije, kateri protislovja in kateri nevtralni?
+
+- $p \implies (\neg q \implies p \land q)$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.22.19.excalidraw]]
+```
+- $(p \land q) \implies (p \vee q)$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.27.07.excalidraw]]
+```
+- $(p \land q) \Longleftrightarrow \neg p \vee \neg q$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.31.49.excalidraw]]
+```
+- $((p \implies q) \land r) \vee (r \implies p)$
+```spoiler-markdown
+![[Drawing 2025-10-20 11.43.37.excalidraw]]
+```
+- $(q \implies p \land r) \land (p \vee r \implies q)$
+```spoiler-markdown
+![[Drawing 2025-10-20 12.03.17.excalidraw]]
+```
+- $(p \implies q) \implies r$
+```spoiler-markdown
+![[Drawing 2025-10-20 12.07.46.excalidraw]]
+```
+
+2. Ali so naslednji izjavni izrazi enakovredni?
+- $p \implies \neg q$ in $q \implies \neg p$
+```spoiler-markdown
+![[Drawing 2025-10-20 12.11.01.excalidraw]]
+```
+- $(p \land \neg q) \implies r$ in $\neg p \land q \land r$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.36.59.excalidraw]]
+```
+- $p \implies (q \vee r)$ in $\neg p \vee q \vee r$
+  ```spoiler-markdown
+  ![[Drawing 2025-10-20 12.12.42.excalidraw]]
+  ```
+  - $(p \implies \neg q) \land (\neg q \implies p)$ in $(\neg p \land q) \vee (p \vee \neg q)$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.49.58.excalidraw]]
+```
+
+3. Poenostavi naslednje izraze:
+- $\neg (p \land q) \implies p \land r$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.55.04.excalidraw]]
+```
+- $p \implies (q \implies p)$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.56.49.excalidraw]]
+```
+- $(p \implies q) \implies (\neg q \implies \neg p)$
+```spoiler-markdown
+![[Drawing 2025-10-17 09.58.56.excalidraw]]
+```
+- $\neg p \implies (p \vee q)$
+```spoiler-markdown
+![[Drawing 2025-10-17 10.01.08.excalidraw]]
+```
+
+4. Poišči tak izjavni izraz X, da bosta izraza $(p \implies X) \land (q \implies X)$ in $\neg p \implies (X \implies q)$ tavtologiji
+```spoiler-markdown
+![[Drawing 2025-10-17 10.04.21.excalidraw]]
+```
+5. Ali obstaja kak izjavni izraz X, za katerega sta izraza $(p \land X) \vee (q \land \neg X)$ in $(p \implies X) \implies q$ enakovredna?
+
+```spoiler-markdown
+![[Drawing 2025-10-17 10.10.14.excalidraw]]
+```
+
+6. Preoblikuj pare izjavnih izrazov v DNO oziroma KNO, nato pa ugotovi, ali so enakovredni.
+- $(p \implies q) \land (r \implies q)$ in $(p \vee r) \implies q$
+```spoiler-markdown
+![[Drawing 2025-10-17 10.33.13.excalidraw]]
+```
+- $p \vee (p \veebar \neg q)$ in $q \implies p$
+```spoiler-markdown
+![[Drawing 2025-10-17 10.37.52.excalidraw]]
 ```

@@ -166,3 +166,35 @@ $\sqrt{3}+1$
 ```spoiler-markdown
 ![[Drawing 2025-10-16 10.59.20.excalidraw]]
 ```
+
+# 3. Domača naloga 
+
+1. Izračunaj $\frac{11-3i}{3+i}$
+```spoiler-markdown
+![[Drawing 2025-10-18 12.31.04.excalidraw]]
+```
+2. Izračunaj $\frac{1+21i}{5+i}$
+```spoiler-markdown
+![[Drawing 2025-10-18 12.34.51.excalidraw]]
+```
+3. Poišči vse rešitve enačbe $-z + \frac{3}{z} = 2$
+```spoiler-markdown
+![[Drawing 2025-10-18 12.42.33.excalidraw]]
+```
+
+# Vaje 3. teden
+1. Iz jagod in malin smo pripravili 32 litrov zgoščenega soka, ki mu nismo dodali nič vode.
+- Soku dodamo 18 litrov vode. Kolikšen odstotek razredčenega soka predstavlja zgoščeni sok?
+# Vaje 4. teden
+1. V kompleksni ravnini skiciraj množice rešitev spodnjih neenačb:
+- $|\overline{z} + 2 - i| \le 2$
+- $Re(\overline{z} + 2 - i) \le 2$
+- $Im(\overline{z}+2-i)\le2$
+2. Kaj naj velja za število a ∈ R, da bo imela enačba $z^2 + 2z - 3 + a = 0$ vsaj eno kompleksno rešitev?
+3. Prevedi v polarno obliko, nato pa z uporabo Eulerjeve formule izračunaj:
+# Vaje IDK
+1. Zapiši število 1+i v polarnem zapisu in izračunaj $(1+i)^8$
+```spoiler-markdown
+![[Drawing 2025-10-21 08.20.03.excalidraw]]
+```
+2. 

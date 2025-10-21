@@ -119,22 +119,53 @@ Izjavna izraza $p \implies q$ in $\neg p \vee q$ sta **enakovredna** ($p \implie
 
 ## Zakoni izjavnega računa
 Nekateri pari enakovrednih izjavnih izrazov imajo posebna imena. To so **zakoni izjavnega računa**:
-1. Zakon dvojne negacije: $\neg \neg A \sim A$
+1. Zakon dvojne negacije:
+- $\neg \neg A \sim A$
 2. Idempotenca:
 - $A \land A \sim A$     
 - $A \vee A \sim A$
-3. Komutativnost: $A \land B \sim B \land A$     $A \vee B \sim B \vee A$     $A \Longleftrightarrow B \sim B \Longleftrightarrow A$
-4. Asociativnost: $(A \land B) \land C \sim A  \land (B \land C)$     $(A \vee B) \vee C \sim A  \vee (B \vee C)$     $(A \Longleftrightarrow B) \Longleftrightarrow C \sim A  \Longleftrightarrow (B \Longleftrightarrow C)$
-5. Absorpcija: $A \land (A \vee B) \sim A$    $A \vee (A \land B) \sim A$
-6. Distributivnost: $(A \vee B) \land C \sim (A\land C) \vee (B \land C)$     $(A \land B) \vee C \sim (A\vee C) \land (B \vee C)$
-7. de Morganova zakona: $\neg (A \vee B) \sim \neg A \land \neg B$     $\neg (A \land B) \sim \neg A \vee \neg B$
-8. Kontrapozicija: $A \implies B \sim \neg B \implies \neg A$
-9. Lastnosti 0 in 1: $A \implies A \sim 1$     $A \Longleftrightarrow A \sim 1$     $A \vee \neg A \sim 1$     $A \land \neg A \sim 0$
-10. Še lastnosti 0 in 1: $A \land 0 \sim 0$     $A \vee 0 \sim A$     $A \land 1 \sim A$     $A \vee 1 \sim 1$     $A \implies 0 \sim \neg A$     $0 \implies A \sim 1$     $A \implies 1 \sim 1$     $1 \implies A \sim A$
-11. Lastnosti implikacije: $A \implies B \sim \neg A \vee B$  ;  $\neg(A \implies B) \sim A \land \neg B$
-12. Lastnosti ekvivalence: $A \Longleftrightarrow B \sim (A \implies B) \land (B \implies A)$     $A \Longleftrightarrow B \sim (A \land B) \vee (\neg A \land \neg B)$     $\neg (A \Longleftrightarrow B) \sim \neg A \Longleftrightarrow B$
-
-13. Kastelicovo pravilo: $(\neg A \land B) \vee (A \land \neg B) = A \veebar B$
+3. Komutativnost:
+- $A \land B \sim B \land A$
+- $A \vee B \sim B \vee A$
+- $A \Longleftrightarrow B \sim B \Longleftrightarrow A$
+4. Asociativnost:
+- $(A \land B) \land C \sim A  \land (B \land C)$
+- $(A \vee B) \vee C \sim A  \vee (B \vee C)$
+- $(A \Longleftrightarrow B) \Longleftrightarrow C \sim A  \Longleftrightarrow (B \Longleftrightarrow C)$
+5. Absorpcija:
+- $A \land (A \vee B) \sim A$
+- $A \vee (A \land B) \sim A$
+6. Distributivnost:
+- $(A \vee B) \land C \sim (A\land C) \vee (B \land C)$
+- $(A \land B) \vee C \sim (A\vee C) \land (B \vee C)$
+7. de Morganova zakona:
+- $\neg (A \vee B) \sim \neg A \land \neg B$
+- $\neg (A \land B) \sim \neg A \vee \neg B$
+8. Kontrapozicija:
+- $A \implies B \sim \neg B \implies \neg A$
+9. Lastnosti 0 in 1:
+- $A \implies A \sim 1$
+- $A \Longleftrightarrow A \sim 1$
+- $A \vee \neg A \sim 1$
+- $A \land \neg A \sim 0$
+10. Še lastnosti 0 in 1:
+- $A \land 0 \sim 0$
+- $A \vee 0 \sim A$
+- $A \land 1 \sim A$
+- $A \vee 1 \sim 1$
+- $A \implies 0 \sim \neg A$
+- $0 \implies A \sim 1$
+- $A \implies 1 \sim 1$
+- $1 \implies A \sim A$
+11. Lastnosti implikacije:
+- $A \implies B \sim \neg A \vee B$
+- $\neg(A \implies B) \sim A \land \neg B$
+12. Lastnosti ekvivalence:
+- $A \Longleftrightarrow B \sim (A \implies B) \land (B \implies A)$
+- $A \Longleftrightarrow B \sim (A \land B) \vee (\neg A \land \neg B)$
+- $\neg (A \Longleftrightarrow B) \sim \neg A \Longleftrightarrow B$
+13. Dodatno pravilo:
+- $(\neg A \land B) \vee (A \land \neg B) = A \veebar B$
 
 $\land$ in $\vee$ nastopata "dualno"
 
@@ -337,3 +368,5 @@ Sklep:
 
 ![[Drawing 2025-10-16 12.04.29.excalidraw]]
 
+**Tips and tricks**: Kako dodati r v izjavni izraz kot $(p \land q \land \neg s)$
+![[Drawing 2025-10-17 10.28.58.excalidraw]]
