@@ -188,13 +188,45 @@ $\sqrt{3}+1$
 # Vaje 4. teden
 1. V kompleksni ravnini skiciraj množice rešitev spodnjih neenačb:
 - $|\overline{z} + 2 - i| \le 2$
+```spoiler-markdown
+![[Drawing 2025-10-21 09.42.35.excalidraw]]
+```
 - $Re(\overline{z} + 2 - i) \le 2$
+```spoiler-markdown
+![[Drawing 2025-10-21 09.48.36.excalidraw]]
+```
+#ToDo
 - $Im(\overline{z}+2-i)\le2$
-2. Kaj naj velja za število a ∈ R, da bo imela enačba $z^2 + 2z - 3 + a = 0$ vsaj eno kompleksno rešitev?
-3. Prevedi v polarno obliko, nato pa z uporabo Eulerjeve formule izračunaj:
-# Vaje IDK
-1. Zapiši število 1+i v polarnem zapisu in izračunaj $(1+i)^8$
+1. Kaj naj velja za število a ∈ R, da bo imela enačba $z^2 + 2z - 3 + a = 0$ vsaj eno kompleksno rešitev?
+2. Prevedi v polarno obliko, nato pa z uporabo Eulerjeve formule izračunaj:
+
+
+3. Zapiši število 1+i v polarnem zapisu in izračunaj $(1+i)^8$
 ```spoiler-markdown
 ![[Drawing 2025-10-21 08.20.03.excalidraw]]
 ```
-2. 
+2. Izračunaj $(1-i\sqrt{3})^20$ s pomočjo polarnega zapisa.
+```spoiler-markdown
+![[Drawing 2025-10-21 08.37.01.excalidraw]]
+```
+
+3. Izračunaj kvadratni koren $\sqrt{1+i}$
+```spoiler-markdown
+![[Drawing 2025-10-21 08.46.07.excalidraw]]
+```
+4. Izračunaj $z^2 = 1+i$
+```spoiler-markdown
+![[Drawing 2025-10-21 08.56.25.excalidraw]]
+```
+5. Izračunaj $\sqrt[3]{-27+27i}$
+```spoiler-markdown
+![[Drawing 2025-10-21 09.16.09.excalidraw]]
+```
+6. Reši enačbo $z^4 + 3 = 0$ in nato polinom $z^4 + 4$ razstavi na dva kvadratna faktorja z realnimi koeficienti.
+```spoiler-markdown
+![[Drawing 2025-10-21 09.28.29.excalidraw]]
+```
+7. Izračunaj $|z-1| \le |z-i|$
+```spoiler-markdown
+![[Drawing 2025-10-21 09.51.19.excalidraw]]
+```
