@@ -373,9 +373,149 @@ Sklep:
 ![[Drawing 2025-10-17 10.28.58.excalidraw]]
 
 ## Predikatni račun
-Predpostavki:
-- Vsi študentje računalništva znajo logično sklepati.
-- Škrat Kuzma ne zna logično sklepati.
-Zaključek:
-- Škrat  Kuzma ni študent računalništva
+**Področje pogovora** je neprazna *množica*. Na primer ljudje, številke, živali.
+**Predikati** so logične funkcije, ki za svoje argumente uporabijo elemente področja pogovora.
+
+Primer: $P(x)$, x je praštevilo.
+- P(2) ... 2 je praštevilo. [1]
+- P(8) ... 8 je praštevilo. [0]
+
+Primer: D(x,y), x deli y.
+- D(2,7) ... 2 deli 7. [0]
+- D(3,3) ... 3 deli 3. [1]
+
+Predikate ločimo po mestnosti.
+V izbrani interpretaciji interpretaciji enomestni predikati ustrezajo *lastnostim* elementov področja pogovora.
+Dvomestni predikati ustrezajo zvezam (tudi relacijam) med elementi področja pogovora.
+
+### Kvalifikatorja
+$\forall$ univerzalni kvantifikator
+$\exists$ eksistenčni kvantifikator
+
+$\forall * P(x)$ je izjava, ki je resnična natanko takrat, ko imajo vsi elementi področja pogovora lastnost P. Sicer je neresnična.
+$\exists * P(x)$ je izjava, ki je resnična natanko takrat, ko obstaja (vsaj en) element področja pogovora, ki ima lastnost P. Sicer je neresnična.
+
+Primer:
+$\forall * P(x) \rightarrow$ Vsako celo število je pravilo. [0]
+$\exists * P(x) \rightarrow$ Obstaja (*vsaj eno*) celo število, ki je praštevilo. [1]
+
+### Formalizacija
+Definiraj ustrezne predikate in zapiši naslednje izjave:
+- Nekateri politiki so nepošteni.
+- Noben politik ni nepošten.
+- Vsi politi so nepošteni.
+
+Pogovarjamo se o **vseh ljudeh** in biti politik je *lastnost, ki jo ljudje lahko imajo*.
+Biti nepošten, je tako kot biti politik, *lastnost*, ki jo lahko nekdo ima.
+**Področje pogovora** so torej vsi ljudje.
+Predikat P ... P(x) ... x je politik.
+Predikat N ... N(x) ... x je nepošten.
+
+- Nekateri politiki so nepošteni. $\exists x (P(x) \land N(x))$
+- Noben politik ni nepošten. $\neg \exists x (P(x) \land N(x))$
+- Vsi politi so nepošteni. $\forall x (P(x) \implies N(x))$
+- Niso vsi politiki nepošteni. $\neg \forall x (P(x) \implies N(x))$
+- Vsi politiki so pošteni. $\forall x (P(x) \implies \neg N(x))$
+
+Univerzalni kvantifikatorju pogosto sledi implikacija.
+
+### Interpretacija
+Dvomestni predikat P(x,y) naj pomeni x pozna y.
+Na katere načine lahko formulo P(x,y) spremeniš v izjavo?
+
+P(Tone,Jože) ... Tone pozna Jožeta.
+$\forall y P(Tone,y)$ ... Tone pozna vse ljudi.
+$\exists y P(Tone,y)$ ... Tone nekoga pozna.
+$\forall x P(x,Joze)$ ... Vsi ljudje poznajo Jožeta.
+$\exists x P(x,Joze)$ ... Nekdo pozna Jožeta.
+
+- $\exists x \exists y P(x,y)$ ... Nekdo nekoga pozna. {my-arrow1|#ffffff}
+- $\exists x \forall yP(x,y)$ ... Nekdo pozna vse ljudi.
+- $\forall x \exists yP(x,y)$ ... Vsak človek pozna nekoga.
+- $\forall x \forall yP(x,y)$ ... Vsak človek pozna vse ljudi. {my-arrow2|#ffff2e}
+- $\exists y \exists xP(x,y)$ ... Nekoga nekdo pozna. {my-arrow1}
+- $\forall y \exists xP(x,y)$ ... Vsakega človeka nekdo pozna.
+- $\exists y \forall xP(x,y)$ ... Obstaja človek, ki ga poznajo vsi ljudje.
+- $\forall y \forall xP(x,y)$ ... Vsakega človeka poznajo vsi ljudje.{my-arrow2}
+
+### Izjavne formule
+- *spremenljivke* x,y,z,...
+- *konstante* a,b,c,...
+- *predikati* P, Q, R, ...
+- izjavni vezniki $\neg, \land, \vee, \implies, \Leftrightarrow,...$
+- *kvalifikatorja* $\forall$ in $\exists$
+- oklepaja ( in )
+Spremenljivkam in konstantam pravimo tudi **termi**.
+**Atomi** predikatnega računa so npr: $P(x),P(a),Q(x,y),Q(a,x),...$
+Atome dobimo tako, da termine vstavimo v predikate.
+
+**Izjavne formule** so definirane induktivno:
+1. Atomi so izjavne formule.
+2. Če sta W in V izjavni formuli in je x spremenljivka, potem so tudi $(\neg W), (W \land V), (W \vee V), (W \implies V), (W \Leftrightarrow V), ...$$(\exists x W) in (\forall x W)$ izjavne formule
+#### Doseg Kvantifikatorjev
+Doseg kvantifikatorja je *najmanjši* možen; najmanjša izjavna formula, ki jo preberemo desno od kvantifikatorja (skupaj z njegovo spremenljivko).
+
+Kvantifikator *veže* svojo spremenljivko in proste spremenljivke z istim imenom v svojem dosegu.
+
+Kvantifikatorji imajo "isto prednost" kot negacija.
+
+V formuli imamo vezane in proste spremenljivke:
+- vstop spremenljivke x je **vezan**, če se **ta** x nahaja v dosegu (območju delovanja) kvantifikatorja $\forall x$ ali $\exists x$
+- vstop spremenljivke, ki ni vezan, je **prost**
+
+![[Drawing 2025-10-23 12.37.09.excalidraw]]
+#### Doseg, vezane in proste spremenljivke
+Določi doseg kvantifikatorjev in odloči katere spremenljivke so vezane in katere proste:
+- $\forall x P(x,y) \land Q(x,y)$
+- $\forall x P(w,y) \land Q(x,y)$
+- $\forall x (P(x,y) \land Q(z,y))$
+![[Drawing 2025-10-23 12.48.14.excalidraw]]
+
+#### Interpretacije izjavne formule
+Interpretacija I izjavne formule W je sestavljena iz neprazne množice D, ki ji pravimo *področje pogovora* interpretacije.
+Poleg tega:
+- vsakemu predikatu ustreza 0/1 logična funkcija v D
+- vsaki konstanti določimo vrednost v D (po navadi je implicitno določena že z imenom konstante)
+- vsaki prosti spremenljivki v W določimo vrednost v D, pri tem vsem prostim spremenljivkam z istim imenom določimo isto vrednost iz D
+
+#### Pomen kvantifikatorjev
+Naj bo W formula. Z W(x/a) označimo formulo, ki jo dobimo tako, da v formuli W vse proste vstope spremenljivke x nadomestimo z a.
+$W ... P(x) \vee \exists x Q(x,y) \land R(b,x)$
+$W(x/a) ... P(a) \vee \exists x Q(x,y) \land R(b,a)$
+
+Formula $\forall x W$ je **resnična** v interpretaciji I, če je za vsak element *področja pogovora* $d \in D$ resnična formula W(x/d). Sicer je $\forall x W$ neresnična.
+
+Formula $\exists x W$ je **resnična** v interpretaciji I, če v področju pogovora obstaja $d \in D$, za katerega je formula W(x/d) resnična. Sicer je $\exists x W$ neresnična.
+
+#### Preimenovanje spremenljivk
+Dejstvo: Če je W formula, potem imen prostih spremenljivk ne smemo spreminjati, če želimo pridelati enakovredno formulo.
+Želja: Vezane spremenljivke lahko *preimenujemo* tako, da ista spremenljivka (spremenljivka z istim imenom)
+- ne nastopa pri več kvantifikatorjih
+- ni hkrati vezana in prosta
+![[Drawing 2025-10-23 13.17.41.excalidraw]]
+
+#### Enakovredne izjavne formule
+Izjavni formuli W in V sta **enakovredni**, če imata logično vrednost v vseh možnih interpretacijah.
+V tem primeru pišemo $W \sim V$.
+
+Izjavna formula W je **splošno veljavna**, če je resnična v vsaki interpretaciji.
+Izjavna formula V je **neizpolnljiva**, če je neresnična v vsaki interpretaciji.
+
+### Zakoni predikatnega računa
+- $\neg \forall x W \sim \exists x \neg W$
+- $\neg \exists x W \sim \forall x \neg W$
+
+- $\forall x \forall y W \sim \forall y \forall x W$ (samo če sta neposredno eden ob drugem)
+- $\exists x \exists y W \sim \exists y \exists x W$ (samo če sta neposredno eden ob drugem)
+
+- $\forall (W \land V) \sim \forall x W \land \forall x V$
+- $\exists x (W \vee V) \sim \exists x W \vee \exists x V$
+
+#### Zakoni predikatnega računa z omejitvami
+Če se x ne pojavi (pogosto) v formuli C, potem veljajo naslednje enakovrednosti:
+- $\forall x (C \vee W) \sim C \vee \forall x W$
+- $\exists x (C \vee W) \sim C \vee \exists x W$
+
+- $\forall x (C \land W) \sim C \land \forall x W$
+- $\exists x (C \land W) \sim C \land \exists x W$
 

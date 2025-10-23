@@ -22,12 +22,12 @@
             }
           },
           {
-            "id": "cc7c8e01f228ffab",
+            "id": "9dcb7047c0ebd742",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diskretne strukture/Zapiski.md",
+                "file": "uvod v računalništvo/Zapiski.md",
                 "mode": "source",
                 "source": false
               },
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
+    "width": 298.5,
+    "collapsed": true
   },
   "right": {
     "id": "d9a70bc77a48a68c",
@@ -185,12 +186,17 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "cc7c8e01f228ffab",
+  "active": "9dcb7047c0ebd742",
   "lastOpenFiles": [
+    "DnD/Simplified Rules.md",
     "diskretne strukture/Zapiski.md",
+    "diskretne strukture/literatura/dsvsp-predavanja1.pdf",
+    "Excalidraw/Drawing 2025-10-23 13.17.41.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-23 12.48.14.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-23 12.37.09.excalidraw.md",
+    "diskretne strukture/literatura/Nepotrjeno 509951.crdownload",
     "matematika/Zapiski.md",
     "diskretne strukture/Vaje.md",
-    "DnD/Simplified Rules.md",
     "matematika/Vaje.md",
     "Excalidraw/Drawing 2025-10-23 10.58.08.excalidraw.md",
     "Excalidraw/Drawing 2025-10-23 10.38.55.excalidraw.md",
@@ -219,14 +225,8 @@
     "Excalidraw/Drawing 2025-10-21 08.56.25.excalidraw.md",
     "Excalidraw/Drawing 2025-10-21 08.46.07.excalidraw.md",
     "Excalidraw/Drawing 2025-10-21 08.37.01.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-21 08.20.03.excalidraw.md",
-    "Excalidraw/Innistrad.md",
     "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
     "DnD/2014 Dungeon Master's Guide.pdf",
-    "DnD/Dungeon Master's Guide.md",
-    "DnD/Useful Sites.md",
-    "DnD/Army of the damned/Monster Manual.pdf",
-    "DnD/Army of the damned/Nepotrjeno 589730.crdownload",
     "slikice/Pasted image 20251016151508.png",
     "slikice/Pasted image 20251016151207.png",
     "slikice/Pasted image 20251016150001.png",

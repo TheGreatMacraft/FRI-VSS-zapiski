@@ -125,3 +125,90 @@ Prikažemo jih v pravokotnikih s tremi razdelki:
 - poceni prikaz končnega izdelka
 
 ![[Pasted image 20251016151508.png]]
+
+# Računalnik kot Stroj
+- računalniki imajo vsi isto zasnovo
+- Von Neumannova arhitektura - 3 karakteristike:
+- 4 glavni podsistemi: pomnilnik, vhod/izhod, aritmetično-logična enota, krmilna enota
+- program shranjen v pomnilniku
+- zaporedno izvajanje ukazov
+
+## Pomnilnik
+- Funkcijska enota za shranjevanje in branje podatkov.
+- Pomnilnik z naključnim dostopom (Random Access Memory - RAM)
+- Naslovni register (Memory Address Register - MAR)
+- Podatkovni register (Memory Data Register -MDR)
+- Branje in pisanje
+- Enodimenzionalna in dvodimenzionalna pomnilniška organizacija
+
+$MAR = log_2(MemmorySize)$
+
+1. Najmanj koliko bitov je potrebnih za naslovni register pri velikosti pomnilnika:
+- 1MB ... 20
+- 10MB ... 24
+- 100MB ... 27
+- 1GB ... 30
+
+2. Pomnilnik naj ima dvorazsežno, kvadratno organizacijo. Kakšne so mere pomnilnika vzdolž vsake izmed obeh razsežnosti, če lahko vanj shranimo 1 MB podatkov? Kako velik bo naslovni register? Koliko bitov se pošlje v dekodirnik vrstice in koliko v dekodirnik stolpca? Koliko izhodov imata vsak izmed obeh dekodirnikov?
+
+$a^2 = 1MB$
+$a^2 = 2^{20}$
+$a = 2^{10} \implies 10$
+
+3. Recimo, da ima pomnilnik 24-bitni naslovni register, prvih 16 bitov je pri tem namenjenih naslovu vrstice, preostalih 8 bitov pa naslovu stolpca. Koliko bajtov podatkov lahko shranimo v ta pomnilnik? Kakšne so mere pomnilnika vzdolž vsake izmed obeh razsežnosti, če predpostavimo, da ima pomnilnik največjo možno velikost?
+
+$a*b = 2^N*2^M = 2^16 * 2^8 = 2^{24} \sim 16 MB$
+
+## Predpomnilnik
+- Ozko grlo in princip lokalnosti (dostopanje do podatkov je počasno)
+- Uporaba:
+	- Poglej v predpomnilnik in uporabi podatek, če je tam.
+	- Če ga ni, dostopaj do pomnilnika RAM
+	- Kopiraj še k naslednjih podatkov.
+
+1. Povprečni čas dostopa do pomnilnika je 25 ns, povprečni čas dostopa do predpomnilnika pa 10 ns. Kakšen je skupni povprečni čas dostopa, če je verjetnost zadetka v predpomnilniku enaka 80%? Kakšna pa bi morala biti verjetnost zadetka, če želimo skupni povprečni čas dostopa znižati na 12 ns?
+
+$t_{pm} = 25ns$
+$\Delta t_{pr} = 10ns$
+$CacheProb = 80$%
+$\Delta t = 0.8 * 10 + 0.2 * 35 = 15ns$
+
+$\Delta t_2 = 12ns$
+$12 = x*10+(1-x)*35$
+$12 = 10x + 35 - 35x$
+$12 = -25x + 35$
+$25x = 23$/25
+$x = \frac{23}{25}$
+$x = 0,92$
+
+## Trdi disk
+- Zunanji pomnilnik - trajni
+- Vhodno-izhodne naprave
+
+1. Recimo, da ima trdi disk naslednje lastnosti: 
+- hitrost vrtenja: 7200 obratov / min = 120 rot/s
+- čas premika glave: 0,5 ms (fiksni začetni čas) + 0,05 ms za vsako sled
+- število površin: 2 (glavi obeh površin se pomikata sočasno)
+- število sledi na površino: 500
+- število sektorjev na sled: 20
+- število bajtov na sektor: 1024
+a) Koliko bajtov podatkov lahko shranimo na ta disk? 
+$2*500*20*1024 = 20480000 \sim 20.5MB$
+b) Kakšni so časi dostopa do enega sektorja v najboljšem, najslabšem in srednjem primeru? Predpostavi, da se v srednjem glava premakne preko 150 sledi.
+
+|             | Najboljši primer             | Srednji primer               | Najslabši primer                    |
+| ----------- | ---------------------------- | ---------------------------- | ----------------------------------- |
+| Čas iskanja | 0.5ms                        | 0.5+150 * 0.05 = 8ms         | 0.5 + 499 * 0.05 = 25.45ms          |
+| Latenca     | 0ms                          | $\frac{8.33ms}{2} = 4.165ms$ | $\frac{1}{120} = 0.00833s = 8.33ms$ |
+| Čas prenosa | $\frac{8.33}{20} = 0.4165ms$ | 0.4165ms                     | 0.4165ms                            |
+| Skupaj      | 0.9156ms                     | 12.5815ms                    | 34,1965ms                           |
+
+2. V splošnem podatki na disku niso shranjeni povsem naključno, temveč se običajno shranjujejo tako, da je čas, ki je potreben za dostop do podatkov kar najkrajši. Če bi imeli disk iz naloge 5, kam bi shranili 50 KB podatkov, da bi bil poznejši dostop do njih kar najhitrejši?
+
+POGLEJ SLIKO NA FONU
+
+Latence ne moreme izboljšati. Čas iskanja zmanjšamo tako da shranimo podatke tako da so blizu sledi 250. Napolnimo eno sled oz. 20 KB. Na isto sled, na drugo površino shranimo še 20KB podatkov. Preostale podatke (10KB) shranimo na sosednjo sled.
+
+3. Na spletu najdite računalniško konfiguracijo in kategorizirajte komponente po Von Neumannovi arhitekturi.
+
+4. 
