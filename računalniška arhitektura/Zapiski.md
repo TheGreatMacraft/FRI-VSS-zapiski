@@ -1,3 +1,4 @@
+
 ```table-of-contents
 title: 
 style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
@@ -170,4 +171,60 @@ Zgled:
 
 Temu pravimo **razširitev predznaka**.
 
+## Plavajoča vejica (floating point)
+$1011,01101 = 1*2^3+1*2^1+1*2^0 + 1*2^{-1}+1*2^{-2}+1*2^{-5} = 11 + 0,25 + 0,125 + 0,03125 = 11,40625_{[10]}$
+**Zapis v eksponenti obliki:**
+$1011,01101 ** 2^0 = 1,01101101 * 2^3$ $\implies$ Vejica "plava" s spreminjanjem eksponenta.
+Splošno: V zapisu z eksponentom: $m * 2^E$, kjer m(*matisa*) in E(*eksponent*)
 
+Če bomo vejico postavili za najbolj levo (pomembo) enico, bo pred vejico **vedno in samo** enica. Zato nam začetne enice ni potrebno pisati (prihranimo 1 bit). Takšnemu zapisu mantise, se reče **normaliziran zapis**
+
+Zapis števil v plavajoči vejici po standardu *IEEE 754*.
+	- Za zapis števil, ta standard uporablja 32 bitov.
+	- Najvišji bit določa predznak ($1 \implies -; 0 \implies +$)
+	- Naslednjih 8 (od $b_{30}$ do, vključno z $b_{23}$) se uporablja za zapis števil
+	$$v = (-1)^S*1,m * 2^{E-127}$$, kjer v - value, S - size, m - matisa, E - eksponent
+
+Nič se predstavi tako, da so vsi biti v $m = 0$ in $E = 0$
+Če imamo zelo majhno število: Če E ne morem več zmanjšati, potem vejice ne morem premakniti za "1" => Ne morem normalizirati števil.
+
+**Denormalizirana števila** $\implies m \ne 0; E = 0$
+$$v_{denorm.} = (-1)^S*0,m*2^{-126}$$
+Kako predstaviti +/- $\infty$?
+Pojavi se pri deljenju z 0. Neskončnost predstavimo tako, da ima eksponent vse bite 1 $\implies E = 1111 1111, m = 0$
+
+Kako zapisati NaN (nedefinirana števila "Not a Number")?
+Pojavi se pri $\frac{0}{0}$. Predstavimo enako kot neskončnost, vendar mantisa ne sme biti 0.
+ $\implies E = 1111 1111, m \ne 0$
+Vsa ostala normalizirana števila:
+$$v = (-1)^S*1,m*2^{E-127};E\in[1,254)$$
+To je zapis v enotni natančnosti (single percision).
+
+**Zapis v dvojiški natančnosti (double percision)**
+Zanj uporabljamo 64 bitov:
+- Najpomembnejši bit je +/-
+- 11 bitov je namenjenim eksponentu
+- 52 pa matisi
+
+Normalizirano:
+$$v = (-1)^S*1,m*2^{E-1023}; E\in[1...2047]$$
+
+
+
+# Ostali številski sistemi
+- dvojiški, pozicijski zapis: $$V(b) = \sum_{i=0}^{n-1}bi2^i; bi \in \{0,1\}$$
+- osmiški: $$v(x) = \sum_{i=0}^{n-1}xi8^i; xi \in \{0,7\}$$
+- šesnajstiški: $$v(x) = \sum_0^{n-1}xi*16^i; xi = \{0...9,A,B,C,D,E,F\}$$
+![[Drawing 2025-10-21 11.26.00.excalidraw]]
+
+---
+
+# Ukazi
+Končno zaporedje bitov, s katerimi kodiramo vsebuje:
+- informacijo o operaciji (Kaj naj procesor dela)
+- informacijo o operandih (Nad čem naj to naredi)
+Danes so ukazi najpogosteje 32 ali 64 bitov
+- nekatere arhitekture imajo poljubno dolge ukaze (npr. Intel)
+Sodobne arhitekture (RISC-V ali ARC) imajo vse ukaze enako dolge (32 ali 64 bitov)
+
+Ukaz (n-biten), ima nekje bite za operacije in nekje bite o operandih. **Format ukazov** določi, kateri biti kodirajo operacijo in kateri biti kodirajo operande.

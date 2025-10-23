@@ -161,3 +161,9 @@ You can help an ally by attacking or distracting the target ,or team up to make 
 ### Hide
 When attempting to hide, you make a stealth (Dexterity) check. If successful, you gain benefits, explained in the [[#Unseen Attackers and Targets]].
 ### Ready
+Ready action lets you act using your reaction before the start on your next turn. To do so, you can chose what action will trigger your reaction and what action will you take in response to it. When the trigger takes place, you can either use your reaction or ignore it. Spells need to have a casting time of 1 action to be readied and holding onto any spell requires concentration. Taking damage while concentrating on a spell might break your concentration.
+### Search
+When using the search action, you devote your attention to finding something and therefore make an investigation (Inteligence) or perception (Wisdom) check.
+### Use an Object
+This action is used when an object requires your action for its use or when you want to interact with more than 1 object during your turn.
+## Making an Attack

@@ -22,45 +22,12 @@
             }
           },
           {
-            "id": "41def5f4ace73b27",
+            "id": "cc7c8e01f228ffab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "matematika/Vaje.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vaje"
-            }
-          },
-          {
-            "id": "0ddde4dc4802ff3d",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2025-10-21 09.51.19.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-10-21 09.51.19.excalidraw"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "3e27d97ff6f4fa82",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a6d634cc116f6e06",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "matematika/Zapiski.md",
+                "file": "diskretne strukture/Zapiski.md",
                 "mode": "source",
                 "source": false
               },
@@ -68,7 +35,8 @@
               "title": "Zapiski"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -125,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5,
-    "collapsed": true
+    "width": 298.5
   },
   "right": {
     "id": "d9a70bc77a48a68c",
@@ -218,10 +185,33 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "41def5f4ace73b27",
+  "active": "cc7c8e01f228ffab",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-10-21 09.51.19.excalidraw.md",
+    "diskretne strukture/Zapiski.md",
+    "matematika/Zapiski.md",
+    "diskretne strukture/Vaje.md",
+    "DnD/Simplified Rules.md",
     "matematika/Vaje.md",
+    "Excalidraw/Drawing 2025-10-23 10.58.08.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-23 10.38.55.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-23 10.27.57.excalidraw.md",
+    "matematika/Matematika_RI_VS_e_handout.pdf",
+    "slikice/Pasted image 20251023095859.png",
+    "Excalidraw/Drawing 2025-10-23 09.34.47.excalidraw.md",
+    "matematika/kolokviji/Rešitve 1. kolokvija.pdf",
+    "slikice/Pasted image 20251023085759.png",
+    "slikice/Pasted image 20251023085610.png",
+    "Excalidraw/Drawing 2025-10-23 08.42.27.excalidraw.md",
+    "slikice/Pasted image 20251023084159.png",
+    "matematika/kolokviji/Nepotrjeno 921425.crdownload",
+    "matematika/kolokviji",
+    "matematika/Nova mapa",
+    "Excalidraw/Drawing 2025-10-23 08.26.17.excalidraw.md",
+    "DnD/Army of the damned/Army of The Damned.md",
+    "DnD/Army of the damned/armyofthedamned.pdf",
+    "računalniška arhitektura/Zapiski.md",
+    "Excalidraw/Drawing 2025-10-21 11.26.00.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-21 09.51.19.excalidraw.md",
     "Excalidraw/Drawing 2025-10-21 09.48.36.excalidraw.md",
     "Excalidraw/Drawing 2025-10-21 09.42.35.excalidraw.md",
     "Excalidraw/Drawing 2025-10-21 09.28.29.excalidraw.md",
@@ -230,10 +220,6 @@
     "Excalidraw/Drawing 2025-10-21 08.46.07.excalidraw.md",
     "Excalidraw/Drawing 2025-10-21 08.37.01.excalidraw.md",
     "Excalidraw/Drawing 2025-10-21 08.20.03.excalidraw.md",
-    "matematika/Zapiski.md",
-    "DnD/Simplified Rules.md",
-    "DnD/Army of the damned/Army of The Damned.md",
-    "DnD/Army of the damned/armyofthedamned.pdf",
     "Excalidraw/Innistrad.md",
     "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
     "DnD/2014 Dungeon Master's Guide.pdf",
@@ -241,30 +227,11 @@
     "DnD/Useful Sites.md",
     "DnD/Army of the damned/Monster Manual.pdf",
     "DnD/Army of the damned/Nepotrjeno 589730.crdownload",
-    "programiranje/domače naloge/novi_asfalt.py~",
-    "diskretne strukture/Vaje.md",
-    "Excalidraw/Drawing 2025-10-20 12.12.42.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-20 12.11.01.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-20 12.07.46.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-20 12.03.17.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-20 11.43.37.excalidraw.md",
-    "diskretne strukture/Zapiski.md",
-    "uvod v računalništvo/Zapiski.md",
-    "uvod v računalništvo/Vaje 1.pdf",
-    "uvod v računalništvo/Vaje 1 - naloge.pdf",
-    "uvod v računalništvo/Nepotrjeno 771426.crdownload",
-    "uvod v računalništvo/2024 - UR Pametna specializacija in analiza zahtev.pdf",
-    "Excalidraw/Drawing 2025-10-18 12.55.34.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-18 12.42.33.excalidraw.md",
     "slikice/Pasted image 20251016151508.png",
     "slikice/Pasted image 20251016151207.png",
     "slikice/Pasted image 20251016150001.png",
     "slikice/Pasted image 20251016145846.png",
     "slikice/Pasted image 20251016145255.png",
-    "slikice/Pasted image 20251016144951.png",
-    "slikice/Pasted image 20251016105253.png",
-    "slikice/Pasted image 20251016081641.png",
-    "slikice/Pasted Image 20251014135513_283.png",
-    "slikice/Pasted Image 20251014134544_203.png"
+    "slikice/Pasted image 20251016144951.png"
   ]
 }

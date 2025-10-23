@@ -230,3 +230,25 @@ $\sqrt{3}+1$
 ```spoiler-markdown
 ![[Drawing 2025-10-21 09.51.19.excalidraw]]
 ```
+
+# 4. Hitri test 4
+
+1. Kako kompleksno število _z=-1+i_ zapišemo v polarni obliki ?
+2. Če je $z^3 = 8e^{i\frac{\pi}{3}}$ katera izmed spodnjih izjav je pravilna?
+- $z = \sqrt[3]{2}e^{i\frac{\pi}{3}}$ je ena izmed treh rešitev zgornje enačbe.
+- $z = 2e^{i\frac{\pi}{6}}$ je ena izmed treh rešitev zgornje enačbe.
+- $z = 2e^{i\frac{\pi}{6}}$ je edina rešitev zgornje enačbe.
+- $z = 2e^{i\frac{\pi}{9}}$ je edina rešitev zgornje enačbe.
+- $z = 2e^{i\frac{\pi}{9}}$ je ena izmed treh rešitev zgornje enačbe.
+3. Zaporedje je podano z eksplicitno formulo $a_n = \frac{n+1}{n-2}$. Koliko je šesti člen zaporedja $a_6$?
+4. Zaporedje je podano z rekurzivno formulo $a_1 = 2$ in $a_{n+1}=2a_n-1$. Koliko je šesti člen zaporedja $a_6$?
+
+```spoiler-markdown
+![[Drawing 2025-10-23 09.34.47.excalidraw]]
+```
+
+---
+3. $\displaystyle \lim_{n \to \infty} \frac{(n+2)^2}{3n^2+n+1}$
+```spoiler-markdown
+![[Drawing 2025-10-23 10.58.08.excalidraw]]
+```

@@ -1,3 +1,4 @@
+
 ```table-of-contents
 title: 
 style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
@@ -205,4 +206,85 @@ Vse vrednosti, na enotski krožnici imajo absolutno vrednost 1.
 
 Izračunajmo $(\frac{\sqrt{2}}{2}+\frac{1}{2}i)^{12}$
 ![[Drawing 2025-10-16 10.23.07.excalidraw]]
+
+#### Koreni kompleksnega števila
+**n-ti koreni** števila $a \in C$ so rešitve enačbe $z^n = a$.
+- Enačbo zapišemo v polarni obliki: $a = |a|*e^{i\psi}$
+- Dobimo n različnih rešitev: $z_k = \sqrt[n]{|a|}e^{i\frac{\psi+2k\pi}{n}}$, $k = 0,1,...n-1$
+- Rešitve ležijo na ogliščih pravilnega n-kotnika v kompleksni ravnini.
+
+![[Drawing 2025-10-23 08.26.17.excalidraw]]
+
+![[Pasted image 20251023084159.png]]
+
+![[Drawing 2025-10-23 08.42.27.excalidraw]]
+
+# Zaporedja
+**Zaporedje** je neka urejena množica 'zaporedoma' postavljenih števil. Matematično natančneje rečemo, da je zaporedje preslikava $\mathbb{N} \rightarrow \mathbb{R}$, $i \mapsto a_i$, ki vsakemu naravnemu številu i (indeksu) priredi točno določeno realno število $a_i$. Pri tem jih imenujemo i indeks, $a_i$ pa i-ti člen zaporedja.
+
+Zaporedje predstavimo:
+- z naštevanjem: 1,2,4,8, ...
+- opisno: "Vsa soda števila"
+- eksplicitno: $a_n = \frac{1}{n}$ za $n \ge 1$ (podano eksplicitno z izrazom $a_n = f(n)$ in neko točno določeno funkcijo $f(x)$)
+- rekurzivno: $a_0 = 1$ in $a_{n+1} = 2a_n$ za $n  \ge 0$ (podano s prvim členom $a_0$ ali $a_1$ in neko točno določeno funkcijo $f(x)$, ki pove, kako iz $a_n$ dobimo $a_{n+1}$)
+
+Geometrijsko lahko zaporedje predstavimo:
+- na številski premici:
+![[Pasted image 20251023085610.png]]
+Ko člene narišemo, se ne vidi 'zaporednosti' členov (kateri člen je 3. ali 4.).
+- kot točke ($n,a_n$) v ravnini:
+![[Pasted image 20251023085759.png]]
+Abscisa (x-koordinata) točke pove *kateri člen* zaporedja je enak ordinati (y-koordinati).
+
+## Primer
+
+**Aritmetično zaporedje**
+- Intuitivni opis: Začnemo z neko vrednostjo. 'Delamo' enako dolge korake v desno.
+- Eksplicitni opis: $a_n = a + nd$
+- Rekurzivni opis: $a_0 = a,a_{n+1} = a_n + d$
+- Primer: $1,2,3,4,5,...$
+- Primer: $1,3,5,7,9,...$
+- Primer: $1,1+\sqrt{3},1+2\sqrt{3},1+3\sqrt{3},1+4\sqrt{3},...$
+
+**Geometrijsko zaporedje**
+- Intuitivni opis: Začnemo z neko vrednostjo. V vsakem koraku prejšnjo vrednost pomnožimo z istim faktorjem.
+- Eksplicitni opis: $a_n = aq^n$
+- Rekurzivni opis: $a_0 = a$, $a_{n+1} = a_nq$
+
+## Lastnosti zaporedji
+- **Naraščajoče** zaporedje: $a_n \le a_{n+1}$, za vse $n \in \mathbb{N}$
+- **Strogo naraščajoče** zaporedje: $a_n < a_{n+1}$ za vse $n\in N$
+- **Padajoče** zaporedje: $a_n \ge a_{n+1}$ za vse $n\in \mathbb{N}$
+- **Strogo padajoče** zaporedje: $a_n > a_{n+1}$ za vse $n\in \mathbb{N}$
+- **Navzgor omejeno** zaporedje: Obstaja zgornja meja $M \in \mathbb{R}$, da velja $a_n \le M$, za vse $n\in \mathbb{N}$
+- **Navzdol omejeno** zaporedje: Obstaja spodnja meja $m \in R$, da velja $m \le a_n$, za vse $n\in \mathbb{N}$
+- **Navzgor in navzdol omejeno** zaporedje: Obstajata meji $m,M$, da velja $m  \le a_n \le M$, za vse $n \in \mathbb{N}$
+
+M in m **nista enolično določena**. Če je $m = 0$, je $m \le 0$ in če $M = n$, je $M \ge N$.
+
+## Stekališče zaporedja
+**Stekališče** zaporedja je število k kateremu se '*steka*' neskončno členov zaporedja. Natančneje, **Stekališče** zaporedja je tako število, da je *v vsaki njegovi okolici neskončno členov zaporedja*. Zaporedje ima lahko več stekališč.
+![[Pasted image 20251023095859.png]]
+
+![[Drawing 2025-10-23 10.27.57.excalidraw]]
+
+## Limita zaporedja
+**Limita** zaporedja je tako število, da je v vsaki njegovi okolici *neskončno* členov, zunaj te okolice pa končno členov zaporedja. Je taka točka, od katere naprej bodo vsi elementi v njeni okolici.
+![[Drawing 2025-10-23 10.38.55.excalidraw]]
+- Lahko rečemo tudi: **Limita** zaporedja $a_n$ je tako število L, da za vsak $\epsilon > 0$ obstaja tak indeks $N \in \mathbb{N}$, da velja $|L-a_n| < \epsilon$, za vse $n \ge N$.
+- Limito zaporedja $a_n$ označimo $\displaystyle \lim_{n \to \infty} a_n$
+- Zaporedje ima lahko več stekališč in zato **nima limite**.
+- Zaporedje ima lahko eno samo stekališče, pa vseeno to stekališče ni nujno limita.
+- Limita zaporedja je **vedno** stekališča, obratno pa **ni vedno** res.
+
+Zaporedje je **konvergentno**, če ima limito. V nasprotnem primeru je **divergentno**.
+- Naraščajoče in navzgor omejeno zaporedje je konvergentno.
+- Padajoče in navzdol omejeno zaporedje je konvergentno.
+
+### Računanje limit
+Če je $\displaystyle \lim_{n \to \infty} a_n$ in $\displaystyle \lim_{b \to \infty} b_n = b$ potem velja:
+- $\displaystyle \lim_{n \to \infty} (a_n+b_n) = a+b$
+- $\displaystyle \lim_{n \to \infty}a_n*b_n = ab$
+- Če je $b_n \ne 0$ za vsak n in $b \ne 0$, je $\displaystyle \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b}$
+- Če je $a_n > 0$, za vsak n in $a > 0$, je $\displaystyle \lim_{n \to \infty}a_n^{b_n} = a^b$
 

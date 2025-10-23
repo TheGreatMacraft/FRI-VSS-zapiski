@@ -22,7 +22,7 @@
 ---
 
 - **Katarina** was once a paladin and a member of the *Riders of Gavony* and therefore became the leader of the *Shadowgrange miilitia*. She was chosen by the elders of the Church to uncover the secret power within the mystical tuning fork, that is the key to freeing Avacyn and saving Innistrad.
-- **Siegfried** is an alchemist and Katarina's husband
+- **Siegfried** is an alchemist and Katarina's fionce
 - **Ralph** is an ally of Katrina and Siegfried
 - **Rinelda Smit** is a ghoulcaller, helping Siegfried in creating skaabs.
 - *Skaab* is a malformed "offspring" created by skaberen, often using corpse parts.

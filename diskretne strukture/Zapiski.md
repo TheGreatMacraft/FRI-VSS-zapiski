@@ -1,3 +1,4 @@
+
 ```table-of-contents
 title: 
 style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
@@ -370,3 +371,11 @@ Sklep:
 
 **Tips and tricks**: Kako dodati r v izjavni izraz kot $(p \land q \land \neg s)$
 ![[Drawing 2025-10-17 10.28.58.excalidraw]]
+
+## Predikatni račun
+Predpostavki:
+- Vsi študentje računalništva znajo logično sklepati.
+- Škrat Kuzma ne zna logično sklepati.
+Zaključek:
+- Škrat  Kuzma ni študent računalništva
+
