@@ -1,10 +1,11 @@
 ovire = [(1, 3, 6), (2, 4, 3), (4, 6, 7),
          (3, 4, 9), (6, 9, 5), (9, 10, 2), (9, 10, 8)]
 x = 6
-min = None
+blizu_ovira = []
 
 for el in ovire:
-    if el[2] == y and (min == None or el[1] < min):
-        min = el[1]
+    if x in el[:-1] and (not blizu_ovira or el[-1] < blizu_ovira[-1]):
+        blizu_ovira = el
 
-print(f"Prva ovira, na katero bo kolesar naletel, v vrstici {x}, je ovira({x},{min})")
+print(f"Prva ovira, na katero bo kolesar naletel, v vrstici {x}, je ovira({blizu_ovira})")
+

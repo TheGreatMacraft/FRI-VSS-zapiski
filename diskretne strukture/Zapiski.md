@@ -208,17 +208,27 @@ Kako bi se v A' znebili konjunkcij?
 $p \land q \sim \neg \neg (p \land q) \sim \neg (\neg p \vee \neg q)$
 Če v A' vsako izmed konjunkcij nadomestimo, kot v zgornjem zgledu, predelam A'', $A'' \sim A' \ sim A$, ki uporablja samo $\neg$ in $\vee$.
 
+Dokaz, da {$\vee, \land$} ni poln nabor:
+![[Drawing 2025-10-24 11.29.51.excalidraw]]
+
 Kako v praksi pokazati, da je nabor izjavnih veznikov $\mathcal{N}$ poln?
 1. Izberemo znan poln nabor izjavnih veznikov $\mathcal{Z}$.
 2. Vsak veznik iz znanega nabora $\mathcal{Z}$ izrazimo samo z uporabo veznikov iz $\mathcal{N}$.
 
 Kako pokazati, da nabor izjavnih izrazov ni poln?
-Lahko poiščemo ovire (nabor {$\implies,\land$} ohranja vrednost 1, zato ni sposoben opisati negacije)
+Lahko poiščemo ovire (nabor {$\implies,\land$} **ohranja** vrednost 1 ali 0, zato ni sposoben opisati negacije)
 
 **Trditev:** Izraz $A_1 \veebar A_2 \veebar A_3 \veebar ... \veebar A_n$ je *ne glede na to, kako so postavljeni oklepaji* resničen natanko tedaj, ko je *liho mnogo* členov izmed $A_1,A_2,A_3,...,A_n$ resničnih.
 
 ![[Drawing 2025-10-16 11.34.11.excalidraw]]
 
+### Seznam polnih naborov
+- {$\neg,\land,\vee$}
+- {$\neg,\land$}
+- {$\neg,\vee$}
+- {$\implies, \neg$}
+- {$\implies,0$}
+- {$\implies \centernot \implies$}
 ## Sklepanje v izjavnem računu
 Predpostavki: 
 1. Če dežuje, je oblačno (Če A, potem B -> $A\implies B$)

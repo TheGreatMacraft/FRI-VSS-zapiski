@@ -296,3 +296,62 @@ Nerešeno:
 ```spoiler-markdown
 ![[Drawing 2025-10-17 10.37.52.excalidraw]]
 ```
+
+# Vaje 3. teden
+
+1. Kateri izmed naslednjih naborov so polni?
+- {$\implies, \neg$}
+```spoiler-markdown
+![[Drawing 2025-10-24 11.32.53.excalidraw]]
+```
+- {$\implies,0$}
+```spoiler-markdown
+![[Drawing 2025-10-24 11.39.35.excalidraw]]
+```
+- {$\implies,1$}
+```spoiler-markdown
+![[Drawing 2025-10-24 11.44.23.excalidraw]]
+```
+- {$\implies, \land$}
+```spoiler-markdown
+![[Drawing 2025-10-24 11.46.16.excalidraw]]
+```
+- {$\implies \centernot \implies$}
+```spoiler-markdown
+![[Drawing 2025-10-24 11.48.55.excalidraw]]
+```
+
+2. Naj bo w trimestni veznik $W(p,q,r) = (p\vee q) \implies r$
+Kateri so polni?
+- {W}
+- {W,1}
+- {W,0}
+```spoiler-markdown
+![[Drawing 2025-10-24 11.55.24.excalidraw]]
+```
+
+3. Zaporedje izjavnih izrazov $B_n$ je definirano rekurzivno: 
+$B_0 = \neg p$
+$B_1 = \neg q$
+$B_2 = W(p,q,B_{n-1}\land B_{n-2})$
+```spoiler-markdown
+![[Drawing 2025-10-24 12.07.41.excalidraw]]
+```
+
+4. Kateri od naslednjih sklepov so pravilni?
+- $p \land r$, $q \land p \implies \neg r$, sklep: $\neg q$
+```spoiler-markdown
+![[Drawing 2025-10-24 12.23.59.excalidraw]]
+```
+- $p \vee q$, $\neg q \land r \implies \neg p$, sklep: $q \vee r$
+```spoiler-markdown
+![[Drawing 2025-10-24 12.32.05.excalidraw]]
+```
+ - $p \implies q$, $r \implies s$, $p \vee r$, sklep $q \land s$
+```spoiler-markdown
+![[Drawing 2025-10-24 12.35.39.excalidraw]]
+```
+ - $p \implies q$, $p \vee s$, $q \implies r$, $s \implies t$, $\neg r$, sklep: $t$
+```spoiler-markdown
+![[Drawing 2025-10-24 12.39.31.excalidraw]]
+```
