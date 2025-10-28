@@ -167,3 +167,87 @@ When using the search action, you devote your attention to finding something and
 ### Use an Object
 This action is used when an object requires your action for its use or when you want to interact with more than 1 object during your turn.
 ## Making an Attack
+Making an attack consist of:
+1. **Choosing a target** within your attack range: a creature, an object or location
+2. **Determine modifiers**. The DM determines whether the target has *cover* and if you have *advantage* or *disadvantage*. Spells, special abilities and other effects can apply penalties, bonuses, advantage or disadvantage
+### Attack Rolls
+When making an attack roll, you roll a d20 and add appropriate modifiers. If the total number equals or exceeds the target's AC (Armor Class), the attack hits.
+#### Modifiers to the Roll
+When a character makes an attack roll, the two most common modifiers are an ability modifier and the character's proficiency bonus.
+##### Ability Modifier
+If the character attacks with a *melee* weapon they use their *Strength* and if they attack with a ranged *weapon* their *Dexterity* is used instead. When cleric makes a melee or ranged spell attack, they use *Wisdom*, but the wizard always uses *Inteligence*.
+##### Proficiency Bonus
+If the character is proficient with the weapon they are using for an attack, they can add their proficiency bonus.
+#### Rolling a 1 or 20
+If a player rolls a 20, the attack hits and becomes a [[#Critical Hit]]. However, if the player rolls a 1, the hit misses.
+### Unseen Attackers and Targets
+Attacking a target that you can't see grants you disadvantage on the attack roll. If you don't guess the target's location correctly, you automatically miss.
+If the creature you are attacking can't see you, you have advantage on the attack roll, but by attacking (whether hit or miss), you give away your location.
+### Ranged Attacks
+Ranged attack is any attack that involves sending a projectile to strike from a distance.
+#### Range
+Sometimes ranged weapons have only one *normal* range, but if a weapon has a secondary *long* range, it has disadvantage when firing something within the long range. A weapon can never target a creature that is further then it's longest range.
+#### Ranged Attacks in Close Combat
+If making an attack range of the target, that is within 5 feet, can see you and isn't incapacitated, you have disadvantage on the attack throw.
+### Melee Attacks
+Melee attacks usually consist of attacking a foe within 5 foot reach, though some creatures have bigger reach.
+Making an **unarmed strike** allows you to deal *bludgeoning* damage equal to 1 + your Strength modifier.
+### Opportunity Attack
+When a hostile creature moves out of your range, without using the disengage action, you can use your reaction (once per round) to strike an opportunity attack and interrupt the creature's movement. If something moves you (teleportation, other creatures, etc.) or you use a disengage action, you avoid any opportunity attacks.
+### Two-Weapon Fighting
+When you use light melee weapon that you are holding in one hand to attack a creature, you gain a bonus action that you can use to attack with a light melee weapon that you are holding in another hand, but your ability modifier doesn't apply to the second attack, unless it's negative. If weapons have throwing property, they can also be thrown.
+## Cover
+If a creature or character is behind a wall, tree, an obstacle or another creature, it has cover. Based on the amount of target's size that the obstacle covers, it can have **half cover, three-quarter cover or total cover**
+
+| Degree of Cover      | AC and Dexterity saving throw addition  |
+| -------------------- | --------------------------------------- |
+| half cover           | +2                                      |
+| three-quarters cover | +5                                      |
+| total cover          | can't be targeted directly by an attack |
+## Damage and Healing
+### Hit  Points
+Hit points are constantly changing, but don't affect the creature's capabilities, until they drop down to 0.
+### Damage Rolls
+Whenever an attack hits, the attacker makes a damage roll, adds any modifiers and applies the damage to the target. Some magic weapons, special abilities, etc. grant you extra damage. When attacking with a weapon you add your ability modifier. Spells tell you which die to roll and what modifiers to use and if the spell targets multiple targets at once, you roll once for all of them.
+#### Critical Hits
+When scoring a critical hit, you roll **all** the damage dice twice.
+#### Damage Types
+The damage types are: acid, bludgeoning, cold, fire, force, lightning, necrotic, piercing, poison, psychic, radiant, slashing and thunder.
+### Damage Resistance and Vulnerability
+If a creature has **resistance** to a certain damage type, the damage from that type they take is **halved** and if the creature has **vulnerability** to a specific damage type, the damage it takes from that type is **doubled**. This change is added last. The creature can't have multiple resistances or vulnerabilities to the same damage type.
+### Healing
+Hit points can be restored by resting or healing. A creature can never have more hit points than its maximum capacity. A creature that is dead can't be healed, before it is revived.
+### Dropping to 0 Hit Points
+Most normal monsters die immediately after dropping to 0 hit points. Players and special NPCs usually fall unconscious when dropping to 0 hit points and have to be revived or succeed in a death saving throw.
+#### Instant Death
+If the damage you take drops you bellow 0 hit points and exceeds the negative amount of your max HP, you die instantly. 
+#### Falling Unconscious
+If damage reduces your HP to 0 or bellow, but fails to kill you, you fall unconscious.
+#### Death Saving Throws
+When you start your turn with 0 HP, you must perform death saving throw. Roll a d20 and if the number is 10 or higher, you succeed, if not you fail. Upon reaching 3 successes, you become stable, but upon reaching 3 fails you die. If death throw results in a 1, it counts as 2 failures. However if you roll a 20, you receive 1 HP.
+While doing death saving throws, if you receive damage from a normal hit, it counts as a death saving throw failure, if the hit is critical hit, it counts as 2 failures and if the damage exceeds your maximum HP, you die.
+#### Stabilizing a Creature
+You can attempt to stabilize a creature, by doing a medicine (Wisdom) check, with a DC 10. A stabilized creature has 0 HP, but isn't required to make death saving throws until it takes damage again.
+### Knocking a Creature Out
+If the attacker reduces the creature to 0 HP with a melee attack, the attacker can decide to leave a creature in a stable "knocked out" state, instead of killing it outright.
+
+---
+# Adventuring
+## Travel
+Characters can walk about 24 miles in a day.
+### Marching Order
+Usually the players occupy the front rank, middle rank and back rank while walking. Those in front and back watch out for danger, while those in the middle are usually making a map, navigating or gathering food for the group, etc. If the group encounters the danger, it is important to note where each member of the group is located.
+### Special Forms of Movement
+Journey often consists of different types of movement.
+#### Long Jumps
+When making a long jump, you cover a number of feet up to your Strength score if you move at least 10 feet on foot immediately before the jump. If you make a long jump while only standing, you only leap half the distance.
+To clear a low obstacle (no taller than a quarter of jump distance), you need to succeed a DC 10 Strength check.
+When landing in a difficult terrain, you need to succeed on a DC 10 Dexterity check in order to land on your feed, if you don't you land prone.
+#### High Jumps
+Making a high jump lets you leap into the air a number of feet equal to 3 + your Strength modifier, if you move at least 10 feet on foot immediately before the jump. Jumping without this, lets you leap only half the height. 
+#### Climbing and Swimming
+If a creature doesn't have a climbing or swimming speed, each foot of movement costs a foot more.
+## Resting
+Adventurers can take short rests in the middle of the day and long rest at the end of the day.
+### Short Rest
+For each level, an adventurer has, they can roll a **hit dice**, to which they add their Constitution modifier to it and regain the total as hit points.

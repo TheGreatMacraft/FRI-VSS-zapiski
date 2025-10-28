@@ -212,9 +212,9 @@ $$v = (-1)^S*1,m*2^{E-1023}; E\in[1...2047]$$
 
 
 # Ostali številski sistemi
-- dvojiški, pozicijski zapis: $$V(b) = \sum_{i=0}^{n-1}bi2^i; bi \in \{0,1\}$$
-- osmiški: $$v(x) = \sum_{i=0}^{n-1}xi8^i; xi \in \{0,7\}$$
-- šesnajstiški: $$v(x) = \sum_0^{n-1}xi*16^i; xi = \{0...9,A,B,C,D,E,F\}$$
+- dvojiški, pozicijski zapis: $\displaystyle V(b) = \sum_{i=0}^{n-1}bi2^i; bi \in \{0,1\}$
+- osmiški: $\displaystyle v(x) = \sum_{i=0}^{n-1}xi8^i; xi \in \{0,7\}$
+- šesnajstiški: $\displaystyle v(x) = \sum_0^{n-1}xi*16^i; xi = \{0...9,A,B,C,D,E,F\}$
 ![[Drawing 2025-10-21 11.26.00.excalidraw]]
 
 ---
@@ -228,3 +228,94 @@ Danes so ukazi najpogosteje 32 ali 64 bitov
 Sodobne arhitekture (RISC-V ali ARC) imajo vse ukaze enako dolge (32 ali 64 bitov)
 
 Ukaz (n-biten), ima nekje bite za operacije in nekje bite o operandih. **Format ukazov** določi, kateri biti kodirajo operacijo in kateri biti kodirajo operande.
+
+Ukazi so bitni zapisi, ki hranijo informacijo o operaciji in operandih. Hranijo se v pomnilniku (VN arhitektura). Vse dogajanje znotraj računalnika je določeno **le** z ukazi.
+
+**Format ukaza** natančno določa, kateri bit v ukazu kodirajo informacijo o operaciji in informacijo o operandih.
+**Operacijska koda** je bitni zapis v ukazu s katerimi kodiramo informacijo o operaciji.
+
+Ukazi opredeljujejo naslednje lastnosti računalnikov:
+1. Kako se operandi hranijo znotraj CPE.
+	- CPE mora pred izvajanjem ukazov, ukaze in operande prebrat iz pomnilnika.
+	- Kje je ukaz - določa PC, ki hrani naslov naslednjega ukaza
+	- Kje so operandi - je zapisano v ukazu
+	- Ko CPE prebere operande iz pomnilnika, jih mora nekje začasno hraniti.
+	- Obstaja velika verjetnost, da:
+		- bomo isti operand uporabili v več ukazih
+		- bomo rezultat nekega ukaza ponovno uporabili v enem od naslednjih ukazov
+		Torej je pomembno operande **začasno hraniti v CPE**
+2. Število eksplicitnih operandov v ukazu.
+	- Po eni strani si želimo veliko število operandov v ukazu, zato, da bi lahko z enim samim ukazom obdelal čim več ukazov.
+		- Večje število operandov - **daljši ukazi** - veliko časa, da jih prenesemo v CPE
+3. Kako bo v ukazu zapisana informacija o lokaciji operandov v pomnilniku.
+	- Najbolj naiven pristop: za vsak operand v ukazu zapišimo njegov celoten naslov. Ta rešitev je neučinkovita, ker potrebujemo zelo veliko število bitov, za zapis operandov. Pri določenih računalnikih je naslov dolg 64 bitov. Za dva operanda, v ukazu bi potrebovali 128 bitov, kar bi bilo **predolgo**.
+4. Operacije.
+5. S kakšno vrsto operandov želimo delat (celo število ali floating point) in koliko bitov bomo namenili za zapis posamezne vrste operandov (8,16,128,...)
+
+---
+## Kje hranimo operande znotraj CPE
+- V CPE vgradimo zelo majhen pomnilnik, ki ima le nekaj pomnilniških besed. Vsaki taki pomnilniški besedi, rečemo register. Računalniki imajo lahko 1,2,8,16,32 registrov:
+	- če ima CPE en sam register, se mu reče **akumulator** (ACC)
+		ACC $\leftarrow$ ACC operacijo OPERAND
+		Tipični primer takega računalnika: z80, 6502
+		Add #16 : ACC $\leftarrow$ ACC + 16 - eden od operandov je bil *eksplicitno* naveden (16), drugi pa *implicitni* (ACC)
+	- če ima CPE pomnilnik narejen iz več pomnilniških besed, se jim reče **registrski niz**
+		- rešitev pri vseh sodobnih računalnikih, ker imajo 8,16,32 registrov (32 ali 64 bitni)
+
+**Registrski niz** je razdeljen v skupini registrov:
+1. Starejši registri:
+	- registri v katerih se hranijo operande za splošne aritmetične operacije
+	- registri za računanje z naslovi
+	**Motorola 6800**: (70-ta leta)
+	- A,B - dva registra za aritmetične operacije - 8 bitna
+	- x - hranjenje in računanje z naslovi - 16 bitna
+	- SP - stack-pointer (skladni kazalec) - 16 bitna
+	**Intel x86-32**:
+		EAX, EBX, ECX, EDX - 32 bitni registri za aritmetične operacije
+		ESI, EDI, EBP, ESP - 32 bitni registri za računanje z naslovi
+2. Novejši registri:
+	Vsi registri so **enakovredni** in se uporabljajo tako za aritmetične operacije, kot tudi za hranjenje in računanje z naslovi. $\implies$ splošno-namenski registri
+	**ARMv7** (32-bit)
+		16 registrov: $r_0,r_1,r_2,...,r_{14},r_{15}$,
+		kjer je $r_{15}$ PC, $r_{14}$ LR (link register), $r_{13}$ stack pointer
+	**RISC-V** (32-bit)
+		32 registrov: $x_0$-$x_{31}$
+## Število eksplicitnih operandov
+1. Eno-operandni računalniki
+	ACC $\leftarrow$ ACC operacija OPERAND
+	V ukazu sta eksplicitno zapisano samo informacija o operaciji in operandu.
+	**Z80, 6502** (70-ta leta)
+2. Dvo-operandni računalniki
+	OP1 $\leftarrow$ OP1 operacija OP2
+	zgled(Intel) ADD EAX, EBX (EAX $\leftarrow$ EAX + EBX)
+3. Tri-operandni računalnik
+	OP3 $\leftarrow$ OP1 operacija OP2
+	**ARMv7**
+		ADD R2,R5,R7; R2 $\leftarrow$ R5 + R7
+		AND R2,R1,R8 ; R3 $\leftarrow$ R1 & R8
+	**RISC-V**
+		ADD X7,X13,X11 ; X7 $\leftarrow$ X13 + X11
+		SUB X29, X17, X30 ; X29 $\leftarrow$ X17 - X30
+## Lokacija operandov in načni naslavljanja
+- Kje smejo biti operandi, ki se uporabljajo v *aritmetičnih operacijah*. Te operacije so zelo pogoste!!! Ker jih želimo izvajati hitro zato ne želimo operandov v pomnilniku.
+
+Dve vrsti računalnikov:
+1. Registrsko-pomnilniški (npr. Intel) reg $\leftarrow$ reg OP (operand v pomnilniku)
+2. Registrsko-registrski - vsi operandi so v registrih (ARMv7,RISC-V)
+
+- Kako je podana *informacija o lokaciji* operandov?
+	- Informaciji o lokaciji, se reče **način naslavljanja**
+	- poznamo 3 vrste operandov (glede na njihovo lokacijo)
+		- **Takojšni operandi** (immediate) - operandi, ko so že v ukazu (ADD r4,r3,#1 ; r4 $\leftarrow$ r3 + 1) ![[Drawing 2025-10-28 13.31.09.excalidraw]]
+			- #1 je že takoj zapisan v ukazu in takoj na voljo za operacijo
+		- **Registrski operandi** so operandi, ki so že v enem od registrov v CPE. Informacija o njihovi lokaciji je podana z naslovom (indeksom, imenom) registra v ukazu.
+			npr: ADD r4, r3, #1 (r4 je **registrski operand**)
+			Ko CPE prebere tak ukaz, še nima tega operanda!!
+			- ima le informacijo, da se operand nahaja v r3
+			- ni takoj na voljo CPE, ker ga mora pred uporabo prebrati iz registra
+			![[Drawing 2025-10-28 13.37.45.excalidraw]]
+			- Če ima CPE $2^n$ registrov, potem v ukazu potrebujemo n bitov za zapis naslov registra
+		- **Pomnilniški operandi** 
+			- če v ukazu dovolimo pomnilniške operande, potem v ukazu moramo zapisati naslov pomnilniške besede, ki hrani operand. Kako?
+				- **Neposredno** v ukaz zapišemo naslov. Težava je, da so naslovi dolgi! (Intel)
+				- **Posredno** - naslov ali del naslova je vsebovan v enem od registrov.

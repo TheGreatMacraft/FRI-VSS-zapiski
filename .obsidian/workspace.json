@@ -4,36 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "1dea3d647f11aed2",
+        "id": "b312acb9504c2797",
         "type": "tabs",
         "children": [
           {
-            "id": "87b0607e1ef54ac4",
+            "id": "914f6464e4cd13eb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "diskretne strukture/Vaje.md",
-                "mode": "source",
-                "source": false
+                "file": "DnD/Army of the damned/armyofthedamned.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Vaje"
+              "icon": "lucide-file-text",
+              "title": "armyofthedamned"
             }
-          }
-        ]
-      },
-      {
-        "id": "9346bc209d6b0e31",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "967fbb4fa0de7a8f",
+            "id": "9e8e8fd7d3002b88",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diskretne strukture/Zapiski.md",
+                "file": "računalniška arhitektura/Zapiski.md",
                 "mode": "source",
                 "source": false
               },
@@ -41,7 +33,8 @@
               "title": "Zapiski"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,48 +184,48 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "87b0607e1ef54ac4",
+  "active": "9e8e8fd7d3002b88",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-10-24 12.39.31.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-28 13.37.45.excalidraw.md",
+    "računalniška arhitektura/Zapiski.md",
+    "Excalidraw/Drawing 2025-10-28 13.31.09.excalidraw.md",
+    "DnD/Characters/Lana.pdf",
+    "računalniška arhitektura/Vaje.md",
     "diskretne strukture/Vaje.md",
+    "Excalidraw/Drawing 2025-10-28 10.40.32.excalidraw.md",
+    "diskretne strukture/Zapiski.md",
+    "Excalidraw/Drawing 2025-10-28 09.58.11.excalidraw.md",
+    "DnD/Army of the damned/armyofthedamned.pdf",
+    "programiranje/izpiti/izpit 23-01-18-0900/izpit 23-01-18-0900.pdf",
+    "programiranje/izpiti/izpit 23-01-18-0900/1.py~",
+    "DnD/Characters/Taja.pdf",
+    "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
+    "DnD/Simplified Rules.md",
+    "programiranje/izpiti/izpit 22-01-17-13.00/izpit 22-01-17-13.00.pdf",
+    "programiranje/domače naloge/funkcije.py~",
+    "programiranje/domače naloge/funkcije.py",
+    "DnD/Dungeon Master's Guide.md",
+    "Untitled.md",
+    "Excalidraw/Drawing 2025-10-27 13.15.11.excalidraw.md",
+    "matematika/kolokviji/Kolokvij 1.md",
+    "Excalidraw/Drawing 2025-10-08 13.11.12.excalidraw.md",
+    "matematika/kolokviji/Rešitve 1. kolokvija.pdf",
+    "matematika/Vaje.md",
+    "uvod v računalništvo/Zapiski.md",
+    "DnD/Army of the damned/Army of The Damned.md",
+    "Excalidraw/Innistrad.md",
+    "Excalidraw/Drawing 2025-10-24 12.39.31.excalidraw.md",
     "Excalidraw/Drawing 2025-10-24 12.35.39.excalidraw.md",
     "Excalidraw/Drawing 2025-10-24 12.32.05.excalidraw.md",
     "Excalidraw/Drawing 2025-10-24 12.23.59.excalidraw.md",
-    "diskretne strukture/Zapiski.md",
     "Excalidraw/Drawing 2025-10-24 12.07.41.excalidraw.md",
     "Excalidraw/Drawing 2025-10-24 11.55.24.excalidraw.md",
     "Excalidraw/Drawing 2025-10-24 11.48.55.excalidraw.md",
     "Excalidraw/Drawing 2025-10-24 11.46.16.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 11.44.23.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 11.39.35.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 11.32.53.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 11.29.51.excalidraw.md",
-    "programiranje/izpiti/izpit 22-01-17-13.00/izpit 22-01-17-13.00.pdf",
-    "programiranje/izpiti/izpit 22-01-17-13.00/5.py~",
-    "računalniška arhitektura/Zapiski.md",
-    "računalniška arhitektura/Vaje.md",
-    "Excalidraw/Drawing 2025-10-24 09.49.16.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 09.46.44.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 09.42.24.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 09.38.42.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 09.24.02.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 09.09.58.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 09.03.57.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 08.17.56.excalidraw.md",
-    "DnD/Simplified Rules.md",
-    "DnD/Useful Sites.md",
-    "programiranje/izpiti/izpit 22-01-17-13.00/5.py",
-    "programiranje/izpiti/izpit 22-01-17-13.00/4.py~",
-    "diskretne strukture/literatura/dsvsp-predavanja1.pdf",
-    "diskretne strukture/literatura/Nepotrjeno 509951.crdownload",
-    "matematika/Matematika_RI_VS_e_handout.pdf",
     "slikice/Pasted image 20251023095859.png",
-    "matematika/kolokviji/Rešitve 1. kolokvija.pdf",
     "slikice/Pasted image 20251023085759.png",
     "slikice/Pasted image 20251023085610.png",
     "slikice/Pasted image 20251023084159.png",
-    "matematika/kolokviji/Nepotrjeno 921425.crdownload",
-    "matematika/kolokviji",
     "slikice/Pasted image 20251016151508.png",
     "slikice/Pasted image 20251016151207.png",
     "slikice/Pasted image 20251016150001.png",

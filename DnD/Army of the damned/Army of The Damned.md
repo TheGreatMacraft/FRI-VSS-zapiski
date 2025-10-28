@@ -26,5 +26,5 @@
 - **Ralph** is an ally of Katrina and Siegfried
 - **Rinelda Smit** is a ghoulcaller, helping Siegfried in creating skaabs.
 - *Skaab* is a malformed "offspring" created by skaberen, often using corpse parts.
-
 # The Adventure
+

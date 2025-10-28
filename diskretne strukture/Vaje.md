@@ -355,3 +355,24 @@ $B_2 = W(p,q,B_{n-1}\land B_{n-2})$
 ```spoiler-markdown
 ![[Drawing 2025-10-24 12.39.31.excalidraw]]
 ```
+
+# 4. Domača naloga
+1. Tromestni veznik A je definiran s predpisom $A(p,q,r) = P \vee (\neg q \land \neg r)$. Ali je nabor veznikov poln?
+- {A}
+- {$A,\neg$}
+- {$A,1$}
+- {A,0}
+- {A,$\veebar$}
+```spoiler-markdown
+![[Drawing 2025-10-28 09.58.11.excalidraw]]
+```
+
+2. Veznik A je definiran z $A(p,q,r) = \neg p \land \neg q \land \neg r$. Izrani $A_i i=0,1,...,$ so definirani rekurzivno z:
+- $A_0 = 0$
+- $A_1 = p$
+- $A_2 = q$
+- $A_N = A(A_{n-1},A_{n-2},A_{n-3})$ za n = 3,4,...
+Izračunaj $A_2004$.
+```spoiler-markdown
+![[Drawing 2025-10-28 10.40.32.excalidraw]]
+```

@@ -1,0 +1,1 @@
+1. Zapišite kompleksno število $z = -\frac{1}{2}+\frac{\sqrt{3}}{2}i$ v polarni obliki ter izračunajte z 12. Rezultat zapišite v obliki x + iy, kjer sta x, y R.

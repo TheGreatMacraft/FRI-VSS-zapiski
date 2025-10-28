@@ -398,7 +398,7 @@ Predikate ločimo po mestnosti.
 V izbrani interpretaciji interpretaciji enomestni predikati ustrezajo *lastnostim* elementov področja pogovora.
 Dvomestni predikati ustrezajo zvezam (tudi relacijam) med elementi področja pogovora.
 
-### Kvalifikatorja
+### Kvantifikatorja
 $\forall$ univerzalni kvantifikator
 $\exists$ eksistenčni kvantifikator
 
