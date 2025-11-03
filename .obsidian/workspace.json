@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "b312acb9504c2797",
+        "id": "1f6d4207ae3357f0",
         "type": "tabs",
         "children": [
           {
-            "id": "914f6464e4cd13eb",
+            "id": "cd44f99c106ad4eb",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "DnD/Army of the damned/armyofthedamned.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "armyofthedamned"
-            }
-          },
-          {
-            "id": "9e8e8fd7d3002b88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "računalniška arhitektura/Zapiski.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Zapiski"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -181,56 +164,59 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "9e8e8fd7d3002b88",
+  "active": "cd44f99c106ad4eb",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-10-28 13.37.45.excalidraw.md",
-    "računalniška arhitektura/Zapiski.md",
-    "Excalidraw/Drawing 2025-10-28 13.31.09.excalidraw.md",
-    "DnD/Characters/Lana.pdf",
-    "računalniška arhitektura/Vaje.md",
-    "diskretne strukture/Vaje.md",
-    "Excalidraw/Drawing 2025-10-28 10.40.32.excalidraw.md",
-    "diskretne strukture/Zapiski.md",
-    "Excalidraw/Drawing 2025-10-28 09.58.11.excalidraw.md",
-    "DnD/Army of the damned/armyofthedamned.pdf",
-    "programiranje/izpiti/izpit 23-01-18-0900/izpit 23-01-18-0900.pdf",
-    "programiranje/izpiti/izpit 23-01-18-0900/1.py~",
-    "DnD/Characters/Taja.pdf",
-    "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
-    "DnD/Simplified Rules.md",
-    "programiranje/izpiti/izpit 22-01-17-13.00/izpit 22-01-17-13.00.pdf",
-    "programiranje/domače naloge/funkcije.py~",
-    "programiranje/domače naloge/funkcije.py",
-    "DnD/Dungeon Master's Guide.md",
-    "Untitled.md",
-    "Excalidraw/Drawing 2025-10-27 13.15.11.excalidraw.md",
-    "matematika/kolokviji/Kolokvij 1.md",
-    "Excalidraw/Drawing 2025-10-08 13.11.12.excalidraw.md",
-    "matematika/kolokviji/Rešitve 1. kolokvija.pdf",
+    "matematika/Zapiski.md",
     "matematika/Vaje.md",
-    "uvod v računalništvo/Zapiski.md",
+    "Excalidraw/Drawing 2025-11-03 19.14.22.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-03 18.52.25.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-03 18.39.27.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-03 17.31.34.excalidraw.md",
+    "diskretne strukture/Zapiski.md",
+    "diskretne strukture/Vaje.md",
+    "DnD/Simplified Rules.md",
+    "DnD/Army of the damned/armyofthedamned.pdf",
+    "DnD/Monster Manual.pdf",
     "DnD/Army of the damned/Army of The Damned.md",
+    "DnD/Player's Handbook.pdf",
+    "DnD/Useful Sites.md",
+    "programiranje/domače naloge/lokacije_ovir.py~",
+    "programiranje/domače naloge/lokacije_ovir.py",
+    "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
+    "DnD/2014 Dungeon Master's Guide.pdf",
+    "Excalidraw/Shadowgrange.md",
+    "DnD/Army of the damned/Media/Into Stensia/blacksmith_example.jpg",
+    "DnD/Army of the damned/Media/Into Stensia/Nepotrjeno 999258.crdownload",
+    "DnD/Nepotrjeno 37866.crdownload",
+    "DnD/Army of the damned/Media/Shadowgrange/inn_example.jpg",
+    "DnD/Army of the damned/Media/Shadowgrange/Nepotrjeno 930000.crdownload",
+    "Note.md",
+    "^Eckhardt Sheck.md",
+    "slikice/Shadowgrange (1).png",
+    "DnD/Army of the damned/Media/Shadowgrange/Shadowgrange.png",
+    "DnD/Army of the damned/Media/Shadowgrange/Shadowgrange.jpg",
+    "slikice/Shadowgrange.png",
+    "DnD/Army of the damned/Media/Shadowgrange/Shadowgrange.png",
+    "DnD/Army of the damned/Notes.md",
+    "DnD/Dungeon Master's Guide.md",
     "Excalidraw/Innistrad.md",
-    "Excalidraw/Drawing 2025-10-24 12.39.31.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 12.35.39.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 12.32.05.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 12.23.59.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 12.07.41.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 11.55.24.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 11.48.55.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-24 11.46.16.excalidraw.md",
-    "slikice/Pasted image 20251023095859.png",
-    "slikice/Pasted image 20251023085759.png",
-    "slikice/Pasted image 20251023085610.png",
-    "slikice/Pasted image 20251023084159.png",
-    "slikice/Pasted image 20251016151508.png",
-    "slikice/Pasted image 20251016151207.png",
-    "slikice/Pasted image 20251016150001.png",
-    "slikice/Pasted image 20251016145846.png",
-    "slikice/Pasted image 20251016145255.png",
-    "slikice/Pasted image 20251016144951.png"
+    "DnD/Army of the damned/Media/Into Stensia/Ominous Bridge.png",
+    "DnD/Army of the damned/Media/Into Stensia/Explosive Summons.png",
+    "DnD/Army of the damned/Media/Into Stensia/Ancient Devoutees.png",
+    "Excalidraw/Drawing 2025-10-30 11.34.07.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-30 10.29.10.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-30 08.30.32.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-28 16.34.35.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-28 16.21.20.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-28 16.16.47.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-28 15.44.01.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-28 15.34.24.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-28 15.21.03.excalidraw.md"
   ]
 }

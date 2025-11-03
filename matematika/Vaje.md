@@ -231,7 +231,7 @@ $\sqrt{3}+1$
 ![[Drawing 2025-10-21 09.51.19.excalidraw]]
 ```
 
-# 4. Hitri test 4
+# 4. Hitri test
 
 1. Kako kompleksno število _z=-1+i_ zapišemo v polarni obliki ?
 2. Če je $z^3 = 8e^{i\frac{\pi}{3}}$ katera izmed spodnjih izjav je pravilna?
@@ -251,4 +251,42 @@ $\sqrt{3}+1$
 3. $\displaystyle \lim_{n \to \infty} \frac{(n+2)^2}{3n^2+n+1}$
 ```spoiler-markdown
 ![[Drawing 2025-10-23 10.58.08.excalidraw]]
+```
+
+# 5. Hitri test
+
+1. Katera izmed spodnjih izjav je gotovo pravilna?
+- Zaporedje, ki ima limito, ima stekališče.
+- Zaporedje, ki ima stekališče, je omejeno.
+- Zaporedje, ki nima stekališča, je omejeno.
+- Zaporedje, ki ima stekališče, je konvergentno.
+- Zaporedje, ki ima stekališče, ni konvergentno.
+- Zaporedje, ki je konvergentno, ima lahko več stekališč.
+2. Katero izmed spodnjih zaporedij ima limito 3?
+- $a_n = \frac{3+n}{1+2n}$
+- $a_n = \frac{3}{1+n}$
+- $a_n = \frac{3+3n+n^2}{1+n-n^2}$
+- $a_n = \frac{1+n-3n^2}{2+n-n^2}$
+- $a_n = \frac{3+n^2}{1+3n^2}$
+3. Koliko je vsota vrste $10 + \frac{5}{2} + \frac{5}{8} + \frac{5}{32} + ... + \frac{10}{4^n} + ...$?
+4. Koliko je vsota vrste $\displaystyle \sum_{i=0}^\infty \frac{4}{3^i}$?
+```spoiler-markdown
+![[Drawing 2025-10-30 10.29.10.excalidraw]]
+```
+# Domača naloga: 4. teden
+1. Z uporabo polarne oblike in de Moivrove formule izračunaj $(1 + i\sqrt{3})^6$.
+```spoiler-markdown
+![[Drawing 2025-11-03 17.31.34.excalidraw]]
+```
+2. Z uporabo polarne oblike in de Moivrove formule izračunaj $(1-i)^{12}$.
+```spoiler-markdown
+![[Drawing 2025-11-03 18.39.27.excalidraw]]
+```
+3. Poišči tisto rešitev enačbe $z^3 = -54 + 54i$ ki leži v prvem kvadrantu kompleksne ravnine.
+```spoiler-markdown
+![[Drawing 2025-11-03 18.52.25.excalidraw]]
+```
+4. Poišči tisto rešitev enačbe $z^3 = -26 -18i$ ki leži v prvem kvadrantu kompleksne ravnine.
+```spoiler-markdown
+![[Drawing 2025-11-03 19.14.22.excalidraw]]
 ```

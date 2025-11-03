@@ -250,4 +250,107 @@ If a creature doesn't have a climbing or swimming speed, each foot of movement c
 ## Resting
 Adventurers can take short rests in the middle of the day and long rest at the end of the day.
 ### Short Rest
-For each level, an adventurer has, they can roll a **hit dice**, to which they add their Constitution modifier to it and regain the total as hit points.
+For each level, an adventurer has, they can roll a **hit dice**, to which they add their Constitution modifier and regain the total as hit points. The player regains their hit dice after a [[#Long Rest]]
+### Long Rest
+At least 8 hour long period when player sleeps, reads, talks, eats or stands watch (no more than 2 hours). If the rest is interrupted by an hour of stressful activity (walking, fighting, etc.) player must restart the long rest to benefit from it.
+At the end of a long rest, character regains all lost hit points and half of the total hit dice.
+A character can only benefit from one long rest per day and must have at least 1 hit point to be able to partake in it.
+## Rewards
+Adventurers will find treasure, which they divide as they see fit. They will also be granted experience, which is divided equally among the characters. Adventurer can level up and gain perks, that are listed on their character sheet.
+
+| Experience Points | Level | Proficiency Bonus |
+| ----------------- | ----- | ----------------- |
+| 0                 | 1     | +2                |
+| 300               | 2     | +2                |
+| 900               | 3     | +2                |
+| 2.700             | 4     | +2                |
+| 6.500             | 5     | +3                |
+>[!info] Coinage
+>There are 3 types of coins: gold, silver and copper.
+>1 golden coin is worth 10 silver coins and 1 silver coin is worth 10 copper pieces.
+>Rare coins are platinum, which are worth 10 golden coins each and electrum coins,
+>which are worth 5 silver per coin.
+
+## Equipment
+Equipment consists of weapons, armor and other gear.
+### Carrying Capacity
+The characters carrying capacity is calculated by multiplying their Strength by 15. A character carrying a load that is too great, has a speed of 0.
+### Armor and Shields
+Armor falls into 3 categories: light, medium and heavy armor. You can also use a shield.
+#### Armor Proficiency
+If you wear a type of armor, you don't have proficiency with, you have *disadvantage* on any ability check, saving throw, or attack roll that involves Strength or Dexterity. You also can't cast spells.
+
+
+| Armor           | Cost   | AC   | Weight |
+| --------------- | ------ | ---- | ------ |
+| *Light Armor*   |        |      |        |
+| Leather         | 10 gp  | 11★  | 10     |
+| Studded leather | 45 gp  | 12★  | 13     |
+| *Medium Armor*  |        |      |        |
+| Hide            | 10 gp  | 12★★ | 12     |
+| Chain shirt     | 50 gp  | 13★★ | 20     |
+| Scale mail      | 50 gp  | 14★★ | 45     |
+| Breastplate     | 400 gp | 14★★ | 20     |
+| *Heavy Armor*   |        |      |        |
+| Ring mail       | 30 gp  | 14   | 40     |
+| Chain mail      | 75 gp  | 16   | 55     |
+| Splint          | 200 gp | 17   | 60     |
+| *Shield*        |        |      |        |
+| Shield          | 10 gp  | +2   | 6      |
+★ You add your Dexterity modifier to your AC, while wearing that armor
+★★ You add your Dexterity modifier, to a maximum of +2, to your AC while wearing that armor.
+#### Light Armor
+When wearing light armor, you add your Dexterity modifier to your base AC.
+#### Medium Armor
+When wearing medium armor, you add your Dexterity modifier to your base AC, but can't add no more than +2.
+**Scale mail** grants you disadvantage on stealth (Dexterity) checks while wearing it.
+#### Heavy Armor
+When wearing heavy armor, you don't apply your Dexterity modifier to your base AC. You also have disadvantage on stealth (Dexterity) checks.
+While wearing **Chain mail**, your speed is reduced by 10 feet if your Strength is lower than 13. While wearing **Splint**, your speed is also reduced by 10 feet if your Strength is lower than 15.
+#### Shields
+A shield increases your AC by 2. You can't benefit from more than one shield at a time.
+### Weapons
+Every weapon is either melee or ranged. A **melee weapon** is used to attack a target within 5 feet of you, while **ranged weapon** is used to attack a target at a distance.
+#### Weapon Proficiency
+The two main categories of weapon proficiency are **simple** and **martial**. Proficiency with a weapon allows you to add your proficiency bonus to your attack roll.
+#### Weapon Properties
+- **Ammunition** allows you to use a ranged weapon (arrows, throwing knifes, etc.). After the battle you can regain half of your ammunition, by searching the battle field. Using such weapon as a melee weapon is considered an [[#Improvised Weapon]].
+- **Finesse** lets you pick either Dexterity or Strength modifier when making an attack roll with that weapon.
+- **Heavy** grants disadvantage to small creatures on attack rolls.
+- **Light** is ideal for [[#Two-Weapon Fighting]].
+- **Loading** lets you fire only one piece of ammunition per action/reaction.
+- **Range** means a weapon can be used to make ranged attacks. It lists 2 number: first is normal range and second is long range. When attacking a target beyond normal reach, you have disadvantage, but attacking a target beyond long range isn't possible.
+- **Thrown** weapon can be used to make ranged attacks. If it is a melee weapon, you can use the same ability modifier for attack roll and damage roll as with melee attacks.
+- **Two-Handed** requires two hands to use.
+- **Versatile** weapon can be used with one or two hands, though it probably benefits from two hand use.
+#### Improvised Weapons
+If an improvised weapon bares resemblance with an actual weapon, it usually gains it's stats. If that's not the case, however, it deals 1d4 damage. This is also a damage dealt by a ranged weapon, that is used as a melee weapon and by a melee weapon that lacks range, but is thrown anyway. An improvised thrown weapon has a normal range of 20 feet and a long range of 60 feet.
+### Miscellaneous Gear and Services
+#ToDo 
+# Spellcasting
+## Spell Level
+A spell's level is a general indicator of how powerful it is. **Cantrips** are simple spells (level 0). Higher spell levels can be cast by higher level spellcasters. Character level and spell level don't correspond directly.
+## Know and Prepared Spells
+Clerics and wizards must prepare their spells. The number of prepared spells is shown on the character sheet. Which spells a spellcaster has prepared can be changed after finishing a long rest. Preparing a spell requires at least 1 minute of mediation or study per spell.
+## Spell Slots
+Spells slots limit the spellcaster's ability to cast spells. The spellcaster gets it's spell slots back after a [[#Long Rest]]. Some monsters can cast spells without having spell slots.
+### Casting a Spell at a Higher Level
+When using higher level spell slots, to cast lower level spells, those spells "expand" to fill that slot, sometimes gaining extra benefits.
+## Cantrips
+Cantrips can be cast without using a spell slot and without being prepared in advance. It is a level 0 spell.
+## Rituals
+The ritual spell can be cast the normal way or as a ritual. Such spell takes 10 minutes longer to cast, but doesn't expend a sell slot. The cleric must have a spell with a ritual tag prepared, while the wizard only needs to have it in their spellbook.
+
+>[!info] **Casting in Armor**
+>The spellcaster must be proficient with the armor to cast spells wearing it.
+## Casting a Spell
+### Casting time
+Most spells require a single action to cast, but some spells require a bonus action, a reaction or more.
+#### Bonus Action
+Such spell requires bonus action to be cast. The player can't have another bonus action on the same turn and can't cast another spell the same turn, except for cantrip with a casting time of 1 action.
+#### Reactions
+Some spells can be cast as reactions.
+#### Longer Casting Times
+When casting spells with longer casting time than a single action, you must spend every turn casting said spell and have uninterrupted [[#Concentration]] while you do so.
+### Range
+#ToDo

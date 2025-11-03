@@ -1,18 +1,9 @@
 def skupne_povezave(pot1,pot2):
-    a = list(pot1)
-    b = list(pot2)
-    rezultat = []
+    st = 0
+    krajsi = pot1 if pot1 < pot2 else pot2
+    for i in range(len(krajsi)):
+        if(pot1[i:i+2]==pot2[i:i+2]):
+            st += 1
+    return st
 
-    for i in range(0,len(a)):
-        if(a[i] == b[i]):
-            j = i
-            tmp = []
-            while j < range(0,len(a)):
-                if(a[j] != b[j]):
-                    i = j
-                    break
-                tmp.append(a[j])
-            if(len(tmp) > 1):
-                rezultat.append(tmp)
-    return rezultat
-print(skupne_povezave("ASAIMWGVIEMHEUTUMVIVHIV"," OIMIMAWAREMMPBTUMGIBTIOWE"))
+print(skupne_povezave("ASAIMWGVIEMHEUTUMVIVHIV","OIMIMAWAREMMPBTUMGIBTIOWE"))

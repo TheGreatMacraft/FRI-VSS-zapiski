@@ -376,3 +376,100 @@ Izračunaj $A_2004$.
 ```spoiler-markdown
 ![[Drawing 2025-10-28 10.40.32.excalidraw]]
 ```
+
+# 5. Teden Vaje
+
+1. Preveri pravilnost sklepov s pomočjo dokaza s protislovjem.
+- $(p \implies q) \land (r \implies s )$, $s \land q  \implies t$, $\neg t \models \neg(p \land r)$
+```spoiler-markdown
+![[Drawing 2025-10-28 15.21.03.excalidraw]]
+```
+- $p \vee q, p \implies r, q \implies s \models r \vee s$
+```spoiler-markdown
+![[Drawing 2025-10-28 15.34.24.excalidraw]]
+```
+- $p \implies r \land t, t \vee s \implies \neg q \models \neg (p\land q)$
+```spoiler-markdown
+![[Drawing 2025-10-28 15.44.01.excalidraw]]
+```
+
+2. Preveri pravilnost sklepa s pomočjo pogojnega sklepa.
+- $p \implies (q \vee r), \not r \models p \implies q$
+```spoiler-markdown
+![[Drawing 2025-10-28 16.16.47.excalidraw]]
+```
+- $p \vee q \implies r \land s, r \vee t \implies u \models p \implies u$
+```spoiler-markdown
+![[Drawing 2025-10-28 16.21.20.excalidraw]]
+```
+3. Za področje pogovora izberemo naravna števila. Enomestni predikat P in dvomestni predikat D interpretiramo kot:
+	P(x) : x je praštevilo,
+	D(x,y) : število x deli število y.
+	Zapiši interpretacije in določi logične vrednosti spodnjih izjavnih formul. Zapiši še negacije teh izjavnih formul.
+- $\forall x (P(x) \vee D(2,x))$
+```spoiler-markdown
+Vsako naravno število je praštevilo ali pa večkratnik števila 2.
+```
+- $\exists x (P(x) \land D(2,x))$
+```spoiler-markdown
+Obstaja naravno število, ki je praštevilo in večkatnik števila 2.
+```
+- $\exists x (P(x) \land D(5,x))$
+```spoiler-markdown
+Obstaja naravno število x, ki je praštevilo in večkratnik števila 5
+```
+- $\forall x (P(x) \implies \neg D(10,x))$
+```spoiler-markdown
+Za vsako naravno število velja: če je praštevilo, potem ni deljivo.
+```
+- $\forall x \exists y D(x,y)$
+```spoiler-markdown
+Za vsako naravno število x, obstaja naravno število y, tako da x deli y.
+Negacija: $\exists x \forall y \neg D(x,y) \sim 1$
+```
+- $\exists x \forall y (D(x,y) \implies \neg P(y))$
+```spoiler-markdown
+Obstaja naravno število x, da za vsako naravno število y velja, da če x deli y, potem y ni praštevilo.
+
+Negacija: $\forall x \exists y (\neg (D(x,y) \implies \neg P(y)))$
+```
+4. Poišči interpretacije v katerih imajo naslednji pari izjavnih formul nasprotne logični vrednosti.
+- $\forall x (P(x) \implies R(x)), \exists x (P(x) \implies R(x))$
+```spoiler-markdown
+![[Drawing 2025-10-28 16.34.35.excalidraw]]
+```
+
+# Kviz po predavanjih v 5. tednu
+1. Katera izmed naslednjih formul je resnična v vsaki interpretaciji?
+- $\forall x (P(x) \land Q(x)) \implies \forall x P(x) \land \forall x Q(x)$
+- $\forall x (P(x) \land Q(x)) \implies \exists x P(x) \vee \exists x Q(x)$
+- $\exists x (P(x) \land Q(x)) \implies \forall x P(x) \land \forall x Q(x)$
+- $\forall x (P(x) \vee Q(x)) \implies \exists x P(x) \land \exists x Q(x)$
+
+```spoiler-markdown
+1.
+```
+2. Za množice A={1,2,3}, B={3,4,5} in C={5,6} določi, katere izmed naslednjih zvez veljajo:
+- A in B sta disjunktni
+- A in C sta disjunktni
+- $A \cap B \cap C = \emptyset$
+- $B \subseteq A \cup C$
+- $A \cup B \subseteq A \cup C$
+- $A \cup B \subset B + C$
+- $A + B \subseteq A \cup C$
+- $A^c \cap B \subseteq A \cup C$
+```spoiler-markdown
+2,3,6,7
+```
+3. Naj bodo A,B,C poljubne množice. Katere od naslednjih enakosti z množicami držijo in zakaj?
+ - $B \cup (B \cap C) = C$
+ - $A + (B \cup C) = (A + B) \cup (A+C)$
+ - $C \cap (B \cup A) = (C \cap B) \cup (C \cap A)$
+ - $A \cap B \cap A = A$
+ - $B + (A \cap C) = (B + A) \cap (B + C)$
+ - $B \cap (A + C) = (B \cap A) + (B \cap C)$
+ - $C \cap B \cap C = B \cap C$
+ - $C \cup (C \cap A) = C$
+ ```spoiler-markdown
+ 3,7,8
+ ```

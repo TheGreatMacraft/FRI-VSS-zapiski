@@ -288,3 +288,27 @@ Zaporedje je **konvergentno**, če ima limito. V nasprotnem primeru je **diverge
 - Če je $b_n \ne 0$ za vsak n in $b \ne 0$, je $\displaystyle \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b}$
 - Če je $a_n > 0$, za vsak n in $a > 0$, je $\displaystyle \lim_{n \to \infty}a_n^{b_n} = a^b$
 
+### Izrek o "sendviču"
+Če za vsak n velja $a_n \le b_n \le c_n$ in $\displaystyle \lim_{n \to \infty} a_n = \lim_{n \to \infty} c_n = a$, je tudi $\displaystyle \lim_{n \to \infty} b_n = a$
+![[Drawing 2025-10-30 08.30.32.excalidraw]]
+
+# Vrste
+
+Vrsta je vsota členov zaporedja. Iz končnih zaporedji tako dobimo **končne vrste**, ki jih vedno lahko izračunamo. Pri neskončnih vrstah pa o vsoti neskončno mnogo členov ne moremo govoriti, saj ni mogoče sešteti neskončno členov.
+
+**Vrsta** je končna vsota členov: $a_1 + a_2 + a_3 + ... + a_k$, ki jo zapišemo krajše s sumacijskim znakom $\displaystyle a_1 + a_2 + a_3 + ... + a_k = \sum_{i=1}^k a_i$ (končna vsota)
+$\displaystyle a_1 + a_2 + ... = \sum_{i=1}^\infty a_i$ (neskončna vsota)
+$\displaystyle a_1 + a_2 + ... = \lim_{n \to \infty}(q_1 + a_2 + ... + a_n)$
+$\displaystyle \sum_{i=1}^\infty a_i = \lim_{n \to  \infty}(\sum_{i=1}^n a_i)$
+delna vsota(Sn) = $\displaystyle \sum_{i=1}^n a_i$
+neskončna vsota: $\displaystyle \sum_{i = 1}^\infty a_n = \lim_{n\to\infty}Sn$
+Neskončna vsota je konvergentna, če obstaja limita delnih vsot Sn.
+
+Vrsta $\displaystyle \sum_{i=1}^\infty a_i$ je **konvergentna**, če je konvergentno zaporedje delnih vsot $\displaystyle Sn = \sum_{i=1}^n a_i$.
+Vrsta je torej konvergentna, če lahko smiselno govorimo o njeni vsoti. V nasprotnem primeru je vrsta **divergentna**.
+
+## Geometrijska vrsta
+Formula končne vsote: $\displaystyle \sum_{i=0}^n a*q^i = a * \sum_{i=0}^n q^i = a * \frac{1-q^{n+1}}{1-q}$
+Neskončna vsota:
+$\displaystyle \sum_{i=0}^\infty a*q^i = \lim_{n\to\infty}(\sum_{i=0}^n a * q^i) = lim_{n\to\infty}(q * \frac{1-q^{n+1}}{1-q})$
+

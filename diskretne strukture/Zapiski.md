@@ -268,7 +268,7 @@ $(A_1 \land A_2 \land ... \land A_n) \implies B$ je "vedno" red (tavtologija)
 $A,A\implies B \models B$   modus ponens (MP)
 $A \implies B, \neg B \models  \neg A$   modus tollens (MT)
 $A \vee B, \neg B \models A$   disjunktivni silogizem (DS)
-$A \implies B, B \implies C \models A \implies C$   hipotetični sigolizem (HS)
+$A \implies B, B \implies C \models A \implies C$   hipotetični sigolizem (HS)e
 $A,B \models A \land B$   združitev (Zd)
 $A \land B \models A$   poenostavitev (Po)
 $A \models A \vee B$   pridružitev (Pr)
@@ -518,7 +518,7 @@ Izjavna formula V je **neizpolnljiva**, če je neresnična v vsaki interpretacij
 - $\forall x \forall y W \sim \forall y \forall x W$ (samo če sta neposredno eden ob drugem)
 - $\exists x \exists y W \sim \exists y \exists x W$ (samo če sta neposredno eden ob drugem)
 
-- $\forall (W \land V) \sim \forall x W \land \forall x V$
+- $\forall x (W \land V) \sim \forall x W \land \forall x V$
 - $\exists x (W \vee V) \sim \exists x W \vee \exists x V$
 
 #### Zakoni predikatnega računa z omejitvami
@@ -529,3 +529,133 @@ Izjavna formula V je **neizpolnljiva**, če je neresnična v vsaki interpretacij
 - $\forall x (C \land W) \sim C \land \forall x W$
 - $\exists x (C \land W) \sim C \land \exists x W$
 
+### Preneksna normalna oblika
+Vsako formulo lahko enakovredno zapišemo tako, da se kvantifikatorji nahajajo samo na začetku.
+1. Preimenujemo spremenljivke
+2. Znebimo se $\implies$ in $\Leftrightarrow$, raje imamo $\neg, \land, \vee$.
+3. Izvlečemo kvantifikatorje na začetek z uporabo zakonov predikatnega računa.
+
+Zgled:
+
+![[Drawing 2025-10-30 11.34.07.excalidraw]]
+
+# Operacije z množicami
+**relacija pripadnosti** ... $x \in A$, x pripada A.
+**podajanje množic**:
+- z naštevanjem elementov A = {0,1,2}
+- z neko izjavno formulo A={$x ; \phi(x)$}
+	Velja: $x \in A \Leftrightarrow \phi(x)$
+
+Zgled:
+- A = {$x;x\notin x$} = $\emptyset$
+- B = {$x;x = 0 \vee x = 1 \vee x = 2$} = {0,1,2}
+- C = {$x;x^2 + 1 \ge 5$}
+
+- Ni vsaka izjavna formula dobra:
+R = {$x ; x\notin x$}
+Ali velja $R\in R$?
+$R \in R \Longleftrightarrow R \notin R$
+## Enakost in vsebovanost
+Množici A in B sta **enaki**:
+$A = B \Longleftrightarrow \forall x (x \in A \Leftrightarrow x \in B)$
+Množica A je **podmnožica** množice B:
+$A \subseteq B \Longleftrightarrow \forall x (x \in A \implies x \in B)$
+relacija **inkluzije**
+Množica A je **prva podmnožica** množice B:
+$A \subset B \Longleftrightarrow A \subseteq B \land A \ne B$
+relacija **stroge inkluzije**
+
+## Operacije z množicami
+- **unija** $A \cup B$ = {$x ; x \in A \vee x \in B$}
+- **presek** $A \cap B$ = {$x;x \in A \land x \in B$}
+- **razlika** A \ B = {$x;x \in A \land x \notin B$}
+- **simetrična razlika** A+B={$x;x \in A \veebar x \in B$}
+
+### Lastnosti operacij
+- $A = B \Longleftrightarrow A \subseteq B \land B \subseteq A$
+- $A \subseteq B \implies A \cup C \subseteq B \cup C$
+- $A \subseteq B \implies A \cap C \subseteq B \cap C$
+- $A \cap B \subseteq A \subseteq A \cup B$
+Pravimo, da sta množici A in B **disjunktivni**, če je $A \cap B = \emptyset$
+
+## Univerzalna množica in komplement
+**Univerzalna množica**, označujemo jo z S, ustreza področju govora v predikatnem računu.
+**Vse** obravnavane množice so vsebovane v univerzalni množici S.
+**Komplement** množice A, označimo ga z $A^c$, definiramo kot $A^c$ = S\A
+
+### Lastnosti komplementa
+- $(A^c)^c = A$
+- $(A \cup B)^c = A^c \cap B^c$
+- $(A \cap B)^c = A^c \cup B^c$
+- A \ B = $A \cap B^c$
+- $A \subseteq B \implies B^c \subseteq A^c$
+- $A \cap B = \emptyset \Longleftrightarrow A \subseteq B^c \Longleftrightarrow B \subseteq A^c$
+
+## Enakosti z množicami
+Pokažemo, da velja $A \cup (A \cap B) = A$
+
+Kako pokažemo, da sta množici L in D enaki?
+- Pokažemo, da L=D in D=L
+- $x\in L$ vlečemo enakoveednosti $x\in D$
+Kako pokažemo, da L in D nista enaki?
+- izberemo konkretni množici A = {1,2,3}, B = {3,4} in poiščemo set, ki pripada L in ne pripada D.
+
+$x \in A \cup (A \cap B))...$
+$x \in A \vee x \in A \cap B ...$
+$x \in A \vee (x \in A \land x \in B)...$
+$a \vee (a \land b)...$
+a...
+
+$A \cup (A \cap B) = A$
+
+$x \in A ... a$
+$x \in B ... b$
+
+**Prednost operacij z množenjem**: $\subset |  \cap,$\\|$\cup,+$
+
+## Zakoni enakosti z množicami
+1. Zakon dvojnega komplementa:
+	- $(A^c)^c = A$
+2. Idempotenca: 
+	- $A \cap A = A$
+	- $A \cup A = A$
+3. Komutativnost:
+	- $A \cap B = B \cap A$
+	- $A \cup B = B \cup A$
+	- $A + B = B + A$
+4. Asociativnost:
+	- $(A \cap B) \cap C = A \cap (B \cap C)$
+	- $(A \cup B) \cup C = A \cup (B \cup C)$
+	- $(A+B)+C = A+(B+C)$
+5. Absorpcija:
+	- $A \cap (A \cup B) = A$
+	- $A \cup (A \cap B) = A$
+6. Distributivnost:
+	- $(A \cap B) \cup C = (A \cup C) \cap (B \cup C)$
+	- $(A \cup B) \cap C = (A \cap C)\cup(B \cap C)$
+	- $(A+B)\cap C = (A \cup C) + (B \cap C)$
+7. de Morganova zakona:
+	- $(A \cup B)^c = A^c \cap B^c$
+	- $(A \cap B)^c = A^c \cup B^c$
+8. Kontrapozicija: 
+	- $A \subseteq B \sim B^c \subseteq A^c$
+9. Lastnosti *prazne* množice $\emptyset$ in *univerzalne* množice S:
+	- $A \cup A^c = S$
+	- $A \cap A^c = \emptyset$
+	- $A + A = \emptyset$
+	- $A+A^c = S$
+10. Lastnosti $\emptyset$ in S:
+	- $A \cap \emptyset = \emptyset$
+	- $A \cup \emptyset = A$
+	- $A \cap S = A$
+	- $A \cup S = S$
+11. Lastnosti vsebovanosti:
+	- $A \subseteq B \sim A \cup B = B \sim A \cap B = A \sim A$ \ $B = \emptyset$
+	- če $A \subseteq B$, potem $A \cup C \subseteq B \cup C$
+	- če $A \subseteq B$, potem $A \cap C \subseteq B \cap C$
+	- $A \cap B \subseteq A, B \subseteq A \cup B$
+12. Lastnosti razlike množic:
+	- A\B$=A\cap B^c$
+13. Lastnosti simetrične razlike:
+	- $A+B = (A$\\$B) \cup (B$\A)
+	- $A + B = (A \cup B)$\\$(A \cap B)$
