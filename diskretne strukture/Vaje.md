@@ -473,3 +473,44 @@ Negacija: $\forall x \exists y (\neg (D(x,y) \implies \neg P(y)))$
  ```spoiler-markdown
  3,7,8
  ```
+# Domača naloga, 5. teden
+1. Ali je sklep $\neg p \implies q \implies \neg r$, $\neg q \vee (p \implies r)$, $(\neg q \vee s) \Leftrightarrow (r \implies p) \models p \vee q \land r$
+```spoiler-markdown
+![[Drawing 2025-11-04 09.39.36.excalidraw]]
+```
+2. Koliko je protiprimerov za sklep $t \vee p \vee u, s \vee \neg t \vee s, u \land (\neg t \vee s) \models \neg r \vee q$?
+```spoiler-markdown
+![[Drawing 2025-11-05 10.24.54.excalidraw]]
+```
+3. Področje pogovora so planeti. $Z(x)$ pomeni, da je planet x podoben Zemlji, $Ž(x)$ pa pomeni, da ima planet x življenje. Napiši ustrezno interpretacijo naslednjih izjav.
+- $\forall x Z(x) \vee \forall x Ž(x)$
+- $\neg \forall (Z(x) \vee Ž(x))$
+- $\forall x (Ž(x) \implies Z(x))$
+- $\forall x Z(x) \vee \forall x \neg Z(x)$
+- $\forall x (Z(x) \vee \neg Z(x))$
+```spoiler-markdown
+1. Vsi planeti so podobni zemlji, ali pa imajo vsi planeti življenje.
+2. Obstaja tak planet, ki ni podoben zemlji in nima življenja.
+3. Vsak planet, ki ima življenje, je podoben zemlji.
+4. Vsi planeti so podobni zemlji ali pa noben planet ni podoben zemlji.
+5. Za vsak planet velja, da je podoben zemlji ali pa ni podoben zemlji.
+```
+# Domača naloga, 6. teden
+1. Naj A(x) pomeni, da je x astronavt, naj P(x) pomeni, da je x planet in naj V(x,y) pomeni, da bo x potoval na y.
+	Zapiši simboličen zapis izjave: **Nobenega planeta ne bodo obiskali vsi astronavti.**
+```spoiler-markdown
+$\forall x(P(x) \implies \exists y(A(y) \land \neg V(y,x))$
+```
+2. Ali so naslednji izrazi paroma enakovredni?
+- $\exists x(P(x) \land Q(w))$ in $\exists x P(x) \land Q(w)$
+- $\forall x \exists z P(x,z)$ in $\exists x \forall z P(x,z)$
+- $\forall x P(x)$ in $\forall z P(z)$
+- $\forall x P(t)$ in $\exists x P(z)$
+- $\forall x (P(x) \land Q(x))$ in $\forall x P(x) \land \forall x Q(x)$
+```spoiler-markdown
+1. DA
+2. NE
+3. DA
+4. NE
+5. DA
+```

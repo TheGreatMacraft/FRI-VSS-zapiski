@@ -290,3 +290,34 @@ $\sqrt{3}+1$
 ```spoiler-markdown
 ![[Drawing 2025-11-03 19.14.22.excalidraw]]
 ```
+# Vaje 6. teden
+1. Dokaži ali je zaporedje $a_n = \frac{2n-1}{n+3}$ konvergentno. Izračunaj od katerega n naprej, so vsi členi na ($2 - \frac{1}{4},2+\frac{1}{4}$)
+```spoiler-markdown
+![[Drawing 2025-11-04 15.25.04.excalidraw]]
+```
+2. Izračunaj limito $\displaystyle \lim_{n\to\infty} (\sqrt{n+1}-\sqrt{n})$
+```spoiler-markdown
+![[Drawing 2025-11-04 16.04.32.excalidraw]]
+```
+3. Izračunaj $\displaystyle \lim_{n\to\infty} \frac{2^{n+1}+3^n}{2^n-3^{n-1}}$
+```spoiler-markdown
+![[Drawing 2025-11-04 16.13.30.excalidraw]]
+```
+4. Izračunaj $\displaystyle \lim_{n\to\infty} \frac{\sqrt{2^n+2}}{2^n+1}$
+```spoiler-markdown
+![[Drawing 2025-11-04 16.27.18.excalidraw]]
+```
+
+# Domača naloga: 5. teden
+1. Od katega člena delje je zaporedje $a_n = \frac{10^{2n}}{n!}$ strogo padajoče ($a_n > a_{n+1}$)?
+```spoiler-markdown
+![[Drawing 2025-11-05 11.17.07.excalidraw]]
+```
+2. Dano je zaporedje $a_n = \frac{n^6-5n+7*5^n}{5^n-1}$. Izračunaj limito tega zaporedja.
+```spoiler-markdown
+![[Drawing 2025-11-05 11.27.20.excalidraw]]
+```
+3. Izračunaj limito zaporedja $a_n = \frac{5n^2+n-1}{5n^2+2n+1}$ in poišči prvi člen tega zaporedja, ki je znotraj $\epsilon$-okolice limite za $epsilon = \frac{1}{50}$.
+```spoiler-markdown
+![[Drawing 2025-11-05 11.35.35.excalidraw]]
+```

@@ -1,4 +1,16 @@
 
+
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
 # Adventure Background
 - **Archangel Avacyn** is trapped within the *Helvault*, after a desperate struggle with the demon **Griselbrand**. Saving her, would mean shattering the *Helvault* and releasing hundreds of years worth of captured demons.
 - A mystical tuning fork, an artifact in church's possession is the key to free **Avacyn** without releasing the demons. 
@@ -151,3 +163,33 @@ The basement is pitch black, so the characters will need dark vision or a source
 >*Beside the back wall is a wooden desk with piles of papers covering its surface along with a leather-bound book. Beside the desk is a humanoid figure laying down on a metal platform with dozens of utensils littering its sides.*
 
 In the basement, there are [[Monster Manual.pdf#page=33|5 twig blights and 1 vine blight]], a Siegfried attempt at creating a living weapon against the vampires. These plants have devoured most of the nutrients from the hawthorn tree and now wait for the opportunity to attack the party.
+
+On the metal platform lays a skaab, having copper plates with silver-inlaid runes woven onto it. The strange fluid in most glass bottles is skaab's *blood*, made of lamp oil with a pinch of angel blood.
+
+On the desk is Siegfried,s journal. The contents praise the bravery and perserverence of **Stensian countrymen**. But above all, Siegfried wrote about his **love for Katarina**. In his journal, he outlines countless plans and i**deas on how to protect his people** from horrors of the night, especially from vampires, an endeavor he devoted his life to. His final entries speak of progressively worse situation, since the Avacyn's disappearance and the magic fading. In his last ditch effort, he turned to **necromancy**, deeming in the necessary evil.
+
+His desk is full of pages about necro-alchemy, the art of creating undead *skaabs*, along with a coded letter:
+![[Letter.png|250]]
+>[!scroll] Deciphered letter
+>**Siegfried,**
+>
+>I am pleased you have chosen to continue your studies in necro-alchemy. Your progress has been impressive, and you will achieve far more if you move your work to Mauer Estate. You will find good space and proper subjects there. I will assist when I can.
+>
+>— **Stitcher Geralf**
+
+>[!treasure] [[2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf#page=231|Alchemy Jug]]
+>Siegfried used the jug to produce oil for skaabs.
+
+>[!treasure] Various Necro-Alchemical Equipment
+>Worth 500 gp to fellow stitchers, but commoners and members of the Church would be hostile to anyone carrying these items.
+
+>[!treasure] Experience Points
+>Divide 325 XP equally among the characters for destroying the blights.
+
+### Mayor's House
+>[!scroll] Mayor's House
+>*The mayor’s house is a one of the larger and more comfortable homes in the village. The two-story building is built atop a small hill not far from the chapel and has a large hawthorn tree sticking up through its roof.*
+>
+>*The house seems ordinary enough until you come close and notice that the mirror placed on the wooden door has been shattered. Holy protection prayers to Avacyn engraved on the door frame have been scratched out with a blade, and the door is slightly ajar. The square-framed windows reveal nothing on the inside; the house is pitch black.*
+
+With a DC 12 Perception (Wisdom) check, the adventurers notice many **humanoid footprints** 

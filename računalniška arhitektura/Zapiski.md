@@ -319,3 +319,63 @@ Dve vrsti računalnikov:
 			- če v ukazu dovolimo pomnilniške operande, potem v ukazu moramo zapisati naslov pomnilniške besede, ki hrani operand. Kako?
 				- **Neposredno** v ukaz zapišemo naslov. Težava je, da so naslovi dolgi! (Intel)
 				- **Posredno** - naslov ali del naslova je vsebovan v enem od registrov.
+## Kakšne operacije naj poznajo arhitekture
+1. **Aritmetično-logične operacije**
+	- aritmetika (+,-,\*,...,/)
+	- logične (IN, ALI, NE, ...)
+	- pomiki (logični & aritmetični)
+2. **Prenos podatkov med CPE registri in RAM**
+	- LOAD/STORE ukazi
+3. **Kontrolni ukazi**
+	- z njimi spreminjamo potek izvajanja ukazov oz. programov
+	- to so ukazi, ki **spreminjajo PC**
+		Spreminjanje PC je lahko:
+		1. **Brezpogojno** (brezpogojni skoki) 
+			- običajno ukazi za klicanje in vračanje iz podprograma
+		2. **Pogojno** (pogojni skoki)
+			- Pogojni biti (*N - negative, Z - zero, V - overflow, C - carry*) - zastavice (flags)
+				- CPE po vsaki operaciji postavi/pobriše te bite
+				- po vsaki izredni operaciji CPE pregleda rezultat:
+					a) če so vsi biti v rezultatu = 0
+					b) če je MSB = 1, potem postavi N bit
+					c) če sešteva 2 števili in zunaj ... IDK
+					d) če seštevamo ali odštevamo dve enako predznačeni števili in ima rezultat drugačen predznak $\implies V = 1$
+				- CPE mora imeti dokaj kompleksno logiko, da vsakič preveri rezultat glede na te 4 bite. $\implies$ naslednji člen (pogojni skok) lahko premeni PC glede na te 4 bite. (Intel)
+			- Pogojni register - ukaz za pogojni skok preveri ali je v registru = 0 - pogoj postavljamo z ukazi, ne s posebno logiko (RISC-V)
+4. **Operacije v FP (floating point)** - operacije v DP, sistemski ukazi
+## Vrste in dolžina operandov
+- dolžina v bitih: 8 - byte, 16 - half word, 32 - word, 64 - double word, 128 - quad word
+Vrste:
+- številski (predznačeni, nepredznačeni, FP)
+- znaki
+- barve
+- zvoki
+# Arhitektura Ukazov ARM-V Lite
+1. Kako se operandi hranijo znotraj CPE?
+- ARMv7 ima 16 32-bitnih registrov.
+- R15 je PC - le ta register ima poseben namen, glede kaj **hrani** - hrani naslov naslednjega ukaza (PC)
+- R14 - v njem je shranjen *povratni naslov* (Link Register)
+- R13 - *Stack Pointer*
+1. ARMv7 ima 3-operandne ukaze
+**Format ukazov pri ARMv7 Lite**
+- vsi ukazi so 32-bitni:
+	31 - 28: pod kakšnim pogojem naj se nek ukaz izvede (condition)
+	- 0000 - izvedi, če je Z=1 (EQ)
+	- 0001 - izvedi, če je Z=0 (NEQ)
+	- 0010 - izvedi, če je C=1 (CS)
+	- 0011 - izvedi, če je C=0 (CC)
+	- 0100 - izvedi, če je N=1 (NS)
+	- 0101 - izvedi, če je N=0 (NC)
+	- 0110 - izvedi, če je V=1 (VS)
+	- 0111 - izvedi, če je V=0 (VC)
+
+	- 1110 - ALWAYS (izvedi ukaz bedno) $\implies$ to bodo imeli v zgornjih 4 bitih vsi ukazi razen pogojnih
+	27-25: povejo tip ukaza:
+	- 00x: data processing
+	- 010: LOAD/STORE ukazi
+	- 10x: kontrolni ukazi
+## Data Processing Ukazi
+![[Drawing 2025-11-04 12.38.29.excalidraw]]
+
+## Load/Store Ukazi
+![[Drawing 2025-11-04 13.26.36.excalidraw]]

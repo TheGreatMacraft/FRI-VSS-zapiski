@@ -268,7 +268,7 @@ $(A_1 \land A_2 \land ... \land A_n) \implies B$ je "vedno" red (tavtologija)
 $A,A\implies B \models B$   modus ponens (MP)
 $A \implies B, \neg B \models  \neg A$   modus tollens (MT)
 $A \vee B, \neg B \models A$   disjunktivni silogizem (DS)
-$A \implies B, B \implies C \models A \implies C$   hipotetični sigolizem (HS)e
+$A \implies B, B \implies C \models A \implies C$   hipotetični silogizem (HS)
 $A,B \models A \land B$   združitev (Zd)
 $A \land B \models A$   poenostavitev (Po)
 $A \models A \vee B$   pridružitev (Pr)
@@ -659,3 +659,104 @@ $x \in B ... b$
 13. Lastnosti simetrične razlike:
 	- $A+B = (A$\\$B) \cup (B$\A)
 	- $A + B = (A \cup B)$\\$(A \cap B)$
+
+## Družine množic
+Naj bo A = {$A_1,A_2,A_3,...$} = {$A_i;i\in I$} **družina množic**. Z $I$ označimo indeksno množico.
+**Unija družine** A je množica $\displaystyle \bigcup A = \bigcup_{i\in I} A_i$ = {$x; \exists i (i \in I \land x \in A_i)$}
+**Presek družine** A je množica $\displaystyle \bigcap A = \bigcap_{i\in I} A_i$ = {$x;\forall i (i \in I \implies x \in A_i)$}
+**Singleton** je množica z enim samim elementom.
+**Par** je množica dveh elementov.
+
+Intervali na $\mathbb{R}$ [a,b] = {$x \in R, a \le x \le b$}
+
+Zgledi družin:
+$A_i = [i,i+1]$ ; $i \in \mathbb{Z}$
+1. $\displaystyle \bigcup_{i\in \mathbb{Z}} [i,i+1] = \mathbb{R}$
+	$\displaystyle \bigcap_{i \in \mathbb{Z}}[i,i+1] = \emptyset$
+2. $\displaystyle \bigcup_{i\in\mathbb{Z}}[i,i+1) = \mathbb{R}$
+	$\displaystyle \bigcap_{i\in\mathbb{Z}} [i,i+1) = \emptyset$
+3. $\displaystyle \bigcup_{i\in\mathbb{N}} (i,\infty) = (0,\infty)$, $\displaystyle B_i = (i,\infty) \implies B_0 \supseteq B_1 \supseteq B_2 \supseteq B_3 \supseteq ... \implies \bigcup_{i \in \mathbb{N}} B_i = B_0$
+	$\displaystyle \bigcap_{i\in\mathbb{N}} (i,\infty) = \emptyset$
+4. $\displaystyle \bigcup_{i\in\mathbb{N}} (2^{-i},\infty) = (0,\infty)$
+	$C_i = (2^{-i},\infty) \implies C_0 \subseteq C_1 \subseteq C_2 \subseteq ...$
+	$\displaystyle \bigcap_{i\in\mathbb{N}}(2^{-i},\infty) = (1,\infty)$
+## Pokritje in razbitje
+Družine množic A = {$A_i;i\in I$} je **pokritje** množice B, če je $\displaystyle B=\bigcup_{i\in I} A_i$
+Družina množic A = {$A_i;i\in I$} je **razbitje** množic B, če je:
+- A pokritje množice B
+- elementi A so neprazni in
+- elementi A so paroma disjunktni
+
+## Urejeni pari
+**Urejeni par** s *prvo komponento (koordinato)* a in *drugo komponento (koordinato)* b označimo z (a,b) in definiramo kot (a,b) ={{a},{a,b}}
+
+**Trditev** (osnovna lastnost urejenih parov):
+$(a,b) = (c,d) \Longleftrightarrow a=c$ in $b = d$
+## Kartezični produkt
+Kartezični produkt množic A in B je množica vseh urejenih parov $A \times B =$ {$(a,b);a\in A \land b \in B$}
+$A \times B \ne B \times A$
+$(A \times B) \times C = A \times (B \times C)$ - kartezični produkt je asociativen.
+### Lastnosti Kartezičnega produkta
+- $A \times (B \cup C) = (A \times B) \cup (A \times C)$ - velja tudi za $\cap$
+- $(A \cup B) \times C = (A \times C) \cup (B \times C)$ - velja tudi za $\cap$
+- $(A \cap B) \times (C \cap D) = (A \times C) \cap (B \times D)$
+- $A \times B = \emptyset \Longleftrightarrow A = \emptyset \vee B = \emptyset$
+- $A \subseteq C \land B \subseteq D \implies A \times B \subseteq C \times D$
+- $A \times B \subseteq C \times D \land A \times B \ne \emptyset \implies A \subseteq C \land B \subseteq D$
+- A končna z m elementi in B končna z n elementi $\implies A \times B$ končna z $m * n$ elementi.
+## Moč končnih množic
+Naj bo A končna množica. Potem |A| označuje **število elementov** ali **moč** množice A.
+Naj bosta A in B končni množici. Pravimo, da sta A in B **enako močni**, $A \sim B$, če |A| = |B|.
+
+Zgledi:
+1. |$\emptyset$| = 0
+2. |{0,1}| = 2
+3. |{{0,1}}| = 1
+
+Trditev:
+Naj bodo A,B,C končne množice.
+1. $|A \times B| = |A| * |B|$
+2. |{$f ; f : A \rightarrow B$}| = $|B^A| = |B|^{|A|}$
+3. |$P$A| = 2^{|A|}
+4. Če je $B \subseteq A$, potem je |A \ B| = |A| - |B|. V splošnem je |A \ B| = |A| - |A $\cap$ B|.
+5. Če je $A \cap B = \emptyset$, potem je |$A \cup B$| = |A| + |B|. V splošnem je |$A \cup B$| = |A| + |B| - |A $\cap$ B|.
+6. $|A \cup B \cup C| = |A| + |B| + |C| - |$$A \cap B$| - |$A \cap C$| - |$B \cap C$| + |$A \cap B \cap C$|
+
+## Načelo vključitev in izključitev
+Naj bo A končna množica in $A_1,A_2, ..., A_n \subseteq A$. Potem je $|A_1 \cup A_2 \cup ... \cup A_n|$ = $|A_1| + |A_2| + ... + |A_n|$ - $|A_1 \cap A_2| - |A_1 \cap A_3| - ... - |A_{n-1} \cap A_n| + ...$ 
+$+ (-1)^{n+1} |A_1 \cap A_2 \cap ... \cap A_n|$ = $\displaystyle \sum_{i = 0}^n (-1)^i S_i,$ kjer je $\displaystyle S_k = \sum_{{J \subseteq \{1,...,n\}} \atop {|J| = k}} |\bigcap_{i \in J}A_i|$.
+## Relacije
+Množica R je **(dvomestna) relacija**, če je vsak njen element urejen par.
+R je relacija. $\Longleftrightarrow$ $\forall x \in R \exists u, v ; x = (u,v)$
+
+AKA
+
+Relacija R je množica urejenih parov.
+
+Množica R je **(dvomestna) relacija v množici** A, če je $R \subseteq A \times A$.
+
+Zgledi:
+1. $A = {e,f,g,h} R = \{(e,f),(f,g),(g,h)\}$
+	xRy ... x je v abecedi neposredno pred y
+2. $A = \mathbb{N}$ $R = \{(x,y) ; x,y \in \mathbb{N} \land x \le y\}$
+3. $id_A = \{(x,x) ; x \in A\}$
+4. $\emptyset \subseteq A \times A$
+5. $U_A :=A \times A \subseteq A \times A$ -> $U_A$ je univerzalna relacija
+Namesto $(x,y) \in R$ pišemo $xRy$
+
+$(1,3) \in \le$ ... $1 \le 3$
+
+### Domena in zaloga vrednosti
+Naj bo R relacija v A.
+$D_R = \{x;\exists y: xRy\}$ **domena** ali **definicijsko območje** relacije R.
+$Z_R = \{y ; \exists x : xRy\}$ **zaloga vrednosti** relacije R
+
+### Lastnosti relacij
+Naj bo R relacija v A. Pravimo, da je:
+1. R *refleksivna* $\Longleftrightarrow \forall x \in A : xRx$
+2. R *simetrična* $\Longleftrightarrow \forall x, y \in A : xRy \implies yRx$
+3. R *asimetrična* $\Longleftrightarrow \forall x,y \in A : xRy \land yRx \implies x = y$
+4. R *tranzitivna* $\Longleftrightarrow \forall x,y,z \in A : xRy \land yRz \implies xRz$
+5. R *sovisna* $\Longleftrightarrow \forall x,y \in A : x \ne y \implies xRy \vee yRx$
+6. R *enolična* $\Longleftrightarrow \forall x,y,z \in A : xRy \land xRz \implies y = z$
+
