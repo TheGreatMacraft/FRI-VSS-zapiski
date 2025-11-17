@@ -759,4 +759,101 @@ Naj bo R relacija v A. Pravimo, da je:
 4. R *tranzitivna* $\Longleftrightarrow \forall x,y,z \in A : xRy \land yRz \implies xRz$
 5. R *sovisna* $\Longleftrightarrow \forall x,y \in A : x \ne y \implies xRy \vee yRx$
 6. R *enolična* $\Longleftrightarrow \forall x,y,z \in A : xRy \land xRz \implies y = z$
+### Grafična predstavitev relacije
+A = {e,f,g,h}
+R = {(e,f),(f,g),(g,h)}
 
+![[Drawing 2025-11-13 11.40.34.excalidraw|75]]
+### Lastnosti iz grafa
+![[Drawing 2025-11-13 11.42.09.excalidraw]]
+
+### Operacije z relacijami
+- komplement relacije, ko se pogovarjamo o družini relacij na isti množici A: $R^{c}:=(A\times A)\textbackslash R=U_{A}\textbackslash R$
+- inverzna relacija: $R^{-1}:=\{(y,x);(x,y)\in R\}$
+- produkt relacij R in S, označimo kot $R*S$: $R*S := \{(x,z);\exists y(xRy \land ySz)\}$
+#### Lastnosti operacij z relacijami
+Naj bodo R, S, T relacije na A:
+1. $(R^{-1})^{-1}=R$
+2. $(R*S)^{-1}=S^{-1}*R^{-1}$
+3. $(R*S)*T=R*(S*T)=:R*S*T$
+4. $R*(S\cup T)=R*S\cup R*T$
+5. $(R\cup S)*T=R*T\cup S*T$
+6. $R*id_{A}=id_{A}*R=R$
+7. $R \subseteq S \implies R*T \subseteq S*T$ in $T*R \subseteq T*S$
+
+Pravili 4. in 5. **ne veljata za presek** $\cap$!
+
+Primer:
+x prednik y...
+x roditelj y *ali...* x roditelj \* roditelj y *ali...* x roditelj \* roditelj \* roditelj y
+x potomec y...
+$\text{prednik}^{-1}=\text{potomec}$
+x sorodnik y...
+x je sorodnik od y, če imata skupnega potomca
+$\exists z(\text{z prednik x in z prednik y})$...
+$\exists z(\text{x potomec z in y potomec z})$...
+**x potomec \* prednik y** =
+
+potomec \* prednik =
+prednik$^{-1}$ \* prednik$^{1}$ $\ne$ prednik$^{0}$ = $id_{\text{ljudje}}$
+
+### Potence relacij
+Zaradi asociativnosti množenja relacij lahko definiramo potence relacij. Naj bo $R\subseteq A\times A$
+- $R^{0}:=id_{A}$
+- $R^{n+1}:=R^{n}*R;n \ge 0$
+Velja $R^{1}=R,R^{2}=R*R$, ter za $m,n \ge 0$ tudi $R^{m}*R^{n} = R^{m+n}$. To ni nujno če $m*n<0$ (nista enakih predznakov)
+- $R^{-n}:=(R^{-1})^{n};n>0$
+
+**tranzitivna ovojnica** relacije R je $R^{+}$, definirana kot: $\displaystyle R^{+}=\bigcup_{k=0}^{\infty}R^{k}$
+**tranzitivno-refleksivna ovojnica** relacije R je $R^{*}$, definirana kot:
+$\displaystyle R^{*}=\bigcup_{k=0}^{\infty}R^{k}$
+
+![[Drawing 2025-11-13 13.03.46.excalidraw]]
+
+Relaciji prednik in potomec sta tranzitivni (tranzitivni ovojnici relacij roditelj & otrok).
+
+### Algebraična karakterizacija lastnosti relacij
+Naj bo R relacija v A. Relacija R je
+1. *refleksivna* $\Longleftrightarrow id_{A}\subseteq R$
+2. *simetrična* $\Longleftrightarrow R^{-1} = R$
+3. *antisimetrična* $\Longleftrightarrow R^{-1}\cap R\subseteq id_{A}$
+4. *tranzitivna* $\Longleftrightarrow R^{2}\subseteq R$
+5. *sovisna* $\Longleftrightarrow id_{A}\cup R \cup R^{-1}=U_{A}$
+6. *enolična* $\Longleftrightarrow R^{-1}*R\subseteq id_{A}$
+
+## Preslikave
+Relacija $f\subseteq A\times B$ je *preslikava iz A v B*, če velja:
+- f je enolična
+- $D_{f} = A$
+- $(Z_{f}\subseteq B)$
+Pišemo tudi $f: A\rightarrow B$
+
+Namesto x f y pišemo $y=f(x)$ in pravimo, da f *(pre)slika* x v y, x je *argument*, y pa *vrednost* preslikave f pri x.
+Tudi y je *slika* x-a
+
+Naj bo f preslikava iz A v B:
+- $A=D_{f}$ ... domena ali definicijsko območje f
+- $Z_{f}$ ... zaloga vrednosti f
+- B ... kodomena f
+
+Zapis:
+- ekstenzionalni $(x,y)\in f$
+- relacijski $xfy$
+- funkcijski $y=f(x)$
+
+Zgled:
+Naj bo X množica nepraznih bitnih besed {0,1,00,01,10,11,000,001,...} in Y množica naravnih števil {0,1,2,3,...},
+definiramo relacije $f_{1},f_{2},f_{3} \subseteq X \times Y, f_{4} \subseteq X\times X\text{ in }f_{5}\subseteq Y\times X$:
+- $x f_{1}y$ natanko tedaj, ko je y število enic v x-u
+- $x f_{2}y$ natanko tedaj, ko je y prvi bit niza x
+- $x f_{3}y$ natanko tedaj, ko je y mesto najbolj leve ničle v x-u
+- $x_{1} f_{4}x_{2}$ natanko tedaj, ko $x_{2}$ dobimo tako, da nizu $x_{1}$ dodamo na koncu 0 ali 1
+- $y f_{5} x$ natanko tedaj, ko je x niz y zaporednih enic.
+
+Katere izmed relacij so preslikave?
+
+### Lastnosti preslikav
+Naj bo $f:A\rightarrow B$. Pravimo, da je:
+- f *injektivna*, če $\forall x,y\in A:(f(x)=f(y)\implies x=y)$
+- f *surjektivna*, če $Z_{f}=B$ (pravimo tudi, da je f preslikava iz A **na** B)
+- f *bijektivna*, če je injektivna in surjektivna

@@ -39,7 +39,7 @@
   "dynamicStyling": "colorful",
   "isLeftHanded": false,
   "iframeMatchExcalidrawTheme": true,
-  "matchTheme": false,
+  "matchTheme": true,
   "matchThemeAlways": false,
   "matchThemeTrigger": false,
   "defaultMode": "normal",
@@ -778,7 +778,7 @@
   "longPressMobile": 500,
   "doubleClickLinkOpenViewMode": true,
   "isDebugMode": false,
-  "rank": "Bronze",
+  "rank": "Silver",
   "modifierKeyOverrides": [
     {
       "modifiers": [

@@ -1,45 +1,16 @@
-# Pametna specializacija
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
 
-## Cilji
-- pametne aplikacije
-- področja pametne specializacije S4
-- poslovni pogled na aplikacije
-- programsko inženirstvo, življenjski ciklus programske opreme
-- natančno:
-	- definicija problema
-	- uporabniške zgodbe
-	- analiza zahtev (nizko in visokonivojske zahteve)
-	- kakovost storitev
-	- načrtovanje, razvoj,...
-Zahteve aplikacij so:
-- funkcionalne - aplikacija opravlja svojo nalogo
-- nefunkcionalne - aplikacija je dovolj hitra, ...
-- sistemske - produkt ima dovolj prostora, ...  
-- visokonivojska/zaupljiovst
-Zahteve moramo točno določiti, preden se lotimo izdelovanja produkta/programa.
-DevOps - sprotno nadgrajevanje sistema, brez da bi ta nehal delovati
-
-## Pametne aplikacije
-- običajno temeljijo na internetu stvari, umetni inteligenci, računalništvu v oblaku, na robu in v megli ter na tehnologijah veriženja blokov
-- aplikacije, ki imajo še posebej izražene uporabniške, aplikacijske in sistemske zahteve
-- Microstoritve
-- orkestracija aplikacijskih komponent, mikrostoritev - kontejnerje lahko prenašamo med računalniki ves čas
-
-### Področja pametne specializacije
-- nacionalni in Evropski raziskovalni ter inovacijski program
-- podobne programe imajo tudi druge napredne države: ZDA, J. Koreja, Japonska, Avstrija ipd.
-- v Slovenskem programu je 8 aplikacijskih domen
-- program je vil razvit v zadnjih letih in temelji na nenehnem podjetniškem procesu odkrivanja
-- Slovenska strategija pametne specializacije: Zdravje, Gospodarstvo, Mobilnost, Javne storitve, Energija in trajnost, novice, mediji ter zabava, industrija, turizem, izobraževanje in izmenjava znanja
-## Zdravje
-
-- glej powerpoint
-# Analiza zahtev
-
----
-# Vaje
-
-## Teme
+# Teme
 - uporabniška zgodba, primeri uporabe, wireframe
 - računalnik kot stroj
 - zbirni jezik
@@ -211,4 +182,69 @@ Latence ne moreme izboljšati. Čas iskanja zmanjšamo tako da shranimo podatke 
 
 3. Na spletu najdite računalniško konfiguracijo in kategorizirajte komponente po Von Neumannovi arhitekturi.
 
-4. 
+## Aritmetično-logična enota (ALE)
+- skupaj z *krmilno enoto* tvori procesor
+- vsebuje **aritmetična** (+,-,* ,/) in  **primerjalna/logična vezja** (IN, ALI, NE)
+- vsebuje **registre** - hitre (namenske) pomnilniške enote, povezane z vezjem ALE
+- vsebuje **podatkovno pot** (Data path) - kako potuje informacija v ALE med registri in vezji
+
+## Strojni ukazi
+Format ukaza v strojnem jeziku:
+- koda operacije
+- naslovi pomnilniških lokacij z operandi
+
+Primer:
+op code: 9
+naslov X: 99
+naslov Y: 100
+ADD X,Y: sešteje števili in zapiše rezultat nazaj na lokacijo Y
+### Prenosi podatkov
+- pomnilniška lokacija $\Longleftrightarrow$ register ALE
+- pomnilniška lokacija A $\rightarrow$ pomnilniška lokacija B
+- register ALE A $\rightarrow$ register ALE B
+**Primeri**:
+	- LOAD X $\rightarrow$ naloži vsebino pomnilniške lokacije v register R
+	- STORE X $\rightarrow$ shrani vsebino registra R na pomnilniško lokacijo X
+	- MOVE X,Y $\rightarrow$ kopiraj vsebino pomnilniške lokacije X na pomnilniško lokacijo Y
+### Aritmetika
+- aritmetične in logične operacije v ALE: +,-, * ,/,IN,ALI,NE
+**Primeri:**
+	- ADD X,Y,Z $\rightarrow$ vrednost(Z) = vrednost(x) + vrednost(Y) *tro-naslovni ukaz*
+	- ADD X,Y $\rightarrow$ vrednost(Y) = vrednost(X) + vrednost(Y) *dvo-naslovni-ukaz*
+	- ADD X $\rightarrow$ R = vr(X) + R *eno-naslovni ukaz*
+### Primerjanje
+- rezultat primerjanja postavi vrednosti bitov pogojnih kod
+**Primer:**
+	- COMPARE X,Y $\rightarrow$ primerja vrednosti pomnilniški lokacij X in Y in postavi vrednost pogojnih kod:
+		 - vrednost(X) > vrednost(Y) GT=1, EQ=0, LT=0
+		 - vrednost(X) = vrednost(Y) GT=0, EQ=1, LT=0
+		 - vrednost(X) < vrednost(Y) GT=0, EQ=0, LT=1
+### Vejitve
+- spreminjanje normalnega zaporednega toka ukazov
+- tipično po ukazu za primerjanje
+**Primeri:**
+	- JUMP X $\rightarrow$ vzemi naslednji ukaz s pomnilniške lokacije X
+	- JUMPGT X $\rightarrow$ skoči samo, če je indikator GT postavljen na 1
+	- JUMPGE X $\rightarrow$ skoči samo, če sta GT in EQ indikatorja postavljena na 1
+	- HALT $\rightarrow$ ustavi izvajanje programa
+### Tabela strojnih ukazov
+
+| Binarna Koda Operacij | Operacija   | Pomen                                                                                                              |
+| --------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------ |
+| 0000                  | LOAD X      | CON(X) $\rightarrow$ R                                                                                             |
+| 0001                  | STORE X     | R $\rightarrow$ CON(X)                                                                                             |
+| 0010                  | CLEAR X     | 0 $\rightarrow$ CON(X)                                                                                             |
+| 0011                  | ADD X       | R + CON(X)                                                                                                         |
+| 0100                  | INCREMENT X | CON(X) + 1 $\rightarrow$ CON(X)                                                                                    |
+| 0101                  | SUBSTRACT X | R - CON(X) $\rightarrow$ R                                                                                         |
+| 0110                  | DECREMENT X | CON(X) - 1 $\rightarrow$ CON(X)                                                                                    |
+| 0111                  | COMPARE X   | - if(CON(X) > R then GT = 1 else 0)<br>- if (CON(X) = R then EQ = 1 else 0)<br>- if(CON(X) > R then LT = 1 else 0) |
+| 1000                  | JUMP X      | dobi naslednji program iz pomnilniške lokacije X                                                                   |
+| 1001                  | JUMPGT X    | dobi naslednji program iz pomnilniške lokacije X, če GT = 1                                                        |
+| 1010                  | JUMPEQ X    | dobi naslednji program iz pomnilniške lokacije X, če EQ = 1                                                        |
+| 1011                  | JUMPLT X    | dobi naslednji program iz pomnilniške lokacije X, če LT = 1                                                        |
+| 1100                  | JUMPNEQ X   | dobi naslednji program iz pomnilniške lokacije X, če EQ = 0                                                        |
+| 1101                  | IN X        | vnesi celo-številsko vrednost iz vhodne naprave v pomnilniško lokacijo X                                           |
+| 1110                  | OUT X       | izpiši, v decimalnem zapisu, vrednost shranjeno v pomnilniški lokaciji X                                           |
+| 1111                  | HALT        | prenehaj izvajanje programa                                                                                        |
+# Turingov stroj

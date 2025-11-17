@@ -1,5 +1,5 @@
 1. Hitri test:
-- Spodnje število zapišemo kot okrajšan ulčomek. Kolikšen je števec? $1.424242... = 1.\overline{42}$
+- Spodnje število zapišemo kot okrajšan ulomek. Kolikšen je števec? $1.424242... = 1.\overline{42}$
 - Vrednost delnice se prvi mesec poveča za 10%, naslednji mesec se pa zniža za 2%. Kolikšna je skupna dvomesečna sprememba vrednosti delnice v %?
 - Izdelek se je najprej podražil za 11%  potem pa pocenil za 10%. Kolikšna je skupna sprememba cene izdelka?
 - Če je izdelek iz prejšnje naloge pred prvo spremembo cene stal 2000€, kolikšna je bila skupna sprememba cene v €?
@@ -320,4 +320,96 @@ $\sqrt{3}+1$
 3. Izračunaj limito zaporedja $a_n = \frac{5n^2+n-1}{5n^2+2n+1}$ in poišči prvi člen tega zaporedja, ki je znotraj $\epsilon$-okolice limite za $epsilon = \frac{1}{50}$.
 ```spoiler-markdown
 ![[Drawing 2025-11-05 11.35.35.excalidraw]]
+```
+
+4. Za zaporedje $a_0 = 0$, $a_{n+1} = \frac{-2}{a_n+3}$ povej ali je $a_n$ omejeno ali monotono (padajoče ali naraščujoče)? Izračunaj limito. *Ta je zajebana!*
+```spoiler-markdown
+![[Drawing 2025-11-11 15.28.21.excalidraw]]
+```
+
+# Vrste
+Vrsta je vsota členov zaporedja.
+1. $(a_n),a_n = \frac{1}{n*(n+1)}$. Izračunaj limito. Izračunaj vrsto.
+```spoiler-markdown
+![[Drawing 2025-11-11 16.20.13.excalidraw]]
+```
+
+2. Izračunaj vsote naslednjih vrst:
+- $\displaystyle \sum_{n=0}^\infty \frac{1}{4^n}$
+```spoiler-markdown
+![[Drawing 2025-11-11 16.41.52.excalidraw]]
+```
+
+---
+# Domača naloga: 6. teden
+
+1. Izračunaj vsoto geometrijske vrste $\displaystyle \sum_{n=2}^\infty \frac{24}{4^n}$.
+```spoiler-markdown
+![[Drawing 2025-11-12 19.43.57.excalidraw]]
+```
+
+2. Dva vlaka na istem tiru potujeta eden proti drugemu, vsak s hitrostjo 50 km/h. Hitra supermuha zapusti prvi vlak s hitrostjo 75 km/h, odleti proti drugemu, se v trenutku obrne in z enako hitrostjo spet odleti proti prvemu. Tam se spet obrne in odleti proti drugemu vlaku itn...  Ugotovi kolikšno razdaljo bo preletela hitra muha, ko se vlaka zaletita. Na začetku sta bila vlaka oddaljena.
+
+```spoiler-markdown
+![[Drawing 2025-11-12 20.08.52.excalidraw]]
+```
+
+---
+# Hitri test 6
+1. Kaj velja za vrsto $\displaystyle \sum_{i=1}^{\infty}\left( \frac{\sqrt{ 5 }}{2} \right)^{i}$?
+2. Kaj velja za vrsto $\displaystyle \sum_{i=1}^{\infty}\left( \frac{2}{\sqrt{ 5 }} \right)^i$?
+3. Na sliki je prikazana krivulja. Katere od spodnjih izjav so pravilne:
+	- Krivulja predstavlja graf naraščajoče funkcije.
+	- Krivulja predstavlja graf padajoče funkcije.
+	- Krivulja predstavlja graf surjektivne funkcije.
+	- Krivulja predstavlja graf injektivne funkcije.
+	- Krivulja predstavlja graf sode funkcije.
+	- Krivulja predstavlja graf lihe funkcije.
+	- Krivulja predstavlja graf funkcije katere definicijsko območje so vsa realna števila razen 0.
+	- Krivulja predstavlja graf funkcije katere zaloga vrednosti so vsa realna števila razen 0.
+	- Krivulja NE predstavlja grafa funkcije.
+	![[Pasted image 20251113083730.png|250]]
+4. Če je $f(x) = x+3$, koliko je $f^{-1}(4)$
+
+```spoiler-markdown
+![[Drawing 2025-11-13 08.20.56.excalidraw]]
+```
+
+# Hitri test 7
+1. Katere izmed spodnjih potenčnih funkcij so naraščajoče?
+	- $f(x)=x^{-3}$
+	- $f(x)=x^{-2}$
+	- $f(x)=x^{-1}$
+	- $f(x)=x^{1}$
+	- $f(x)=x^{2}$
+	- $f(x)=x^{3}$
+	- $f(x)=x^{4}$
+	- $f(x)=x^{5}$
+		- $f(x)=x^{6}$
+2. Katere izmed navedenih potenčnih funkcij so padajoče?
+	- $f(x) = x^{-5}$
+	- $f(x) = x^{-4}$
+	- $f(x) = x^{-3}$
+	- $f(x) = x^{-2}$
+	- $f(x) = x^{-1}$
+	- $f(x) = x^{1}$
+	- $f(x) = x^{2}$
+	- $f(x) = x^{3}$
+	- $f(x) = x^{4}$
+3. Katere izmed spodnjih izjav so pravilne za polinom $p(x) = (x-1)(x^{2}+2)(x^{2}-2)(x^{2}+3)$?
+	- Polinom p (x) ima stopnjo 4, natanko 3 realne ničle, vodilni koeficient 1 in začetno vrednost 12.
+	- Polinom p (x) ima stopnjo 7, natanko 7 realnih ničel, vodilni koeficient 1 in začetno vrednost 12.
+	- Polinom p (x) ima stopnjo 7, natanko 5 realnih ničel, vodilni koeficient 12 in začetno vrednost 1.
+	- Polinom p (x) ima stopnjo 7, natanko 3 realne ničle, vodilni koeficient 12 in začetno vrednost 1.
+	- Polinom p (x) ima stopnjo 7, natanko 3 realne ničle, vodilni koeficient 1 in začetno vrednost 12.
+	- Polinom p (x) ima stopnjo 7, natanko 5 realnih ničel, vodilni koeficient 1 in začetno vrednost 12.
+4. Katere izmed spodnjih izjav so smiselne in pravilne za racionalno funkcijo $q(x)=\frac{x^{2}+x-2}{x-2}$
+	- Funkcija q (x) je definirana povsod, razen pri ničlah $x_1 = 1$ in $x_2 = -2$.
+	- Funkcija q (x) je definirana povsod, razen v polu $x_1 = −2$.
+	- Funkcija q (x) je definirana povsod, razen v polu $x_1 = 2$ in na asimptoti $y = x + 3$?
+	- Funkcija q (x) ima ničli $x_1 = 1$ in $x_2 = -2$, pol $x_3 = 2$ in asimptoto $y = x$.
+	- Funkcija q (x) ima ničli $x_1 = −1$ in $x_2 = 2$, pol $x_3 = −2$ in asimptoto $y = x + 3$.
+	- Funkcija q (x) ima ničli $x_1 = 1$ in $x_2 = −2$, pol $x_3 = 2$ in asimptoto $y = x + 3$.
+```spoiler-markdown
+![[Drawing 2025-11-13 10.25.56.excalidraw]]
 ```

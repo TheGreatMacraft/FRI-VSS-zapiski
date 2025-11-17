@@ -1,4 +1,4 @@
-from itertools import groupby
+from itertools import groupby,zip_longest
 zemljevid = [
     "......",
     "..##..",
@@ -9,10 +9,10 @@ zemljevid = [
 
 zemljevid_potem = [
     ".##.#.",
-    "..##.#",
+    ".....#",
     ".##.#.",
-    "##.###",
-    "###.##",
+    "##....",
+    "....##",
 ]
 
 vrstica = ".##.####...##."
@@ -24,7 +24,7 @@ def stevilo_ovir(vrstica):
     return sum(1 for k,g in groupby(vrstica) if(k=='#'))
 
 def najsirsa_ovira(vrstica):
-    return max(len(list(g)) for k,g in groupby(vrstica))
+    return max(len(list(g)) for k,g in groupby(vrstica) if k == "#")
 
 def pretvori_vrstico(vrstica):
     rez = []
@@ -43,13 +43,16 @@ def pretvori_zemljevid(vrstice):
     return rez
 
 def izboljsave(prej, potem):
-    for (k_prej,g_prej), (k_potem,g_potem) in zip(groupby(prej),groupby(potem)):
-        if(k_potem == "#" and g_prej != g_potem):
+    pretvorjeno_prej = pretvori_zemljevid(prej)
+    return [el for el in pretvori_zemljevid(potem) if el not in pretvorjeno_prej]
 
+def huligani(prej, potem):
+    return izboljsave(prej,potem),izboljsave(potem,prej)
 
 print(dolzina_ovir(vrstica))
 print(stevilo_ovir(vrstica))
-print(najsirsa_ovira(vrstica))
+print(najsirsa_ovira("...#..."))
 print(pretvori_vrstico(vrstica))
 print(pretvori_zemljevid(zemljevid))
-print(izboljsave(prej, potem))
+print(izboljsave(zemljevid, zemljevid_potem))
+print(huligani(zemljevid, zemljevid_potem))

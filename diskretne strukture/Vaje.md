@@ -514,3 +514,94 @@ $\forall x(P(x) \implies \exists y(A(y) \land \neg V(y,x))$
 4. NE
 5. DA
 ```
+
+# Kviz po predavanjih v 6. tednu
+1. Definirajmo množice:
+- N = {0,1,2,3,...} množica naravnih števil
+- S = {0,2,4,6,...} množica sodih števil
+- L = {1,3,5,7,...} množica lihih števil
+- P = {2,3,5,7,...} množica praštevil
+- Q = {0,1,4,9,...} množica popolnih kvadratov
+in operaciji množenja množice s številom in prištevanja števil k množici: 
+če je $k \in N$ in $A=\{a_1,a_2,a_3,...\} \subseteq N$, potem je $kA = \{ka_1,ka_2,ka_3,...\}$ in $k + A = \{k+a_1,k+a_2,k+a_3,...\}$
+
+Tj. kA je množica, ki jo dobimo tako, da vse elemente množice A pomnožimo s k. k+A pa dobimo, če vsem elementom množice A prištejemo k.
+
+Katere od naslednjih trditev držijo?
+- {S,L} je pokritje množice N.
+- {i + S; $i \in L$} je pokritje množice N.
+- {i + L; $i \in L$} je pokritje množice N.
+- {iL; $i \in L$} je pokritje množice N.
+- {iS; $i \in L$}  je pokritje množice N.
+- {$2^iL$; $i \in L$}  je pokritje množice N.
+- {$2^iL$; $i \in N$}  je pokritje množice N.
+- {$2^iN$; $i \in N$}  je pokritje množice N.
+- {$2^iP$; $i \in N$}  je pokritje množice N.
+- {iP; $i \in P$}  je pokritje množice N \ {0,1}.
+- {iQ; $i \in Q$}  je pokritje množice Q.
+- {iP; $i \in Q$}  je pokritje množice L.
+- {iQ; $i \in N$}  je pokritje množice N.
+- {S,L}  je razbitje množice N.
+- {2^iL;i \in N} je razbitje množice N \ {0}.
+
+2. Za množice A,B,C velja |A| = 7, |B| = 4, |C| = 4, |$A \cap B$| = 2, |$A \cap C$|= 3 in |$B \cap C$| = 1. Kolikšna je moč množice $A \cap B \cap C$, če veš, da je |$A \cup B \cup C$| = 10
+
+```spoiler-markdown
+10 = 7+4+4-2-3-1+x
+10 = 15-6 + x
+10 = 9 + x
+1 = x
+
+Odgovor: $|A \cap B \cap C| = 1$
+```
+
+3. Množice A,B,C imajo vse po 6 elementov. Poleg tega je $|A \cap B|$ = 4, $|A \cap C|$ = 5 in |$A \cap B \cap C$| = 2. Določi moč množice $(B \cap C)$ \ A.
+
+```spoiler-markdown
+Podatki niso OK.
+![[Drawing 2025-11-10 14.14.26.excalidraw]]
+```
+
+4. Za množice A,B,C velja $|A \cap B|$ = 2, $|A \cap C|$ = 3 in $|B \cap C|$ = 1. Kolikšno je najmanjše možno število elementov v množici $A \cup B \cup C$, če veš, da so množice A,B,C enakih moči?
+
+```spoiler-markdown
+
+```
+
+5. Za množice A,B,C velja |$A\cap C$| = 3, $|A \cap C|$ = 3 in $|B \cap C| = 1$. Kolikšno je najmanjše možno število elementov v množici $A \cup B \cup C$, če veš, da so množice A,B,C samih **različnih moči**?
+
+```spoiler-markdown
+
+```
+
+---
+
+2. Določi množice:
+- $\emptyset \cap \{\emptyset\}$
+- $\{\emptyset\} \cap \{\emptyset\}$
+- $\{\emptyset,\{\emptyset\}\}$ \ $\{\emptyset\}$
+```spoiler-markdown
+![[Drawing 2025-11-11 17.12.27.excalidraw]]
+```
+
+3. Ali veljajo naslednje enakosti oz. vsebovanosti z množicami? Dokaži ali pa poišči protiprimer.
+- $((A \cap B ) \cup (C \cap D))^c = (A^c \cup B^c) \cap (C^c \cup D^c)$
+- $((A \cup B) \cap (A \cup B^c)) \cup ((A^c \cup B) \cap (A^c \cup B^c)) = S$
+- (A ∪ B) ∩ (A ∪ $B^c$ ) ∩ ($A^c$ ∪ B) ∩ ($A^c$ ∪ $B^c$ ) = ∅
+- A \ (A \ (B \ (B \ C))) = A ∩ B ∩ C
+- A \ (B ∪ C) = (A \ B) ∩ (A \ C)
+- A ∪ (B + C) = (A ∪ B) + (A ∪ C)
+- (A ∩ B) \ C ⊆ (A ∪ C) ∩ B
+- (A + B) \ A = B \ A
+- (A + B) + (A + C) = A + (B + C)
+- A + B ⊆ A + (B + C)
+
+```spoiler-markdown
+![[Drawing 2025-11-11 17.17.56.excalidraw]]
+```
+
+4. Ali velja enakost (B \ C) ∪ (A ∩ C) \ B = (A ∪ B) ∩ (C ∪ B)? Kaj pa vsebovanost (B \ C) ∪ (A ∩ C) \ B ⊆ (A ∪ B) ∩ (C ∪ B)?
+
+```spoiler-markdown
+![[Drawing 2025-11-11 18.33.17.excalidraw]]
+```

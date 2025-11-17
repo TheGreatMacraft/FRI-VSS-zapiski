@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "eacd9e5928ed1a81",
+        "id": "4e65f1f689fabf8c",
         "type": "tabs",
         "children": [
           {
-            "id": "8e1b97f36422c9e6",
+            "id": "5391a42041c12e09",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "diskretne strukture/Zapiski.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Zapiski"
+              "title": "New tab"
             }
           }
         ]
@@ -78,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5,
-    "collapsed": true
+    "width": 298.5
   },
   "right": {
     "id": "d9a70bc77a48a68c",
@@ -161,6 +156,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -175,53 +171,52 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "8e1b97f36422c9e6",
+  "active": "5391a42041c12e09",
   "lastOpenFiles": [
-    "a.md",
-    "diskretne strukture/Zapiski.md",
-    "DnD/Army of the damned/Army of The Damned.md",
-    "diskretne strukture/Vaje.md",
-    "programiranje/Uporabna Znanja.md",
+    "uvod v računalništvo/Vaje.md",
+    "uvod v računalništvo/literatura študentov/Uvod_v_racunalnistvo_koncna_verzija.pdf",
+    "računalniška arhitektura/Vaje.md",
+    "Excalidraw/Drawing 2025-11-16 18.37.44.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 18.17.01.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 17.57.32.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 17.54.44.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 17.39.23.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 17.33.34.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 16.00.05.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 15.54.31.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 15.46.50.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 15.43.45.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 15.36.42.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 15.32.36.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 15.18.23.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 14.56.02.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 14.46.55.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 14.35.22.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 14.20.57.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-16 14.13.26.excalidraw.md",
+    "uvod v računalništvo/kolokvij/UVR_Kolokvij_1.pdf",
     "DnD/Player's Handbook.pdf",
     "DnD/Monster Manual.pdf",
     "DnD/Army of the damned/armyofthedamned.pdf",
-    "računalniška arhitektura/Zapiski.md",
-    "Excalidraw/Drawing 2025-11-04 09.39.36.excalidraw.md",
-    "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
-    "programiranje/domače naloge/zemljevid_ovir.py~",
-    "matematika/Zapiski.md",
-    "matematika/Vaje.md",
-    "Excalidraw/Drawing 2025-11-05 11.35.35.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-05 11.27.20.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-05 11.17.07.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-05 10.24.54.excalidraw.md",
-    "slikice/Pasted Image 20251105103001_210.png",
-    "DnD/Army of the damned/Media/Shadowgrange/basement.ds.crswap",
-    "DnD/Army of the damned/Media/Shadowgrange/basement.ds",
-    "Excalidraw/Drawing 2025-11-04 16.27.18.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-04 16.13.30.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-04 16.04.32.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-04 15.25.04.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-04 13.26.36.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-04 12.38.29.excalidraw.md",
-    "DnD/Army of the damned/Media/Shadowgrange/Letter.png",
-    "računalniška arhitektura/Vaje.md",
-    "kokosek.si.md",
-    "DnD/Army of the damned/Media/skaab.webp",
-    "DnD/Army of the damned/Media/Nepotrjeno 703226.crdownload",
     "DnD/Simplified Rules.md",
-    "DnD/Dungeon Master's Guide.md",
-    "DnD/Army of the damned/Notes.md",
-    "Excalidraw/Drawing 2025-11-03 19.14.22.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-03 18.52.25.excalidraw.md",
-    "programiranje/domače naloge/lokacije_ovir.py~",
-    "programiranje/domače naloge/lokacije_ovir.py",
-    "DnD/Army of the damned/Media/Into Stensia/blacksmith_example.jpg",
-    "DnD/Army of the damned/Media/Shadowgrange/inn_example.jpg",
-    "slikice/Shadowgrange (1).png",
-    "DnD/Army of the damned/Media/Shadowgrange/Shadowgrange.png",
-    "DnD/Army of the damned/Media/Shadowgrange/Shadowgrange.jpg",
-    "slikice/Shadowgrange.png",
-    "DnD/Army of the damned/Media/Shadowgrange/Shadowgrange.png"
+    "DnD/Army of the damned/Army of The Damned.md",
+    "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
+    "matematika/Zapiski.md",
+    "DnD/Army of the damned/Media/Shadowgrange/Alchemy Basement.png",
+    "DnD/Army of the damned/Media/Shadowgrange/basement.ds.crswap",
+    "DnD/Army of the damned/Media/Shadowgrange/store_example.jpg",
+    "programiranje/domače naloge/angelčin_zapis.py~",
+    "uvod v računalništvo/literatura študentov/Vprašanja za Ustni izpit.md",
+    "uvod v računalništvo/literatura študentov",
+    "uvod v računalništvo/Zapiski - Ne Moji.md",
+    "slikice/Pasted image 20251113145924.png",
+    "uvod v računalništvo/literatura/Vaje 5.pdf",
+    "slikice/Pasted image 20251113083730.png",
+    "slikice/Pasted image 20251112185625.png",
+    "slikice/Pasted image 20251112182317.png",
+    "slikice/Pasted image 20251112182248.png",
+    "slikice/Pasted image 20251112182219.png",
+    "slikice/Pasted image 20251112182140.png",
+    "slikice/Pasted Image 20251111183427_830.png"
   ]
 }

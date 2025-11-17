@@ -379,3 +379,57 @@ Vrste:
 
 ## Load/Store Ukazi
 ![[Drawing 2025-11-04 13.26.36.excalidraw]]
+
+- Load Byte (LDRB)
+
+![[Drawing 2025-11-11 12.16.39.excalidraw]]
+
+## Skočni ukazi
+- spreminjajo PC
+- lahko upoštevajo zastavice N,Z,V,C
+### Branch if ... (B xx)
+
+![[Drawing 2025-11-11 13.23.43.excalidraw]]
+
+**N,Z,V,C** - ti biti se postavljajo v odvisnosti od rezultata le *dveh ukazov*. Skočni ukazi pa primerjajo COND s temi 4 biti.
+Ta ukaza sta **TST** in **CMP**.
+
+CMP: operand1 - operand2
+Z = 1, če operand1 = operand2, sicer Z=0
+N = 1, če operand1 < operand2, sicer N=0
+C = 1, če operand1 $\ge$ operand2
+# ARMv7 koda
+
+```ARM
+	.global _start
+	
+	.text
+	.org 0x00000000
+_start:
+
+
+_end:
+	B _end
+	
+	
+	.data
+a: .word 0x12345678
+```
+
+- .global \_start $\implies$ začetek programa
+- .text $\implies$ od tu naprej bo koda programa
+- .org 0x00000000 $\implies$ program se začne na tem naslovu
+- \_start: $\implies$ začetek ukazov programa
+- \_end: $\implies$ konec ukazov programa
+- .data $\implies$ začetek podatkov
+- a: $\implies$ ime spremenljivke; .word $\implies$ 32 bitov/4 bajte;  0x12345678 $\implies$ vrednost spremenljivke
+
+## Ukazi
+- ldr r1, =ime spremenljivke $\implies$ r1 $\leftarrow$ naslov spremenljivke
+- ldr r2, [r1, #0] $\implies$ r1 $\leftarrow$ vsebina spremenljivke z naslovom r1+0
+- add r3, r2, r1 $\implies$ r3 $\leftarrow$ r2 + r1
+- str r3, [r1,#4] $\implies$ naslov r1+4bajte $\leftarrow$ r3
+
+Nimamo ukaza, s katerim bi v nek register zapisali 32-bitni naslov (premalo prostora).
+Edini način, da naslov neke spremenljivke preberem v register je, da ga najprej zapišem v pomnilnik in ga nato od tam preberem z baznim naslavljanjem.
+

@@ -1,0 +1,4 @@
+- Uvod v Računalništvo 17.11 11:15
+- Diskretne Strukture 26.11 19:00-21:00
+- Matematika: 3.12 19:00
+---

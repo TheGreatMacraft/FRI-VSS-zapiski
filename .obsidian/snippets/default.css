@@ -32,3 +32,13 @@
     --callout-color: 181, 67, 132;
     --callout-icon: lucide-handshake;
 }
+
+.callout[data-callout="sun"] {
+    --callout-color: 255, 251, 43;
+    --callout-icon: lucide-sun;
+}
+
+.callout[data-callout="music"] {
+    --callout-color: 196, 138, 57;
+    --callout-icon: lucide-guitar;
+}

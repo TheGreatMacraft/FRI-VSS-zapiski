@@ -1,3 +1,4 @@
 {
-  "attachmentFolderPath": "slikice"
+  "attachmentFolderPath": "slikice",
+  "alwaysUpdateLinks": true
 }

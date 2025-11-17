@@ -12,6 +12,25 @@ hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
 
+WHAT IS A TOUPLE?? why cant i change them?
+# Stringi
+
+## Regex
+
+Regex se uporablja za iskanje točno določenih struktur v stringih.
+**Funkcije**:
+- search - poišče en ustrezen element in se ustavi
+- findall - poišče vse ustrezne elemente
+**Format**:
+Vse zapišemo kot "raw" string (r"..."), ker lahko v nasprotnem primeru python "požre" "\\"
+
+```python
+import re
+
+s = "sdsds(13)sdsdsd"
+vse = re.search(r"\((\d+)\)",s) # (13)
+st = re.search(r"\((\d+)\)",s).group(1) # 13
+```
 # Seznami (Lists)
 
 ## Append vs Extend
@@ -47,7 +66,19 @@ print(list(zip(a,b)))
 ```
 Zip združi elemente seznamov, ki ležijo na istih indeksih in vrne njihov iterator.
 
-Groupby:
+## "Odštevanje" Seznamov
+```python
+a = [1,2,3]
+b = [1,2,3,4,5,6]
+
+c = a - b #NE DELUJE, ZATO NAREDIMO:
+
+c = [el for el in b if el not in a] #TO PA SUPER DELUJE
+print(c)
+
+[4,5,6]
+```
+## GroupBy
 ```python
 from itertools import groupby
 
@@ -68,3 +99,18 @@ for k,g in groupby(beseda):
 . ['.']
 ```
 Groupby združi elemente seznama v key in group, tako da je key vrednost (v zgornjem primeru "." ali "#"), group pa je seznam te vrednosti, ponovljene tolikokrat, kot se je na tistem mestu pojavila v originalnem seznamu. Če ti tudi po tej razlagi stvar ni še čisto jasna, mi lahko pišeš [tu](https://chatgpt.com/).
+
+# Funkcije
+
+## Vračanje **Večih** Seznamov
+```python
+def funkcija():
+	a = [1,2,3]
+	b = [4,5,6]
+	return a,b
+
+c,d = funkcija()
+print(c,d)
+
+[1, 2, 3] [4, 5, 6]
+```

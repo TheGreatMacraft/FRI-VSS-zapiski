@@ -179,7 +179,7 @@ If the character attacks with a *melee* weapon they use their *Strength* and if 
 ##### Proficiency Bonus
 If the character is proficient with the weapon they are using for an attack, they can add their proficiency bonus.
 #### Rolling a 1 or 20
-If a player rolls a 20, the attack hits and becomes a [[#Critical Hit]]. However, if the player rolls a 1, the hit misses.
+If a player rolls a 20, the attack hits and becomes a [[#Critical Hit]]. Howe*ver, if the player rolls a 1, the hit misses.
 ### Unseen Attackers and Targets
 Attacking a target that you can't see grants you disadvantage on the attack roll. If you don't guess the target's location correctly, you automatically miss.
 If the creature you are attacking can't see you, you have advantage on the attack roll, but by attacking (whether hit or miss), you give away your location.
