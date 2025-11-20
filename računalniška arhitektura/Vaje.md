@@ -456,3 +456,277 @@ a:		.word 0x20
 b:		.word 0x10
 zastavice: .space 8
 ```
+
+---
+
+# Kviz 1
+
+1. V spodnji ARMv7 kodi želimo prebrati vrednost spremenljivke `d` v register `r4`. Kakšen mora biti odmik (???) da bo ukaz `ldrb r4, [r3, ???]` pravilno bral iz spremenljivke `d`?
+
+```asm
+.global _start
+.text
+.org 0x00000000
+
+_start:
+    ldr r3, =a
+    ldrb r4, [r3, ???]
+
+_end:
+    B _end
+
+.data
+a: .byte 0x01
+b: .byte 0x02
+empty: .space 4
+c: .byte 0x03
+d: .byte 0x04
+e: .word 0xffffffff
+```
+
+- 0
+- 8
+- 7
+- 4
+
+```spoiler
+7
+```
+
+2. Imam število `0x00000005` v 32-bitni plavajoči vejici po IEEE 754. Izberite pravilen odgovor:
+	- Vrednost tega števila je 5
+	- Število je pozitivno in denormalizirano
+	- Število je negativno in normalizirano
+	- Vrednost tega števila je -5
+
+```spoiler
+Število je pozitivno denormalizirano
+```
+
+3. Imamo dve binarni števili v dvojiškem komplementu: štiribitno `A=1010` in osembitno `B=11111010`. Izberi pravilno trditev:
+	- A < B in imata obe števili enaki absolutni vrednosti
+	- A > B in imata števili različni absolutni vrednosti
+	- A < B in sta obe števili pozitivni
+    - A = B
+
+```spoiler
+A=B
+```
+
+4. Imamo dve celi predznačeni binarni števili `A=1011` in `B=0101`, ki ju seštevemo. Izberi pravilno trditev:
+	- rezultat je 1110 in pride do prenosa in preliva
+	- rezultat je 0000 in pride do prenosa, ne pa do preliva
+	- rezultat je 0000 in ne pride do preliva in prenosa
+	- rezultat je 1111 in ne pride do prenosa
+
+```spoiler-markdown
+Rezultat je 0000, pride do prenosa, ne pa do preliva.
+```
+
+5. Predpostavite, da imamo v registru `r7` vrednost `-2` in v registru `r2` vrednost `0xfffffffe`. Kaj bo vrednost zastavic po izvedbi ukaza `CMP r2, r7`?
+	- Zastavici C in N bosta nastavljeni (C=1, N=1), zastavica Z pa bo počiščena (Z=0)
+    - Zastavici N in C bosta počiščeni, zastavica Z bo nastavljena (C=0, N=0, Z=1)
+    - Zastavice C in Z bosta nastavljene (C=1, N=1, Z=1)
+    - Zastavica N bo počiščena, zastavici C in Z bosta nastavljeni (C=1, N=0, Z=1)
+
+```spoiler-markdown
+Zastavici N in C bosta počiščeni, zastavica Z bo nastavljena (C=0, N=0, Z=1)
+```
+
+6. Predpostavite, da imamo v registru `r7` vrednost `12` in v registru `r2` vrednost `3`. Kaj bo vrednost zastavic po izvedbi ukaza `CMP r7, r2`?
+	- Zastavica C bo nastavljena (C=1), zastavica N bo počiščena (C=1, N=0)
+    - Zastavici C in N bosta nastavljeni (C=1, N=1)
+    - Zastavici C in N bosta počiščeni (C=0, N=0)
+    - Zastavica C bo počiščena (C=0), zastavica N bo nastavljena (C=0, N=1)
+
+```spoiler-markdown
+Zastavica C bo nastavljena (C=1), zastavica N bo počiščena (C=1, N=0)
+```
+
+7. Za spremenljivke
+```
+A: .word 0x1f2e3d4c  
+B: .word 0xaabbccdd  
+C: .word 0x55667788  
+```
+ki so v pomnilniku shranjene ena za drugo, izberi pravilen niz ukazov, da bo spremenljivka `C` shranjena na naslovu `A`.
+	- ldr r0,=C; ldr r1,[r0,#0]; str r1,[r0,#8]
+    - ldr r0,=A; ldr r1,[r0,#8]; str r1,[r0,#0]
+    - ldr r0,=A; ldr r1,[r0,#0]; str r1,[r0,#4]
+    - ldr r0,=A; ldr r1,[r0,#0]; str r1,[r0,#8]
+
+```spoiler-markdown
+ldr r0,=A; ldr r1,[r0,#8]; str r1,[r0,#0]
+```
+
+8. V spodnji ARMv7 kodi želimo prebrati vrednost spremenljivke `e` v register `r4`. Kakšen mora biti odmik (???) da bo ukaz `ldr r4, [r3, ???]` pravilno bral iz spremenljivke `e`?
+
+```asm
+.global _start
+.text
+.org 0x00000000
+
+_start:
+    ldr r3, =a
+    ldr r4, [r3, ???]
+
+.end:
+
+.data
+a: .byte 0x01
+b: .byte 0x02
+empty: .space 4
+c: .byte 0x03
+d: .byte 0x04
+e: .word 0xffffffff
+```
+
+- 8
+- 4
+- 6
+- 9
+
+```spoiler-markdown
+8
+```
+
+9. Kaj naredi ukaz `str r1, [r6, #8]`?
+	- Prenese 8-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r6+8
+    - Prenese 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je shranjen v r6+8
+    - Prenese 32-bitno spremenljivko iz r6 v pomnilniško besedo, katere naslov je r1+8
+    - Shrani 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r6+8
+
+```spoiler-markdown
+Shrani 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r6+8
+```
+
+10. Kaj naredi ukaz `strb r1, [r5, #-16]`?
+	- Shrani 8-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r5+16
+    - Shrani 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r5-16
+    - Shrani 8-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r5-16
+    - Shrani 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r5+16
+
+```spoiler-markdown
+Shrani 8-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r5-16
+```
+
+11. Imamo dve binarni števili v 32-bitnem zapisu s plavajočo vejico: A = `01000100101010001110000000000011` B = `11000100011000011100000000001111` Izberi pravilno trditev:
+	- A < B in sta obe števili negativni
+    - A < B in sta različno predznačeni
+    - A > B in sta obe števili pozitivni
+    - A > B in sta različno predznačeni
+
+```spoiler-markdown
+A > B in sta različno predznačeni
+```
+
+12. Imamo dve binarni števili v dvojiškem komplementu: štiribitno `A=1001` in osembitno `B=11111000`. Izberi pravilno trditev:
+	- A = B = 1
+    - A = B = 0
+    - A = 8, B = 248
+    - A = B
+
+```spoiler-markdown
+Noben od odgovorov, B < A; B = -8, A = -7
+```
+
+13. Imamo dve celi predznačeni binarni števili `A=1000` in `B=1001`, ki ju seštejemo in zapišemo rezultat s 4 biti. Izberi pravilno trditev:
+	- rezultat je 0001 in pride do preliva, ne pa do prenosa
+    - rezultat je 1001 in pride do prenosa in preliva
+    - rezultat je 0001 in ne pride do prenosa niti do preliva
+    - rezultat je 0001 in pride do prenosa in preliva
+
+```spoiler-markdown
+rezultat je 0001 in pride do prenosa in preliva
+```
+
+14. Pri arhitekturi, ki uporablja 8 registrov in ima 3-operandne ukaze, koliko bitov potrebujemo za kodiranje registrov?
+	- 9
+    - 16
+    - 32
+    - 12
+
+```spoiler-markdown
+9
+```
+
+15. Predpostavite 32-bitno arhitekturo z 64 registri in 512 operacijskimi kodami. Kolikšen je lahko največji odmik v LOAD/STORE ukazih?
+	- največ 14-bitni odmik
+    - največ 16-bitni odmik
+    - največ 18-bitni odmik
+    - največ 11-bitni odmik
+
+```spoiler-markdown
+največ 11-bitni odmik
+```
+
+16. Predpostavite 32-bitno arhitekturo, kjer so ukazi 32-bitni, naslovi 32-bitni in pri kateri imamo za shranjevanje operandov v CPE 8 32-bitnih registrov. Arhitektura ima 128 različnih operacij ter za dostop do pomnilnika dovoljuje le bazno naslavljanje z odmikom. Zato bomo v ukazih LOAD/STORE lahko imeli:
+	- največ 12 bitni odmik
+    - največ 32 bitni odmik
+    - največ 20 bitni odmik
+    - največ 19 bitni odmik
+
+```spoiler-markdown
+največ 19 bitni odmik
+```
+
+17. Imamo dve binarni števili v dvojiškem komplementu: štiribitno `A=1010` in osembitno `B=11111010`. Izberi pravilno trditev:
+	- A < B in sta obe števili pozitivni
+    - A < B in imata obe števili enaki absolutni vrednosti
+    - A > B in imata števili različni absolutni vrednosti
+    - A = B
+
+```spoiler-markdown
+A=B
+```
+
+18. Pri arhitekturi, ki za shranjevanje operandov v CPE uporablja 8 registrov in ima 3-operandne ukaze, bomo v ukazih, ki izvedejo `reg1 <- (reg2 OP reg3)` potrebovali:
+	- 16 bitov za kodiranje registrov
+    - 32 bitov za kodiranje registrov
+    - 12 bitov za kodiranje registrov
+    - 9 bitov za kodiranje registrov
+
+```spoiler-markdown
+9 bitov za kodiranje registrov
+```
+
+19. Imam število `0x3F000000` v 32-bitni plavajoči vejici po IEEE 754. Izberite pravilen odgovor:
+	- Vrednost tega števila je +0.3000000
+    - Vrednost tega števila je -0.3000000
+    - Vrednost tega števila je +0.3150000
+    - Vrednost tega števila je +0.5000000
+
+```spoiler-markdown
+Vrednost tega števila je +0.5000000
+```
+
+20. Imamo dve binarni števili v IEEE 754 formatu enojne natančnosti: A = `0x80000000` B = `0x00000000` Izberi pravilno trditev:
+	- A = B in sta števili normalizirani
+    - A in B sta ničli
+    - A < B in sta obe števili denormalizirani
+    - A > B in sta obe števili denormalizirani
+
+```spoiler-markdown
+A in B sta ničli
+```
+
+21. Kaj naredi ukaz `str r1, [r6, #8]`?
+	- Prenese 32-bitno spremenljivko iz r6 v pomnilniško besedo, katere naslov je r1+8. Pri tem uporabljamo bazno naslovljanje z odmikom.
+    - Prenese 8-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r6+8. Pri tem uporabljamo bazno naslovljanje z odmikom.
+    - Prenese 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je shranjen v r6+8. Pri tem uporabljamo neposredno pomnilniško naslovljanje.
+    - Shrani 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r6+8. Pri tem uporabljamo bazno naslavljanje z odmikom.
+
+```spoiler-markdown
+Shrani 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r6+8. Pri tem uporabljamo bazno naslavljanje z odmikom.
+```
+
+22. Pri arhitekturi, ki za shranjevanje operandov v CPU uporablja registre in ima 3-operandne registrsko-registrske ukaze, imamo v ukazu 12 bitov za kodiranje registrov. Koliko splošnonamenskih registrov ima taka arhitektura?
+	- 12
+    - 9
+    - 16
+    - 32
+
+```spoiler-markdown
+16
+```
+
