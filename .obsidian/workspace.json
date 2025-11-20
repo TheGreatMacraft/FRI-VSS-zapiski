@@ -4,17 +4,65 @@
     "type": "split",
     "children": [
       {
-        "id": "4e65f1f689fabf8c",
+        "id": "662d4d90ae472faf",
         "type": "tabs",
         "children": [
           {
-            "id": "5391a42041c12e09",
+            "id": "ee6e64b32568af65",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "diskretne strukture/Vaje.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Vaje"
+            }
+          },
+          {
+            "id": "ff2ac01737850572",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-11-20 13.25.13.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-11-20 13.25.13.excalidraw"
+            }
+          },
+          {
+            "id": "f27e0f13575bcf1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "diskretne strukture/Zapiski.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Zapiski"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4e2a13a69fabc2be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f32671cd911237fd",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "diskretne strukture/kolokviji/dsvsp-k1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "dsvsp-k1"
             }
           }
         ]
@@ -74,7 +122,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
+    "width": 298.5,
+    "collapsed": true
   },
   "right": {
     "id": "d9a70bc77a48a68c",
@@ -171,52 +220,53 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "5391a42041c12e09",
+  "active": "ee6e64b32568af65",
   "lastOpenFiles": [
+    "diskretne strukture/Zapiski.md",
+    "diskretne strukture/Vaje.md",
+    "Excalidraw/Drawing 2025-11-20 13.25.13.excalidraw.md",
+    "diskretne strukture/kolokviji/dsvsp-k1.pdf",
+    "diskretne strukture/literatura/dsvsp-predavanja2.pdf",
+    "diskretne strukture/literatura/dsvsp-predavanja.pdf",
+    "matematika/Zapiski.md",
+    "slikice/Pasted image 20251120103224.png",
+    "matematika/Matematika_RI_VS_e_handout.pdf",
+    "računalniška arhitektura/Zapiski.md",
+    "računalniška arhitektura/Vaje.md",
+    "DnD/Army of the damned/Army of The Damned.md",
+    "DnD/Army of the damned/armyofthedamned.pdf",
+    "matematika/Vaje.md",
+    "Excalidraw/Drawing 2025-11-18 16.40.56.excalidraw.md",
+    "slikice/Pasted Image 20251118165236_037.png",
+    "Excalidraw/Drawing 2025-11-18 16.34.30.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 16.25.15.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 16.10.04.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 16.00.16.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 15.54.06.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 15.39.32.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 15.20.08.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 10.29.12.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-07 13.01.58.excalidraw.md",
+    "slikice/Pasted image 20251118102727.png",
+    "Excalidraw/Drawing 2025-11-18 10.19.02.excalidraw.md",
+    "Excalidraw/Drawing 2025-11-18 09.41.30.excalidraw.md",
+    "slikice/Pasted Image 20251118094325_564.png",
+    "Excalidraw/Drawing 2025-11-18 09.27.03.excalidraw.md",
     "uvod v računalništvo/Vaje.md",
     "uvod v računalništvo/literatura študentov/Uvod_v_racunalnistvo_koncna_verzija.pdf",
-    "računalniška arhitektura/Vaje.md",
     "Excalidraw/Drawing 2025-11-16 18.37.44.excalidraw.md",
     "Excalidraw/Drawing 2025-11-16 18.17.01.excalidraw.md",
     "Excalidraw/Drawing 2025-11-16 17.57.32.excalidraw.md",
     "Excalidraw/Drawing 2025-11-16 17.54.44.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 17.39.23.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 17.33.34.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 16.00.05.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 15.54.31.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 15.46.50.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 15.43.45.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 15.36.42.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 15.32.36.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 15.18.23.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 14.56.02.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 14.46.55.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 14.35.22.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 14.20.57.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 14.13.26.excalidraw.md",
     "uvod v računalništvo/kolokvij/UVR_Kolokvij_1.pdf",
     "DnD/Player's Handbook.pdf",
     "DnD/Monster Manual.pdf",
-    "DnD/Army of the damned/armyofthedamned.pdf",
-    "DnD/Simplified Rules.md",
-    "DnD/Army of the damned/Army of The Damned.md",
     "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
-    "matematika/Zapiski.md",
     "DnD/Army of the damned/Media/Shadowgrange/Alchemy Basement.png",
-    "DnD/Army of the damned/Media/Shadowgrange/basement.ds.crswap",
     "DnD/Army of the damned/Media/Shadowgrange/store_example.jpg",
-    "programiranje/domače naloge/angelčin_zapis.py~",
-    "uvod v računalništvo/literatura študentov/Vprašanja za Ustni izpit.md",
-    "uvod v računalništvo/literatura študentov",
-    "uvod v računalništvo/Zapiski - Ne Moji.md",
     "slikice/Pasted image 20251113145924.png",
-    "uvod v računalništvo/literatura/Vaje 5.pdf",
     "slikice/Pasted image 20251113083730.png",
     "slikice/Pasted image 20251112185625.png",
-    "slikice/Pasted image 20251112182317.png",
-    "slikice/Pasted image 20251112182248.png",
-    "slikice/Pasted image 20251112182219.png",
-    "slikice/Pasted image 20251112182140.png",
-    "slikice/Pasted Image 20251111183427_830.png"
+    "slikice/Pasted image 20251112182317.png"
   ]
 }

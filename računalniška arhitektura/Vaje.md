@@ -289,29 +289,170 @@ Rezultat: 1(predznak) 01111111 (eksponent) 11110000000000000000000 (mantisa) = 0
 35,6875 = 100011,1011 = 1,000111011 $* 2^5$ = 0 10000100 00011101100000000000000 = 0x420EC000
 
 ```spoiler-markdown
-.global _start
+        .global _start
 
-.text
-.org 0x00000000
+        .text
+        .org 0x00000000
 _start:
 
-ldr r0, =STEV1
-ldr r1, =STEV2
+ldr r0,=a
+ldr r1,=b
 
 ldr r2, [r0]
 ldr r3, [r1]
 
-str r3, [r0]
 str r2, [r1]
+str r3, [r0]
 
 _end:
-B _end
+        B _end
 
 
-.data
-STEV1:  	.word  0xBFF80000
-STEV2: 		.word  0x420EC000
+        .data
+a:  	.word  0xBFF80000
+b:		.word  0x420EC000
 
 ```
 
-2. 
+2. Zapišite ukaz(e) v zbirniku za procesor ARM, ki v podan register naloži vrednost spremenljivke:
+	- naloži 32-bitno vrednost 0x12345678 v register R1
+	- naloži 8-bitno vrednost 128 v register R1.
+	- naložimo 16-bitno vrednost 0xF123 v register R1.
+
+```spoiler-markdown
+ldr r1, =0x12345678
+ldrb r1, #128
+ldrh r1, =0xF123
+```
+
+3. Napišite program v ARM zbirniku, ki izračuna naslednji izraz: rez = (a + b) - (c - d), in shrani rezultat. Vse spremenljivke so 32 bitne in imajo naslednje vrednosti:
+	- a = 32, b = 16, c= 12, d = 24
+	- a = - 257, b = -16, c = -68, d = 34 
+	V CPUlator vpišite spremenljivke v šestnajstiškem zapisu.
+
+```spoiler-markdown
+        .global _start
+
+        .text
+        .org 0x00000000
+_start:
+
+ldr r0,=a1
+
+ldr r1, [r0]
+ldr r2, [r0,#4]
+ldr r3, [r0,#8]
+ldr r4, [r0,#12]
+
+add r5,r1,r2
+sub r6,r3,r4
+sub r7,r5,r6
+
+_end:
+        B _end
+
+
+        .data
+a: 		.word 0x20
+b:		.word 0x10
+c: 		.word 0x0c
+d:		.word 0x18
+
+a1: 	.word 0xfffffeff
+b1:		.word 0xfffffff0
+c1: 	.word 0xffffffbc
+d1:		.word 0x00000022
+```
+
+4. Napišite zaporedje ukazov v zbirniku za ARMv7, ki izračuna negativno vrednost števila a = 56 z dvojiškim komplementom in shrani rezultat v spremenljivko b. Namig: uporabite XOR operacijo.
+
+```spoiler-markdown
+        .global _start
+
+        .text
+        .org 0x00000000
+_start:
+
+ldr r0,=a
+ldr r1, [r0]
+ldr r2, [r0,#4]
+
+eor r3,r1,r2
+add r3,r3,#1
+
+_end:
+        B _end
+
+
+        .data
+a: 		.word 0x00000038
+full: 	.word 0xffffffff
+```
+
+5. Rezervirajte prostor za tabelo z oznako TABELA, v kateri bo zapisanih 5 8-bitnih vrednosti (bajtov). Nato napišite zaporedje ukazov v zbirniku za ARMv7, ki v vse bajte tabele zapiše vrednost 0xFF.
+
+```spoiler-markdown
+        .global _start
+
+        .text
+        .org 0x00000000
+_start:
+
+ldr r0,=tabela
+mov r1, #0xff
+
+mov r2, #5
+
+loop:
+strb r1,[r0]
+add r0,r0,#1
+sub r2,r2,#1
+
+cmp r2, #0
+bne loop
+
+
+_end:
+        B _end
+
+
+        .data
+tabela: 	.space 5
+```
+
+6. Preverite delovanje ukazov CMP in TST za dva operanda (OP1, OP2), če uporabite desetiški števili 32 in 16. Izpišite rezultate zastavic N, Z, C, V iz registra CPSR (Current Program Status Register):
+	- OP1 = OP2 (N = ; Z = ; C = ; V = )
+	- OP1 > OP2 (N = ; Z = ; C = ; V = )
+	- OP1 < OP2 (N = ; Z = ; C = ; V = )
+
+```spoiler-markdown
+        .global _start
+
+        .text
+        .org 0x00000000
+_start:
+
+ldr r0,=a
+ldr r1,[r0]
+ldr r2,[r0,#4]
+
+cmp r2,r1
+mrs r3, CPSR
+
+and r3,r3,#0xF0000000
+str r3,[r0,#8]
+
+tst r1,r2
+mrs r3, CPSR
+
+and r3,r3,#0xF0000000
+str r3, [r0,#12]
+
+_end:
+        B _end
+
+
+a:		.word 0x20
+b:		.word 0x10
+zastavice: .space 8
+```

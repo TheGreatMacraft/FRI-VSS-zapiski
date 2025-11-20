@@ -42,3 +42,10 @@
     --callout-color: 196, 138, 57;
     --callout-icon: lucide-guitar;
 }
+
+i, em, span.cm-em {
+color: #50648c; }
+
+body {
+    --bold-color: #8f5b39;
+}

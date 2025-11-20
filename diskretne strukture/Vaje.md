@@ -605,3 +605,62 @@ Podatki niso OK.
 ```spoiler-markdown
 ![[Drawing 2025-11-11 18.33.17.excalidraw]]
 ```
+
+---
+# Domača naloga, 7. teden
+1. Ali drži enakost $C + (A\cap B) = (C\textbackslash (A\cup B)) \cap/(A\cap B\cap C)$?
+
+```spoiler-markdown
+![[Drawing 2025-11-18 09.27.03.excalidraw]]
+```
+
+2. Ali velja enakost $((A+B)\textbackslash C)\cup(A\cap B\cap C) = ((A\cup B)\textbackslash C)+(A\cup B)$?
+
+```spoiler-markdown
+![[Drawing 2025-11-18 09.41.30.excalidraw]]
+```
+
+3. Koliko elementov ima množica $P(P(\{1,2\}))$.
+
+```spoiler-markdown
+$|P(P({1,2}))| = 2^2^2 = 16$
+```
+
+---
+
+# Kolokvij
+1. Trimestni izjavni veznik A je definiran z opisom $A(p,q,r)\equiv(p \implies q)\vee r$, zaporedje izjavnih izrazov pa definiramo z začetnima členoma $A_{1}=q\implies p,A_{2}=p\land \neg q$ in pri $n\ge 3$ z rekurzivno zvezo $A_{n}=A(A_{n-2},p,A_{n-1})$.
+	- Izračunaj prvih šest členov zaporedja ($A_{i},i\in \mathbb{N}$)
+	- Pokaži, da za vsako naravno število $k\ge 1$ velja trditev: Če sta člena $A_{k}$ in $A_{k+1}$ tavtologiji, potem sta tudi člena $A_{k+1}$ in $A_{k+2}$ tavtologiji.
+	- S pomočjo indukcije izračunaj $A_{2024}$
+
+2. Dan je sklep $\neg r\vee p,r\vee s,s\implies \neg p,q\vee(r\implies s)\models p\implies q$. Preveri ali je sklep pravilen in zapiši formalen dokaz tega sklepa. Ali sklep ostane pravilen, če zaključek $p \implies q$ zamenjamo s $p\vee q$? Zakaj?
+
+3. V področju pogovora živalskih vrst uporabimo predikate $R,A,H$ z naslednjimi pomeni: $A(x) \dots x$ živi v Afriki, R(x) ... x ima rep, H(x,y) ... x je hitrejši od y.
+	Tako R(lev) formalizira izjavo "Lev ima rep."
+	Izjavo "x je hitrejši od slona." pa formaliziramo s formulo H(x, slon).
+	Formaliziraj naslednje izjave. Pri tem smiselno definiraj potrebne manjkajoče predikate.
+	- Nekatere živali nimajo repa.
+	- Vsaka afriška žival zna plavati.
+	- Nekatere afriške živali nimajo repa in ne znajo plavati.
+	- Slon je najhitrejša žival.
+	- Najhitrejša žival živi v Afriki in zna plavati.
+
+```spoiler-markdown
+$\exists x \neg R(x)$
+$\forall x(A(x)\implies P(x))$
+$\exists x(A(x) \land\neg R(x)\land \neg P(x))$
+$\forall xH(slon,x)$
+$\forall x(\forall yH(x,y)\implies A(x)\land P(x))$
+ali
+$\exists x(\forall y H(x,y)\land A(x)\land P(x))$
+
+```
+
+4. Naj bodo A,B in C poljubne množice. Opazujemo množice:
+	- $U = A+B+C$
+	- $V=(A\cup B\cup C)\textbackslash (A\cap B\cap C)$
+	- $W=(A+B)\cup(B+A)\cup(C+B)$
+	1. Utemelji, da sta množici V in W enaki.
+	2. Pokaži, da v splošnem ne velja vsebovanost $U \subseteq V$. Ravno tako pokaži, da v splošnem ne velja vsebovanost $W \subseteq U$.
+	3. 

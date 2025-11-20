@@ -425,11 +425,72 @@ a: .word 0x12345678
 - a: $\implies$ ime spremenljivke; .word $\implies$ 32 bitov/4 bajte;  0x12345678 $\implies$ vrednost spremenljivke
 
 ## Ukazi
-- ldr r1, =ime spremenljivke $\implies$ r1 $\leftarrow$ naslov spremenljivke
-- ldr r2, [r1, #0] $\implies$ r1 $\leftarrow$ vsebina spremenljivke z naslovom r1+0
-- add r3, r2, r1 $\implies$ r3 $\leftarrow$ r2 + r1
-- str r3, [r1,#4] $\implies$ naslov r1+4bajte $\leftarrow$ r3
+- `ldr r1, =ime spremenljivke` $\implies$ r1 $\leftarrow$ **naslov** spremenljivke
+- `ldr r2, [r1, #0]` $\implies$ r1 $\leftarrow$ **vsebina** spremenljivke z naslovom r1+0
+- `str r3, [r1,#4]` $\implies$ naslov r1+4bajte $\leftarrow$ r3 (ker so naslovi 32 bitni oz. 4 bajtni, bo ta ukaz naložil naslednji naslov od tistega v *r1*)
+- `mov r0, r1` $\implies$ r0 $\leftarrow$ r1
+### Aritmetične
+- `add r3, r2, r1` $\implies$ r3 $\leftarrow$ r2 + r1
+- `add r0, r0, #1` $\implies$ r0 $\leftarrow$ r0 + 1
+- `sub r0, r1, r2` $\implies$ r0 $\leftarrow$ r1 - r2
+- `adc r1, r2, #1` $\implies$ r1 $\leftarrow$ r2 + 1 + C (*carry bit*)
+- `cmp r0,r1`
+	Naredi: r0 - r1, in če je rezultat:
+	- negativen (r0 < r1): C = 0, N=1, Z=0
+	- pozitiven (r0 > r1): C = 1, N = 0, Z = 0
+	- nič (r0 = r1): C = 0, N = 0, Z = 1
+### Logične Operacije
+- `and r0, r1, r2` $\implies$ r0 $\leftarrow$ r1 AND r2
+	r0 je novo število, ki ga dobimo če nad vsakim parom istoležnih bitov r1 in r2 izvedemo operacijo *AND*
+- `orr r0, r1, r2` $\implies$  r0 $\leftarrow$ r1 OR r2
+	r0 je novo število, ki ga dobimo če nad vsakim parom istoležnih bitov r1 in r2 izvedemo operacijo *OR*
+- `eor r0, r1, r2` $\implies$ r0 $\leftarrow$ r1 EOR r2
+	r0 je novo število, ki ga dobimo če nad vsakim parom istoležnih bitov r1 in r2 izvedemo operacijo *EXCLUSIVE OR*
+- `tst r0, r1`
+	Ukaz izvede r0 AND r1, in glede na rezultat nastavi zastavice: Z=1, če je 0 in N=1 če je negativen. Rezultat se zavrže
+### Rotacijski ukazi
+- `lsl r0, r1, r2`
+	Ukaz pomakne bite r1, za r2 v levo, na najmanjši bit vpiše *0* in shrani rezultat v r0. *"množenje z 2"* ($1010 \rightarrow 0100$)
+- `lsr r0, r1, r2`
+	Ukaz pomakne bite r1, za r2 v desno, na najvišji bit vpiše *0* in shrani rezultat v r0. *"nepredznačeno deljenje z 2"* ($1010 \rightarrow 0101$)
+- `asr r0, r1, r2`
+	Ukaz pomakne bite r1, za r2 v desno, na najvišji bit vpiše *prejšnji najvišji bit* in shrani rezultat v r0. ($1010 \rightarrow 1101$)
+- `ror r0, r1, r2`
+	Ukaz pomakne bite r1 za r2 v desno, na najvišji bit vpiše *prejšnji najmanjši bit* in shrani rezultat v r0. ($1010 \rightarrow 0101$)
+
+---
 
 Nimamo ukaza, s katerim bi v nek register zapisali 32-bitni naslov (premalo prostora).
 Edini način, da naslov neke spremenljivke preberem v register je, da ga najprej zapišem v pomnilnik in ga nato od tam preberem z baznim naslavljanjem.
 
+## Ukazi za odmike
+- pomiki so zelo koristne aritmetične operacije
+1. Logični pomik v levo
+	- biti operanda se pomaknejo za eno mesto v levo in se v desni bit vpiše 0: $0011 \rightarrow 0110$
+	- *"Množenje z 2!"*
+	- **LSL**
+2. Logični pomik v desno
+	- biti operanda se pomaknejo za eno mesto v desno in se v levi bit vpiše 0: $0011 \rightarrow 0001$
+	- *"Nepredznačeno deljenje z 2!"*
+	- **LSR**
+3. Aritmetični pomik v desno
+	- biti operanda se pomaknejo za eno mesto v desno in se v najvišji bit vpiše prejšnji prvi bit: $1000\rightarrow 1100$
+	- **ASR**
+4. Rotacija v desno
+	- biti operanda se pomaknejo za eno mesto v desni in se v najvišji bit vpiše prejšnji zadnji bit: $1000\rightarrow 0100$
+	- **ROR**
+## Podprogrami
+Funkcij v visokih programskih jezikih (Python), sploh nebi mogli pisat, če nebi bilo *podpore v arhitekturi*:
+1. Klicanje podprogramov
+2. Vračanje iz podprogramov
+3. Prenos argumentov/parametrov
+**Klic podprogramov**:
+- Zapomnimo si *povratni naslov* - naslov ukaza, ki sledi ukazom za klic
+- PC $\leftarrow$ naslov podprograma $\rightarrow$ skočni naslov $\rightarrow$ naslov prvega ukaza podprograma
+- povratni naslov je **vedno** v registru **R14** - *Link Register*
+- vse to naredi ukaz BL (*Branch and Link*)
+**Vrnitev iz podprograma**:
+- $PC \leftarrow LR$
+- BX LR
+
+**Preliv** - seštevanje 2 enako predznačenih števil vodi v rezultat, ki ima drug predznak

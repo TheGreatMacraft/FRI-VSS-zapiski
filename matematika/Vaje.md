@@ -339,6 +339,46 @@ Vrsta je vsota členov zaporedja.
 ```spoiler-markdown
 ![[Drawing 2025-11-11 16.41.52.excalidraw]]
 ```
+- $\displaystyle \sum_{n=2}^{\infty}\frac{2^{n}}{3^{2n-1}}$
+```spoiler-markdown
+![[Drawing 2025-11-18 15.20.08.excalidraw]]
+```
+- $\frac{3}{2}+1+\frac{2}{3}+\frac{4}{9}+\frac{8}{27}+\dots$
+```spoiler-markdown
+![[Drawing 2025-11-18 15.39.32.excalidraw]]
+```
+
+---
+# Funkcije
+1. Kaj je $Df$ od:
+- $f(x)=\sqrt{ -x^{2}-x+2 }$
+```spoiler-markdown
+![[Drawing 2025-11-18 15.54.06.excalidraw]]
+```
+- $f(x)=\log (\frac{2+x}{2-x})$
+```spoiler-markdown
+![[Drawing 2025-11-18 16.00.16.excalidraw]]
+```
+
+2. Poišči predpis za inverz (inverzna funkcija):
+- $f(x) = \\frac{x+1}{2x-3}$
+```spoiler-markdown
+![[Drawing 2025-11-18 16.10.04.excalidraw]]
+```
+3.Preveri ali je funkcija soda/liha:
+- $f(x)=-x^{2}-2|x|+1$
+```spoiler-markdown
+![[Drawing 2025-11-18 16.25.15.excalidraw]]
+```
+- $f(x)=\log(\frac{1+x}{1-x})$
+```spoiler-markdown
+![[Drawing 2025-11-18 16.34.30.excalidraw]]
+```
+4. Nariši graf racionalne funkcije:
+- $f(x) = \frac{x^{3}+2x^{2}-8x}{x^{2}-1}$
+```spoiler-markdown
+![[Drawing 2025-11-18 16.40.56.excalidraw]]
+```
 
 ---
 # Domača naloga: 6. teden
@@ -413,3 +453,25 @@ Vrsta je vsota členov zaporedja.
 ```spoiler-markdown
 ![[Drawing 2025-11-13 10.25.56.excalidraw]]
 ```
+
+---
+
+# domača naloga: 7. teden
+1. Poišči interval, ki predstavlja definicijsko območje funkcije $f(x) = \log(-(x^{2}-9x+18)).$
+
+```spoiler-markdown
+![[Drawing 2025-11-18 10.19.02.excalidraw]]
+```
+
+2. Na spodnji slike je graf neznane funkcije f. Koliko približno so naslednje vrednosti (rezultat zaokroži na 1 ali 2 decimalke):
+	- f(0.60)
+	- x, za katerega je f(x) = 0.70
+	- $f^{-1}(0.38)$
+![[Pasted image 20251118102727.png|250]]
+
+```spoiler-markdown
+f(0.60) = 0.56
+f(x) = 0.70; x=0.79
+$f^{-1}(0.38) = f(x) = 0.38; x=0.3$
+```
+---

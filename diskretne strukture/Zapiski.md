@@ -759,6 +759,7 @@ Naj bo R relacija v A. Pravimo, da je:
 4. R *tranzitivna* $\Longleftrightarrow \forall x,y,z \in A : xRy \land yRz \implies xRz$
 5. R *sovisna* $\Longleftrightarrow \forall x,y \in A : x \ne y \implies xRy \vee yRx$
 6. R *enolična* $\Longleftrightarrow \forall x,y,z \in A : xRy \land xRz \implies y = z$
+7. R *ekvivalenčna*, če je *refleksivna, simetrična in tranzitivna*
 ### Grafična predstavitev relacije
 A = {e,f,g,h}
 R = {(e,f),(f,g),(g,h)}
@@ -857,3 +858,95 @@ Naj bo $f:A\rightarrow B$. Pravimo, da je:
 - f *injektivna*, če $\forall x,y\in A:(f(x)=f(y)\implies x=y)$
 - f *surjektivna*, če $Z_{f}=B$ (pravimo tudi, da je f preslikava iz A **na** B)
 - f *bijektivna*, če je injektivna in surjektivna
+
+### Inverzna preslikava
+Kdaj je $f^{-1}$ tudi preslikava?
+$f:A\rightarrow B$
+1. $f^{-1}$ je enolična natanko tedaj, ko je f injektivna
+2. $f^{-1}$: $B\rightarrow A$ natanko tedaj, ko je f bijektivna
+
+$\forall x \in B \forall y,z\in A: xf^{-1}y$ in $yf^{-1}z \implies y=z$
+$\forall x \in B \forall y,z \in A: x=f(y)$ in $x=f(z) \implies y=z$
+
+$$
+\forall y,z\in A f(y)=f(z)\implies y=z$$
+### Kompozitum preslikav
+Naj bosta g : $A\rightarrow B$ in $f:B\rightarrow C$. Potem je $f\circ g = g * f$
+
+$\exists z:xgz \text{ in }zfy$...
+$\exists z=g(x) \text{ in }y=f(z)$
+$y = f(g(x))$
+
+$(f\circ g) \circ h = h * (g*f)=(h*q)*f=f\circ(g\circ h)$
+
+#### Lastnosti kompozituma
+
+Naj bo f: $A\rightarrow B$.
+Potem je $f \circ id_{A}=id_{B} \circ f = f$
+
+$f:B\rightarrow C, g:A\rightarrow B$
+1. f,g injektivni $\implies f\circ g$ injektivna
+2. f,g surjektivni $\implies$ $f\circ g$ surjektivna
+3. $f\circ g$ injektivna $\implies$ g injektivna
+4. $f\circ g$ surjektivna $\implies$ f surjektivna
+
+Naj bo $f:B\rightarrow A,g:A\rightarrow B$. če je $f\circ g=id_{A}$ in $g\circ f=id_{B}$, potem sta f in g bijekciji in je $g=f^{-1}$.
+
+$f\circ g:A\rightarrow A$
+$g\circ f:B\rightarrow B$
+
+$f\circ g$ je surjektivna in injektivna (f je surjektivna, g je injektivna)
+
+$g\circ f$ je surjektivna in injektivna (g je surjektivna, f injektivna)
+
+b in f sta torej bijektivni.
+
+$\exists g^{-1}:B\rightarrow A$
+$\exists f^{-1}:A\rightarrow B$
+
+$f^{-1}=f^{-1}\circ id_{A} = f^{-1}\circ (f\circ g)=(f^{-1}\circ f)\circ g=id_{B}\circ g=g$
+### Dirichletov princip
+Naj bo A končna množica in $f:A\rightarrow A$. Potem so naslednje trditve enakovredne:
+- f je injektivna
+- f je surjektivna
+- f je bijektivna
+
+*Recap:* Če imamo več predmetov kot predalčkov, potem mora biti v vsaj enem predalčku več kot en predmet.
+
+Parkiranje: 10 parkirnih mest, 10 avtov:
+- parkiranje je surjektivno ... na vsakem parkirnem mestu je vsaj en avto.
+- parkiranje je injektivno ... na vsakem parkirnem mestu je največ en avto
+- parkiranje je bijektivno .. na vsakem parkirnem mestu je natanko en avto
+
+Množica A je končna, če je za preslikavo $f:A\rightarrow A$ surjektivnost enakovredna injektivnosti.
+
+### Ekvivalenčna relacija
+$R \subseteq A\times A$ je *ekvivalenčna*, če je:
+- refleksivna,
+- simetrična
+- tranzitivna
+
+Zgledi:
+1. Relacija || vzporednosti v množici vseh premic v ravnini.
+2. A={ljudje}, $xRy \Longleftrightarrow x$ ima enako barvo oči kot y.
+3. $f:A\rightarrow B,x,y\in A:xR_{f}y \Longleftrightarrow f(x)=f(y)$ x in y imata isto funkcijsko vrednost
+4. Naj bo $m\in N,m \ge 2$. Definirajmo relacijo R v množici $\mathbb{Z}$: $xRy \Longleftrightarrow m$ deli $|x-y|$
+
+"sta iz iste države"
+"sta kovana iz iste kovine"
+"sta kovana iz iste kovine IN sta iz iste države"
+#### Ekvivalenčni razredi
+Naj bo $R \subseteq A \times A$ ekvivalenčna in $x\in A$
+R[x]={$y\in A;yRx$} je *ekvivalenčni razred* elementa x
+$A/R = \{R[x];x\in A\}$ (množica vseh ekvivalenčnih razredov) je *faktorska (kvocientna) množica* množice A po relaciji R.
+
+**Trditev:**
+Naj bo R ekvivalenčna relacija na A. Potem za poljubna $x,y\in A$ velja $R[x]=R[y]\Longleftrightarrow xRy$
+
+*Dokaz* 
+- $x\in R[x] \dots x\in R[y] \dots xRy$
+- (pokazali bomo, da je $R[x]\subseteq R[y]$ in $R[y]\subseteq R[x]$)
+	- $z\in R[x]\dots zRx \text{ in }xRx ..T.. zRy \dots z\in R[y]$
+	- $z \in R[y] \dots zRy \text{ in }xRy..+S.. zRy \text{ in } yRx ..T.. zRx\dots z\in R[x]$
+Zato $R[x] = R[y]$
+

@@ -292,4 +292,75 @@ If Ralph's ghost is destroyed or appeased, the darkness disappears and [[#^flora
 **THE CHARACTER'S CAN'T PROGRESS TO THE NEXT PART, IF STRIONIC RESONATOR ISN'T FOUND!**
 
 # Night of the Dead
+Siegfried's skaab army is making its way towards Shadowgrange. It is lead by Rinelda Smitt, a young necromancer and a Siegfried's partner in crime.
 
+## Refuges
+Word spreads about a group of refuges from neighboring villages arriving in Shadowgrange, where priests of the chapel (including [[#^Flora|Flora]]) help treat the wounded. Curious crowd forms around them, learning that they escaped from Mordov, a settlement one day north of Shadowgrange. Yesterday it was attacked by the zombie army and the 26 refuges are the only survivors of the attack, escaping the zombies with the help of 3 carriages and horses.
+
+- Players suddenly hear guard bells ringing and villagers shouting through the town.
+- If they are near chapel, Flora along with other priests, will hurry towards the Shadowgrange's gates
+
+The harmed refuges are taken into chapel, where unnamed priests take care of them. About 10 stay outside. A few townsfolk begin asking them questions.
+
+
+>[!npc] Avor
+One of the refuges, shivering on the chapel's stairs, clutching a cup of tea. His gaze is fixed, his eyes barely blinking, still haunted by unspeakable horrors, that will plague his nights to come.
+
+- *What happened?*
+	A fog rolled in from the farbog north of Mordov. It was thicker than usual and carried a stiff chill. Many in town knew it to be a bad omen. They were right. Next we heard the screams. The restless dead were upon us. The shambling remains of folk like you and me attacked the living, tearing them apart, like it's their second nature.
+
+- *How did you escape?*
+	Us few that survived were the lucky ones standing near the stables when the undead attacked. We took any horses still there, along with the carriages, and rounded up as many folk as we could. Then we made a blind ride out into the fog. Many of us didn’t make it…
+
+- *What attacked your village?*
+	The walking dead. Corpses that should be in the ground, peaceful in the Blessed Sleep. They shambled towards us with pitiless eyes. All they wanted to do was tear us apart. Cared for nothing else. 
+	But the worst thing I saw was a human walking amongst these brutes. A teenaged girl chanting and waving a, a symbol around – I don’t know what it was. She was laughing and prancing around as we were being slaughtered left and right. Laughing!
+
+- *How many are there?*
+	It was impossible to tell when the attack happened. One moment a fog rolled in, the next they were everywhere. But we saw them again across the valley as we fled. Hundreds of them, definitely.
+
+- *Where did they come from?*
+	When we saw them, they already were all around us. But all the walking dead had dried mud up to their waists. You get muddy like that from walking through the farbog (swamp) north of Mordov, so I reckon that’s where they came from.
+
+- *Did you see Siegfried?*
+	A man by that name came through our village a few months ago. He was in a foul mood and avoided small talk. He rested, stocked up on supplies, and then headed into the farbog to the north, despite us telling him it was a suicidie mission. Never heard anything of him since then.
+
+- When players try to leave:
+	"Wait," he struggles to stand up and limps towards you, "towering above all the undead were 2 *other* creatures... Huge abominations, each grafted from hundreds of human arms, legs...",he leans closer to most trustworthy PC and whispers, "we saw one pick up a man by his waist, as it simultaneously used it's many arms to rip a man's arms and legs and a... a head from his body. All gone in a second.", he looks down and stands up on his own again, looking at all of the PCs again saying, "I don't know what I saw, I don't know what they want. But I know they are coming here and they aren't far behind. Im sorry,... but Shadowgrange will fall.", he turns and begins limping back, "Better run for the hills while you can."
+
+Soon after, [[#^Levi|Levi]] comes with a couple guards and forces the curious crowd to back off from the refuges, so the guards can properly interrogate them.
+
+At some point, [[#^Flora|Flora]] will seek out adventurers, saying: 
+
+"Thank Avacyn you lot are still here. I was worried you fled on account of such horrifying news. There is no time to waste, so excuse my bluntness, but Shadowgrange needs you. Our numbers are stretched thin and the few guards we do have, never fought such a huge amalgamation army. Please, I beg of you, in the name of Avacyn, will you fight by our side?", 
+
+*she puts one arm on her chest, with the other, she reaches out to PCs.*
+
+If they confront the villager's past negligence for Ralph and Katarina, she says: 
+
+"Stensia has always been riddled with vampires. While other provinces sure have their fare share of fiends, beasts and undead, none of them are as vicious and bloodthirsty as vampires. We learned long ago, that this is their land, they made sure we understood that. Fighting them seized being an option, once the mighty power of Avacyn waned. Ralph knew it was only a matter of time before vampires learned of the *resonator* and attacked his home. Don't think he predicted Katarina's kidnapping though."
+
+If asked about Siegfried, she admits she:
+- knows Siegfried is creator of approaching army
+- understands his anger with Shadowgrange people
+- but his army must be stopped, for the common good
+
+When the PCs accept Flora's proposal:
+
+"Thank you, in the name of not just all of Shadowgrange, but all the refuges from various villages that fell already, I thank you all. But we must hurry, a meeting of the village leaders is to be had immediately, we can't afford losing any more time.", *she gestures the PCs to follow her and rushes to the town hall.*
+
+While walking towards the town hall read this:
+
+>[!scroll] Ghost Town
+>As you rush after Flora towards the town hall, you notice the nervous villagers leaving their homes, taking the bare necessities and leaving Shadowgrange with carriages and horses. The chaos takes you aback, since the streets were always quiet and people very stoic, as is the norm for Stensians. Seeing these, usually cold-hearted people panic to such an extent sends shivers down your spine for the unavoidable battle ahead.
+
+## Ill Tidings
+
+>[!scroll] The Table
+>You all follow Flora into the town hall, where sitting waiting are at a round table, [[#^eckhardt|Eckhardt]] and [[#^levi|Levi]], who along with Flora make up the Town's Council.
+
+Flora starts the meeting:
+
+"Well, you all know why we're here. If what the refuges from Mordov say is true, there's a horde of undead rampaging through the countryside as we speak. We expect the attack any day now. It is our duty to figure out what is to be done.", *as Flora finishes she looks towards Levi and gives him a nod. Levi, slouched in his chair looks towards the rest of the council:* "I have 38 trained men in the town's army, which is but a spit in the face of hundreds of undead, estimated to make up the coming army. If we decide to fight this menace, I can conjure up about 100 of townsmen with some sort of combat experience. We don't have a whole lot of arms, but we can check if [[#^marcus|Marcus]] managed to bless the silver.", *give the PCs a moment to respond to this*
+
+*Flora:* "Your brave men would be backed by me, the other 10 clerks and the divine support of Avacyn's holy power. We can also rally the Moontouched Sisters. Their hunting skills would surely prove useful in this situation.", *she pauses for a second as she suggests the alternate option*, "On the contrary"

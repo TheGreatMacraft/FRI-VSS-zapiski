@@ -540,3 +540,97 @@ V ničlah sode stopnje graf ohrani predznak (se x-osi le dotakne), v ničlah lih
 ### Ne-okrajšane racionalne funkcije
 Če se zgodi, da je ničla racionalne funkcije hkrati tudi pol, potem je racionalna funkcija zapisana v **ne-okrajšani obliki**.
 ## Eksponentna funkcija
+Vsaka funkcija oblike $f(x) = a^{x}, a > 0$. Od potenčne funkcije se razlikuje v x-u, ki se tu ne pojavi v **bazi**, kot je to značilno za *potenčno funkcijo*, temveč v **eksponentu**.
+### Lastnosti funkcije
+- Definirana je na celi realni osi: $Df = \mathbb{R}$
+- Zaloga vrednosti so vsa pozitivna realna števila: $Zf=\mathbb{R}^{+}=(0,\infty)$
+- gre skozi točki (0,1) in (1,a)
+- injektivna za vsak $a \ne 1$
+- strogo naraščajoča, če $a>1$
+- strogo padajoča, če $a<1$
+- konstanta funkcija $f(x) = 1^{x}=1$, če $a=1$
+
+## Logaritemska funkcija
+Inverz injektivnih eksponentnih funkcij je **logaritemska funkcija**, definirana: $f(x)=\log_{a}(x)$
+### Lastnosti funkcije
+- Definirana je na celi realni osi: $Df=\mathbb{R}$
+- Zaloga vrednosti so vsa realna števila: $Zf=\mathbb{R}$
+- gre skozi točki (1,0) in (a,1)
+- bijektivna
+- strogo naraščajoča, če $a>1$
+- strogo padajoča, če $a<1$
+### Logaritemske lastnosti
+- $\log_{a}1 = 0, \text{ker } a^{0}=1$
+- $\log_{a}a=1, \text{ker }a^{1}=a$
+- $\log_{a}(a^{x}) = x$
+- $a^{\log_{a}x}=x$
+- $\log_{a}(xy)=\log_{a}x+\log_{a}y, \text{ker } a^{x+y} = a^{x} \cdot a^{y}$
+- $\log_{a}\left( \frac{x}{y} \right) = \log_{a}x - \log_{a}y$
+- $\log_{a}x^{r}=r\log_{a}x$
+- $\log_{a}x=\frac{{\log_{b}x}}{\log_{b}a}$ - *prehod na novo osnovo*
+## Funkcije - limite
+**Limita funkcije** f(x) v točki a je število, kateremu se vrednosti f(x) približujejo, ko se vrednost argumenta x približuje vrednosti a: $\displaystyle \lim_{ x \to a }f(x)$ in preberemo *limita, f(x), ko gre x proti a.*
+
+Matematična definicija: Število L je limita funkcije f(x), ko se x približuje a, če za vsako število $\epsilon > 0$ obstaja $\delta>0$, da velja: $|x-a|<\delta \implies|f(x)-L|<\epsilon$
+
+- $f(x)=\frac{x^{2}}{x}$ - $\displaystyle \lim_{ x \to 0 }f(x)=0$
+- $g(x)=\frac{x}{x}$ - $\displaystyle \lim_{ x \to 0 }g(x) = 1$
+- $f(x)=\frac{x}{x^{2}}$ - $\pm \infty$ - limita **ne** obstaja
+### Leva in desna limita
+**Leva limita** je vrednost, kateri se funkcija približuje, ko se vrednosti x-a približujejo dani točki iz leve strani: $\displaystyle \lim_{ x \nearrow a}f(x) \text{ ali } \lim_{ x \to a^{-} }f(x)$
+
+**Desna limita** je vrednost, kateri se funkcija približuje, ko se vrednosti x-a približujejo dani točki iz desne strani: $\displaystyle \lim_{ x \searrow a }f(x) \text{ ali }\lim_{ x \to a^{+} }f(x)$
+
+Funkcija ima v dani točki limito, če sta v tej točki leva in desna limita enaki.
+
+$\displaystyle \lim_{ x \to \infty } \frac{1}{x} = 0$
+## Zvezna funkcija
+Funkcija je na intervalu zvezna, če je na danem intervalu 'nepretrgana' (zvezna) krivulja. Obstaja, če v vsaki točki intervala limita funkcije obstaja in je enaka vrednosti funkcije: 
+$\displaystyle \lim_{ x \to a } f(x) = f(a), \lim_{ x \to a^{-} }f(x) = \lim_{ x \to a^{+} }f(x) = f(a)$
+
+## Kotne funkcije
+V pravokotnem trikotniku so vsa razmerja stranic odvisna le od enega izmed kotov. Definiramo lahko funkcije:
+- $\sin(\text{kot}) =\frac{\text{nasprotna kateta}}{\text{hipotenuza}}$
+- $\sin(\text{kot}) = \frac{\text{priležna kateta}}{\text{hipotenuza}}$
+- $\cot(\text{kot})=\frac{\text{priležna kateta}}{\text{nasportna kateta}}$
+- $\tan(\text{kot})=\frac{\text{nasprotna kateta}}{\text{priležna kateta}}$
+
+### Enotska krožnica
+V enotski krožnici z radijem 1 in opazujemo, da kjer poltrak iz središča seka krožnico, nastane pravokotni trikotnik.
+![[Pasted image 20251120103224.png|250]]
+
+Dolžina krožnega loka: $l = \alpha \cdot r$
+
+Funkciji sin in cos sta periodični na $2\pi$ (360$^{\circ}$):
+- $\cos(2\pi+x) = \cos(x)$
+- $\sin(2\pi+x)=\sin (x)$
+Funkciji tan in cot pa sta periodični na $\pi$ (180$^{\circ}$):
+- $\tan(x+\pi)=\tan(x)$
+- $\cot(x+\pi)=\cot(x)$
+### Lastnosti
+- $\sin ^{2}x+\cos ^{2}x=1$
+- $\cos\left( \frac{\pi}{2} -x\right) = \sin x, \sin\left( \frac{\pi}{2} -x\right)=\cos x$
+- $\sin(\pi-x)=\sin x,\cos(\pi-x)=-\cos x$
+- $\sin(\pi+x)=-\sin x,\cos(\pi+x)=-\cos x$
+
+- $\tan ^{2}x+1=\frac{1}{\cos ^{2}x}$
+- $\cos(x+y)=\cos x\cos y-\sin x\sin y$
+- $\sin(x+y)=\sin x\cos y+\cos x\sin y$
+
+
+|      | sin x        | cos x        | tan x                                              | cot x                 |
+| ---- | ------------ | ------------ | -------------------------------------------------- | --------------------- |
+| $Df$ | $\mathbb{R}$ | $\mathbb{R}$ | $\mathbb{R} - \left\{ \frac{\pi}{2} +k\pi\right\}$ | $\mathbb{R}-\{k\pi\}$ |
+| $Zf$ | [-1,1]       | [-1,1]       | $\mathbb{R}$                                       | $\mathbb{R}$          |
+
+
+| x               | sin x                  | cos x                  | tan x                  | cot x                  |
+| --------------- | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| 0               | 0                      | 1                      | 0                      | $\pm \infty$           |
+| $\frac{\pi}{6}$ | $\frac{1}{2}$          | $\frac{\sqrt{ 3 }}{2}$ | $\frac{\sqrt{ 3 }}{3}$ | $\sqrt{ 3 }$           |
+| $\frac{\pi}{4}$ | $\frac{\sqrt{ 2 }}{2}$ | $\frac{\sqrt{ 2 }}{2}$ | 1                      | 1                      |
+| $\frac{\pi}{3}$ | $\frac{\sqrt{ 3 }}{2}$ | $\frac{1}{2}$          | $\sqrt{ 3 }$           | $\frac{\sqrt{ 3 }}{3}$ |
+| $\frac{\pi}{2}$ | 1                      | 0                      | $\pm \infty$           | 0                      |
+## Krožne funkcije
+So (prirejene) inverzne funkcije kotnih funkcij:
+- Funkcija sinus je bijektivna kot funkcija $\left[ -\frac{\pi}{2},\frac{\pi}{2}\right]$
