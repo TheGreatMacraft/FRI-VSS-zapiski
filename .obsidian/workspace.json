@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "662d4d90ae472faf",
+        "id": "0cd275e1a68f1ac9",
         "type": "tabs",
         "children": [
           {
-            "id": "ee6e64b32568af65",
+            "id": "0b2b44acae8b5859",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "računalniška arhitektura/Vaje.md",
+                "file": "programiranje/Uporabna Znanja.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vaje"
-            }
-          },
-          {
-            "id": "ac4ee23dcbb8b683",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "računalniška arhitektura/Zapiski.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Zapiski"
+              "title": "Uporabna Znanja"
             }
           }
         ]
@@ -190,53 +176,52 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "ee6e64b32568af65",
+  "active": "0b2b44acae8b5859",
   "lastOpenFiles": [
-    "računalniška arhitektura/Zapiski.md",
-    "računalniška arhitektura/Vaje.md",
-    "diskretne strukture/Vaje.md",
-    "diskretne strukture/Zapiski.md",
-    "Excalidraw/Drawing 2025-11-20 13.25.13.excalidraw.md",
-    "diskretne strukture/kolokviji/dsvsp-k1.pdf",
-    "diskretne strukture/literatura/dsvsp-predavanja2.pdf",
-    "diskretne strukture/literatura/dsvsp-predavanja.pdf",
+    "programiranje/domače naloge/izpit2025.py~",
+    "matematika/Vaje.md",
+    "Excalidraw/Drawing 2026-01-11 11.03.10.excalidraw.md",
+    "Excalidraw/Drawing 2025-12-16 09.34.27.excalidraw.md",
+    "slikice/Pasted Image 20260111120107_333.png",
     "matematika/Zapiski.md",
-    "slikice/Pasted image 20251120103224.png",
+    "Excalidraw/Drawing 2026-01-09 18.05.09.excalidraw.md",
+    "slikice/Pasted Image 20260109192618_188.png",
+    "slikice/Pasted Image 20260109181350_506.png",
+    "diskretne strukture/Zapiski.md",
     "matematika/Matematika_RI_VS_e_handout.pdf",
+    "Excalidraw/Drawing 2026-01-08 09.41.03.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-08 08.55.58.excalidraw.md",
+    "diskretne strukture/Vaje.md",
+    "Excalidraw/Drawing 2026-01-03 14.17.33.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-07 12.46.58.excalidraw.md",
+    "slikice/Pasted Image 20260107135303_505.png",
+    "slikice/Pasted Image 20260107132114_461.png",
+    "slikice/Pasted Image 20260107131616_135.png",
+    "slikice/Pasted Image 20260107131440_004.png",
+    "slikice/Pasted Image 20260107125908_375.png",
+    "slikice/Pasted Image 20260107125221_675.png",
+    "računalniška arhitektura/Zapiski.md",
+    "programiranje/Uporabna Znanja.md",
+    "Excalidraw/Drawing 2026-01-04 14.42.30.excalidraw.md",
+    "Excalidraw/Drawing 2025-10-07 13.01.58.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-04 14.05.41.excalidraw.md",
+    "Excalidraw/Drawing 2025-12-30 09.41.32.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-04 13.38.36.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-04 13.27.55.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-02 16.14.13.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-02 16.07.37.excalidraw.md",
+    "slikice/Pasted Image 20260102160915_125.png",
+    "Excalidraw/Drawing 2026-01-02 15.57.15.excalidraw.md",
+    "Excalidraw/Drawing 2026-01-02 15.38.57.excalidraw.md",
     "DnD/Army of the damned/Army of The Damned.md",
     "DnD/Army of the damned/armyofthedamned.pdf",
-    "matematika/Vaje.md",
-    "Excalidraw/Drawing 2025-11-18 16.40.56.excalidraw.md",
-    "slikice/Pasted Image 20251118165236_037.png",
-    "Excalidraw/Drawing 2025-11-18 16.34.30.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 16.25.15.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 16.10.04.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 16.00.16.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 15.54.06.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 15.39.32.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 15.20.08.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 10.29.12.excalidraw.md",
-    "Excalidraw/Drawing 2025-10-07 13.01.58.excalidraw.md",
-    "slikice/Pasted image 20251118102727.png",
-    "Excalidraw/Drawing 2025-11-18 10.19.02.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-18 09.41.30.excalidraw.md",
-    "slikice/Pasted Image 20251118094325_564.png",
-    "Excalidraw/Drawing 2025-11-18 09.27.03.excalidraw.md",
-    "uvod v računalništvo/Vaje.md",
-    "uvod v računalništvo/literatura študentov/Uvod_v_racunalnistvo_koncna_verzija.pdf",
-    "Excalidraw/Drawing 2025-11-16 18.37.44.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 18.17.01.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 17.57.32.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-16 17.54.44.excalidraw.md",
-    "uvod v računalništvo/kolokvij/UVR_Kolokvij_1.pdf",
-    "DnD/Player's Handbook.pdf",
+    "Excalidraw/Drawing 2026-01-01 11.59.39.excalidraw.md",
     "DnD/Monster Manual.pdf",
-    "DnD/2024 Dungeon_Masters_Guide - Wizards_of_the_Coast.pdf",
-    "DnD/Army of the damned/Media/Shadowgrange/Alchemy Basement.png",
-    "DnD/Army of the damned/Media/Shadowgrange/store_example.jpg",
-    "slikice/Pasted image 20251113145924.png",
-    "slikice/Pasted image 20251113083730.png",
-    "slikice/Pasted image 20251112185625.png",
-    "slikice/Pasted image 20251112182317.png"
+    "DnD/Player's Handbook.pdf",
+    "DnD/Starter Rulebook.pdf",
+    "programiranje/domače naloge/dodatne_ovire.py~",
+    "matematika/kolokviji/Rešitve 1. kolokvija.pdf",
+    "diskretne strukture/kolokviji/dsvsp-k1.pdf",
+    "diskretne strukture/literatura/dsvsp-predavanja2.pdf"
   ]
 }

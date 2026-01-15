@@ -437,7 +437,7 @@ a: .word 0x12345678
 - `cmp r0,r1`
 	Naredi: r0 - r1, in če je rezultat:
 	- negativen (r0 < r1): C = 0, N=1, Z=0
-	- pozitiven (r0 > r1): C = 1, N = 0, Z = 0
+	- pozitiven/nič (r0 $\ge$ r1): C = 1, N = 0, Z = 0
 	- nič (r0 = r1): C = 0, N = 0, Z = 1
 ### Logične Operacije
 - `and r0, r1, r2` $\implies$ r0 $\leftarrow$ r1 AND r2
@@ -494,3 +494,62 @@ Funkcij v visokih programskih jezikih (Python), sploh nebi mogli pisat, če nebi
 - BX LR
 
 **Preliv** - seštevanje 2 enako predznačenih števil vodi v rezultat, ki ima drug predznak
+
+---
+Primer: ADD R7, R3, R2
+![[Drawing 2025-12-23 11.28.47.excalidraw]]
+
+![[Drawing 2025-12-23 11.33.11.excalidraw]]
+
+![[Drawing 2025-12-23 11.43.35.excalidraw]]
+
+![[Drawing 2025-12-23 11.54.00.excalidraw]]
+
+- ugotovitev: Med dvema A-tip ukazoma, od katerih prvi piše v register Rx in drugi bere iz istega registra Rx, morajo preteči *3 urine periode*.
+
+B-type:
+
+![[Drawing 2025-12-23 12.29.26.excalidraw]]
+
+Ukazi tipa B, nebi smeli zajemati ukazov 2 urni periodi - *Kontrolna nevarnost (Control Hazard)*
+- včasih so to odpravljali zgolj programsko - spreminjanje vrstnega reda ukazov, da vrinemo 2 ukaza. Če jih ne najdemo, dodamo 2 ukaza ki nič ne spremenita (add r1, r1, #0)
+- za B ukazi, je potrebno vriniti 2 ukaza, ki se zagotovo lahko izvedeta - skočna reža (branch slot)
+
+- (odpravljanje Read after Write nevarnosti) danes imajo procesorji premoščanje v cevovodu - rezultat je na voljo v naslednjem ukazu še preden se ta shrani v destinacijski register.
+- (odpravljanje kontrolnih nevarnosti) - napovedovanje vejitev (Branch prediction)
+
+# Pomnilnik
+V VN arhitekturi:
+- pomnilnik hrani ukaze in operande (vse kar se dogaja v VN računalniku je določeno izključno z ukazi)
+- viden je kot zaporedje naslovljenih pomnilniških besed - vsaka pom. beseda ima svoj enolično določen naslov
+- vsebuje končno število pom. besed.
+- pomnilnik ima naključen dostop - CPE lahko izstavi poljuben naslov in v vsakem trenutku dostopa do poljubne pom. besede
+
+## Resnični pomnilnik
+- ne znamo narediti pomnilnik tako, kot si ga je zamislil VN
+- namesto linearnega zaporedja pod. besed, je pomnilnik narejen kot 2D polje (matrika) pom. besed
+- danes poznamo 2 tehnologiji za izdelavo pomnilnikov:
+	- statični - 1 celica (1 bit) zahteva veliko prostora na siliciju, zelo hiter, enak proces izdelave kot za CPE, hrani informacijo dokler je priklopljen na napajanje (**drag ko svina**) - vse pomnilne celice v CPE
+	- dinamični - 1 celica je majhna, zelo počasen, drugačen proces izdelave kot za CPE, izgublja informacijo v 64 ms (**bil je poceni, zdaj ne več tako**) - za delovni spomin
+
+### SDRAM
+Dostop do pomnilniške besede (branje ali pisanje):
+- naslovimo vrstico - aktiviranje/odpiranje vrstice -> ko je vrstica odprta, imamo omogočen dostop do vseh besed v tej vrstici
+*čas med tRCD $\sim$ 15ns*
+- naslovimo stolpec - izbira stolpca
+*čas med CL $\sim$ 15ns*
+- dostop (branje ali pisanje)
+- zapremo vrstico - precharge
+*čas med tPRE $\sim$ 15ns*
+spet 1.
+
+$t_{RCD}$ (row-to-column-delay): čas, ki mora preteči med odprtjem vrstice in izbiro stolpca
+$CL$ (CAS Latency): čas, ki preteče od izbire stolpca do tega, da so nam podatki na voljo
+$t_{PRE}$ (Precharge time) - čas, ki mora preteči od zaprtja vrstice do ponovnega odpiranja.
+
+$t_{RANDOM} = t_{RCD} + CL + t_{PRE} \sim 45ns$
+
+Kako pohitriti dostop?
+- ne dostopamo naključno, ampak do besed iz že odprte vrstice - DRAM nas "sili" v zaporedne dostope in ne mara naključnih dostopov (dostop do zaporednih pom. besed v isti vrstici)
+- dostopamo do več besed hkrati - več sosednjih iz iste vrste
+

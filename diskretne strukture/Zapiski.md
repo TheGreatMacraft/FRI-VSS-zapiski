@@ -229,6 +229,7 @@ Lahko poiščemo ovire (nabor {$\implies,\land$} **ohranja** vrednost 1 ali 0, z
 - {$\implies, \neg$}
 - {$\implies,0$}
 - {$\implies \centernot \implies$}
+- {$\implies$,$\veebar$}
 ## Sklepanje v izjavnem računu
 Predpostavki: 
 1. Če dežuje, je oblačno (Če A, potem B -> $A\implies B$)
@@ -262,7 +263,7 @@ Zaključek:
 Dokaz $A_1,A_2,...,A_n$ |= B, "vedno", ko so resnične vse $A_1,...,A_n$, je resničen B. Vedno, ko je resničen $A_1 \land A_2 \land ... \land ... A_n$, je resničen tudi B.
 
 $(A_1 \land A_2 \land ... \land A_n) \implies B$ je "vedno" red (tavtologija)
-
+1
 #### Pravila sklepanja (osnovni pravilni sklepi)
 
 $A,A\implies B \models B$   modus ponens (MP)
@@ -386,7 +387,7 @@ Sklep:
 **Področje pogovora** je neprazna *množica*. Na primer ljudje, številke, živali.
 **Predikati** so logične funkcije, ki za svoje argumente uporabijo elemente področja pogovora.
 
-Primer: $P(x)$, x je praštevilo.
+Primer: $P(x)$, x je praštevilo.e
 - P(2) ... 2 je praštevilo. [1]
 - P(8) ... 8 je praštevilo. [0]
 
@@ -681,7 +682,7 @@ $A_i = [i,i+1]$ ; $i \in \mathbb{Z}$
 	$C_i = (2^{-i},\infty) \implies C_0 \subseteq C_1 \subseteq C_2 \subseteq ...$
 	$\displaystyle \bigcap_{i\in\mathbb{N}}(2^{-i},\infty) = (1,\infty)$
 ## Pokritje in razbitje
-Družine množic A = {$A_i;i\in I$} je **pokritje** množice B, če je $\displaystyle B=\bigcup_{i\in I} A_i$
+Družina množic A = {$A_i;i\in I$} je **pokritje** množice B, če je $\displaystyle B=\bigcup_{i\in I} A_i$
 Družina množic A = {$A_i;i\in I$} je **razbitje** množic B, če je:
 - A pokritje množice B
 - elementi A so neprazni in
@@ -950,3 +951,106 @@ Naj bo R ekvivalenčna relacija na A. Potem za poljubna $x,y\in A$ velja $R[x]=R
 	- $z \in R[y] \dots zRy \text{ in }xRy..+S.. zRy \text{ in } yRx ..T.. zRx\dots z\in R[x]$
 Zato $R[x] = R[y]$
 
+# Graf
+Graf je urejen par G = (V,E), kjer je:
+- V neprazna mnoica *točk (vozlišč)* grafa G
+- E množica *povezav* grafa G, pri čemer je 
+
+Pisava: namesto e={u,v} pišemo krajše e=uv ali e=vu.
+V tem primeru pravimo, da sta točki u in v *krajišči* povezave e, povezava e povezuje točki u in v.
+Pravimo tudi, da sta u in v *sosednji*, kar označimo z $u \sim v$, ker sta krajišči iste povezave.
+Oznake: V=V(G) ... množica točk grafa G, E=E(G) ... množica povezav grafa G
+
+Drugi razredi grafov:
+- *multigraf* ... dovolimo vzporedne povezave
+- *psevdo graf* ... in zanke
+- *usmerjen graf* ... povezave so usmerjene
+
+## Stopnja točk
+- *Stopnja* točke $v \in V(G)$ je število povezav, ki imajo v za krajišče.
+- Stopnjo točke v označimo z deg(v)
+- Točka stopnje 0 je *izolirana točka*, točki stopnje 1 pravimo tudi *list* grafa.
+- Graf G je *regularen*, če imajo vse njegove točke isto stopnjo.
+- Graf G je *d-regularen*, če so vse točke grafa G stopnje d. 3-regularnim grafom pravimo tudi *kubični grafi*.
+
+Izrek(Lema o rokovanju):
+Naj bo G graf z n-točkami in m-povezavami. Potem je
+$\displaystyle \sum_{i=1}^{n}deg(v_{i})=2\cdot m$
+Posledica:
+V vsakem grafu je *sodo* mnogo točk lihe stopnje.
+
+## Grafično zaporedje
+Končno zaporedje naravnih števil: $d_{1}\ge d_{2}\ge d_{3}\ge\dots\ge d_{n}$ je grafično, če obstaja graf G u $n$ točkami, ki imajo stopnje enake $d_{1},d_{2},\dots,d_{n}$.
+
+Naloga: Ali je zaporedje 6,4,4,3,2,2,1 grafično?
+Nalogo reši požrešno:
+
+![[Drawing 2025-11-27 12.31.09.excalidraw]]
+
+Kaj pa 6665443
+![[Drawing 2025-11-27 12.35.58.excalidraw]]
+
+Grafa $G_{1}$ in $G_{2}$ sta *izomorfna*, če obstaja preslikava $f:V(G_{1})\to V(G_{2})$ za katero velja:
+1. f je bijektivna
+2. $u \sim G_{1} v \Longleftrightarrow f(u) \sim G_{2}f(x)$
+
+Izomorfna grafa sta iste oblike:
+- vedno isto število točk(vozlišč)
+- vedno isto število povezav
+- vedno iste stopnje vozlišč
+- vedno isto število trikotnikov.
+
+## Polni grafi
+Graf je poln, če sta vsaki njegovi točki sosedi. Poln graf na n točkah označimo s $K_{n}$.
+
+$V(K_{n})=\{v_{1},v_{2},\dots,v_{n}\}$
+$E(K_{n})=\{v_iv_j;1 \le i \le j \le n\}$
+$deg(v_1) = n-1$
+
+PREPIŠI IZ UČILNICE
+
+## Definicija sprehoda
+**Sprehod** S v grafu G = (V,E) je zaporedje vozlišč $u_{0},u_{1},u_{2}\dots u_{n-1},u_{n}$ pri čemer sta zaporedni vozlišči sprehoda $u_{i}$ in $u_{i+1}$ *sosedi* v grafu G (i=0,...,n-1)
+*Dolžina* sprehoda S = $u_{0}u_{1}\dots u_{n}$ je enaka n, $|S| = n$. Vozlišče $u_{0}$ imenujemo *začetek*, vozlišče $u_{n}$ pa *konec* sprehoda. $u-v$ *sprehod* je sprehod z začetkom v u in koncem v v.
+
+Sprehod $S = u_{0}\dots u_{n}$ je *pot*, če $u_{i}\ne u_{j}$ za vse $0\le i<j\le n$
+Sprehod $S=u_{0}\dots u_{n}$ je *obod*
+
+**Stik** ali *konkatenacija* sprehodov $S_{1}=u_{0}u_{1}\dots u_{k}$ in $S_{2}=u_{k}u_{k+1}\dots u_{m}$ je sprehod $S_{1}S_{2}=u_{0}u_{1}\dots u_{k}u_{k+1}\dots u_{m}$. Velja tudi $|S_{1}S_{2}| = |S_{1}|+|S_{2}|$
+*Obratni sprehod* sprehoda $S=u_{0}u_{1}\dots u_{k}$ je sprehod $S^{R}=u_{k}\dots u_{1}u_{0}$.
+
+### Dokaz ekvivalenčnosti
+- refleksivna - s sprehodi dolžine 0
+- simetrična - z obratnimi sprehodi
+- tranzitivna - s stiki sprehodov
+
+**Razdalja** - dolžina najkrajše poti/sprehoda med točkama v G. *dist(x,y)*
+Za poljubne 3 točke u,v,w grafa G velja: $dist(u,w)\le dist(u,v) + dist(v,w)$
+
+## Dvodelni grafi
+Graf je *dvodelen*, če lahko točke grafa pobarvamo z dvema barvama tako, da ima *vsaka* povezava krajišči različnih barv.
+Če ima vsako krajišče *vsaj eno* povezavo z katerikolim "drugim" krajiščom, je graf **dvodelen**, če pa ima vsako krajišče povezavo z *vsemi* "drugimi" krajišči, potem je graf **polno dvodelen**.
+
+$C_{2k}$ je dvodelen graf, medtem ko $C_{2k+1}$ pa ni dvodelen. 
+
+[Obdelaj kar manjka]
+
+### Razširjen Evklidov algoritem
+gcd - največji skupni deljitelj
+lcm - najmanjši skupni večkratnik
+
+![[Drawing 2025-12-18 11.27.12.excalidraw]]
+
+![[Drawing 2025-12-18 11.39.59.excalidraw]]
+
+## Linearna diofantska enačba
+**Linearna diofantska enačba z dvema neznankama**, je enačba oblike $a \cdot x + b \cdot y = c$, kjer so znani $a,b,c\in \mathbb{Z}$ in iščemo celoštevilsko rešitev x in y.
+
+![[Drawing 2025-12-18 12.12.37.excalidraw]]
+
+Vaja: $6x+15y = 7$
+
+![[Drawing 2025-12-18 12.28.42.excalidraw]]
+
+# Permutacije
+Naj bo A poljubna množica. **Permutacija** na A je vsaka bijektivna preslikava $f : A\rightarrow A$

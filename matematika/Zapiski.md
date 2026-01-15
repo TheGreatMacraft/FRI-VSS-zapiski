@@ -10,44 +10,6 @@ includeLinks: true # Make headings clickable
 hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
-# Zaporedja
-
-## Rešitev računanja ničel polinoma: Zaporedja
-- iskanje ničel funkcije je lahko v praksi precej zapleteno. Generiramo zaporedje približkov $x_0, x_1, x_2$, ..., ki se čedalje bolj približuje iskani rešitvi (ničli funkcije)
-
-# Vrste
-- seštevamo elemente zaporedja, da dobimo dovolj dober približek iskanega števila (funkcije, ploščine, ...)
-- Vsako "lepo" funkcijo lahko zelo dobro aproksimiramo s polinomom v neki okolici:
-$f(x) = f(a) +  \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3$
-
-# Funkcije
-- opis, kako se izhodni podatki "zvezno" spreminjajo glede na vhodne
-- Npr: gibanje cene delnice, povprečna višina ljudi v odvisnosti od starosti, spremljanje temperature v 3D prostoru, ...
-
-# Odvod
-- opisuje lokalne značilnosti funkcije
-- iskanje ekstremov funkcije
-- reševanje diferencialnih enačb
-# Integral
-- povprečje podatkov
-- ploščine telesa
-- težišče telesa
-- verjetnost (pričakovana vrednost)
-- FEM/BEM za numerične simulacije
-# Vektorji
-- opis koordinat gibanja telesa
-- računanje kotov med stranicama
-
-# Matrike
-- opisovanje linearnih sprememb količin
-- iskanje spletnih strani (pafe rank)
-- določanje najbolj problematičnih lastnih frekvenc
-- rekonstrukcija površine iz danih točk v prostoru
-- simulacija gibanja tekočin
-
-$\begin{bmatrix} 1 & 0 & 1 & 0 \\ 3 & -1 & 3 & -1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 2 & 0 \end{bmatrix}$
-
----
 
 # Številske množice
 ## Naravna števila
@@ -282,7 +244,7 @@ Zaporedje je **konvergentno**, če ima limito. V nasprotnem primeru je **diverge
 - Padajoče in navzdol omejeno zaporedje je konvergentno.
 
 ### Računanje limit
-Če je $\displaystyle \lim_{n \to \infty} a_n$ in $\displaystyle \lim_{b \to \infty} b_n = b$ potem velja:
+Če je $\displaystyle \lim_{n \to \infty} a_n = a$ in $\displaystyle \lim_{b \to \infty} b_n = b$ potem velja:
 - $\displaystyle \lim_{n \to \infty} (a_n+b_n) = a+b$
 - $\displaystyle \lim_{n \to \infty}a_n*b_n = ab$
 - Če je $b_n \ne 0$ za vsak n in $b \ne 0$, je $\displaystyle \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b}$
@@ -308,7 +270,7 @@ Vrsta $\displaystyle \sum_{i=1}^\infty a_i$ je **konvergentna**, če je konverge
 Vrsta je torej konvergentna, če lahko smiselno govorimo o njeni vsoti. V nasprotnem primeru je vrsta **divergentna**.
 
 Torej, če je vrsta $\displaystyle \sum_{n=1}^\infty$ konvergentna, je $\displaystyle \lim_{n\to\infty} a_n = 0.$ Vendar pa obratno ni nujno res. **Harmonična vrsta** (divergentna) je vrsta, katere členi sicer gredo proti 0, vendar pa ni konvergentna. Če bi člene tako vrste seštevali dovolj dolgo, bi prišlo do poljubno velikega števila.
-
+	
 Primer: $\displaystyle \sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + ...$
 
 Če za pozitivne člene $a_n$ velja $\displaystyle \lim_{n\to\infty} a_n = 0$, potem je vrsta $\displaystyle \sum_{n=1}^\infty (-1)^n * a_n$ konvergentna. Torej, če členom alterniramo predznak, imajo vsote limito.
@@ -633,4 +595,212 @@ Funkciji tan in cot pa sta periodični na $\pi$ (180$^{\circ}$):
 | $\frac{\pi}{2}$ | 1                      | 0                      | $\pm \infty$           | 0                      |
 ## Krožne funkcije
 So (prirejene) inverzne funkcije kotnih funkcij:
-- Funkcija sinus je bijektivna kot funkcija $\left[ -\frac{\pi}{2},\frac{\pi}{2}\right]$
+- Funkcija sinus je bijektivna kot funkcija $\left[ -\frac{\pi}{2},\frac{\pi}{2}\right] \to [-1,1]$ njena inverzna funkcija je *arcsin* $[-1,1]\to \left[  -\frac{\pi}{2},\frac{\pi}{2} \right]$
+- Funkcija kosinus je bijektivna kot funkcija $[0,\pi]\to[-1,1]$, njena inverzna funkcija je bijektivna *arccos* $[-1,1]\to [0,\pi]$
+- Funkcija tan je bijektivna funkcija $\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]\to[-\infty,\infty]$, njena inverzna funkcija je bijektivna *arctan* $[-\infty,\infty]\to[-\frac{\pi}{2},\frac{\pi}{2}]$
+- Funkcija cotan je bijektivna funkcija $[0,\pi]\to[-\infty,\infty]$, njena inverzna funkcija je bijektivna *arccottan* $[-\infty,\infty]\to[0,\pi]$
+
+## Odvod
+Odvod funkcije (smerni koeficient tangente) v dani točki lahko opisuje naraščanje/padanje funkcije v nekem trenutku: $\displaystyle  f'(x) = \lim_{ h \to \infty }\frac{f(x+h)-f(x)}{h}$
+
+Če je odvod funkcije v določeni točki enak 0: $f'(x_{0})=0$, ima funkcija v tej točki **stacionarno točko**: *minimum*/*maksimum*/*prevoj*.
+
+![[Drawing 2025-11-27 08.49.41.excalidraw]]
+Če limita za računanje odvoda v dani točki ne obstaja, potem tudi odvod v tej točki ne obstaja, torej funkcija v tej točki **ni odvedljiva**.
+![[Pasted image 20251127104551.png]]
+Če sta f in g odvedljivi funkciji, velja:
+- $(f+g)'(x) = f'(x) + g'(x)$
+- $(\alpha f)'(x) = \alpha f'(x)$
+- $(fg)'(x) = f'(x)g(x) + f(x)g'(x)$
+- $\left( \frac{f(x)}{g(x)} \right)' = \frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^{2}}$, kjer $g(x) \ne 0$
+
+### Posredno odvajanje
+$f((g(x)))' = f'(g(x))\cdot g'(x)$
+$(\sin(\log x))' = \cos(\log x)\cdot \frac{1}{x} = \frac{\cos(\log x)}{x}$
+
+### Višji odvodi
+Odvod odvoda je *drugi odvod* funkcije: $f''(x) = (f')'(x)$
+Če je $f'(x_{0})=0$ in je drugi odvod:
+- $f''(x_{0}) > 0$ - v $x_{0}$ je lokalni minimum.
+- $f''(x_{0}) < 0$ - v $x_{0}$ je lokalni maksimum.
+- $f''(x_{0}) = 0$ - potem iz teh podatkov še ne moremo ugotoviti maksimuma in minimuma -> moramo izračunati *tretji odvod*, etc.  
+
+Drugi odvod pove, kako se graf krivi:
+- kjer je $f''(x)\ge 0$, je f *konveksna*, graf funkcije leži *nad* tangento grafa
+- kjer je $f''(x)\le 0$, je f *konveksna*, graf funkcije leži *pod* tangento grafa
+
+![[Pasted image 20251204082617.png]]
+
+Primer:
+![[Pasted image 20251204083303.png]]
+
+![[Drawing 2025-12-04 08.33.13.excalidraw]]
+
+Risanje funkcije $f(x)=x^{3}-3x+2$ - dodatne informacije preko stacionarnih točk:
+
+![[Drawing 2025-12-04 08.46.48.excalidraw]]
+
+Iščemo obliko valja, ki bo imela čim manjšo površino za dani volumen 1l.
+
+![[Drawing 2025-12-04 08.56.12.excalidraw]]
+
+### Globalni ekstremi
+Odvedljiva funkcija na zaprtem intervalu [a,b] doseže maksimum in minimum:
+- v stacionarni točki ali
+- na robu intervala
+
+Za *globalne* min/max preverimo vse *lokalne* min/max in *rob definicijskega območja*.
+
+### Približek z diferencialom
+Oznaka: $f'(x) = \frac{df}{dx}$
+
+![[Drawing 2025-12-04 09.47.22.excalidraw]]
+
+S pomočjo diferenciale izračunamo *približek* za $\sqrt{ 0.98 }$
+
+![[Drawing 2025-12-04 10.21.12.excalidraw]]
+
+S pomočjo diferenciale izračunaj približek za $\sin(\frac{2\pi}{180})$
+
+![[Drawing 2025-12-04 10.27.49.excalidraw]]
+
+### Tajlorjev polinom
+$f(x_{0}+h) \approx C_{0}+C_{1}\cdot h +C_{2}\cdot h^{2}+C_{3}\cdot h^{3}+\dots+C_{n}\cdot h^{n}$ polinom stopnje n v spremenljivki h.
+$$
+\begin{align}
+C_{0}=f(x_{0}) \\
+C_{1}=f'(x_{0}) \\
+C_{2}=\frac{f''(x_{0})}{2!} \\
+C_{3}=\frac{f'''(x_{0})}{3!} \\
+\dots  
+\end{align}
+$$
+
+$P_{1}(x) = f(x_{0})+f'(x_{0})(x-x_{0})$
+$P_{2}(x)=f(x_{0})+f'(x_{0})(x-x_{0})+f''(x_{0})(x-x_{0})$
+
+f in $P_{1}$ se ujemata v $x_{0}$ v vrednosti in 1. odvodu: $f(x_{0})$
+$P_{1}(x_{0})=f(x_{0})+f'(x_{0})\cdot(x-x_{0})=f(x_{0})$
+
+$P_{2}(x_{0})$ in $f(x)$ se ujemata v $x_{0}$ v:
+- vrednosti $f(x_{0}) = P_{2}(x_{0})=f(x_{0})+f'(x_{0})\cdot 0+f''(x_{0}) \cdot 0$
+- 1. odvod $f'(x_{0}) = P_{2}(x_{0})=0+f'(x_{0})\cdot 1 + \frac{f''(x_{0})}{2} \cdot 2(x_{0}-x_{0})$
+- 2. odvod $f''(x_{0})=0+0+f''(x_{0})$
+
+### L'Hospitalovo pravilo
+$\displaystyle \lim_{ x \to a }f(x) = \lim_{ x \to a }g(x)=0$ ali $\displaystyle \lim_{ x \to a }f(x) = \lim_{ x \to a }g(x) = \pm \infty$ potem velja $\displaystyle \lim_{ x \to a }\frac{f(x)}{g(x)} = \lim_{ x \to a }\frac{f'(x)}{g'(x)}$
+
+[Nadoknadi zapiske]
+
+$\displaystyle \int_{a}^{b}(f(x)-g(x))dx=-\int_{a}^{b}(g(x)-f(x))dx =$
+$\displaystyle \int_{a}^{b}f(x)dx - \int_{a}^{b}g(x)dx$
+
+## Lastnosti določenega integrala
+- $\displaystyle \int_{b}^{a}f(x)dx = - \int_{a}^{b}f(x)dx$
+- $\displaystyle \int_{a}^{a}f(x)dx = 0$
+- $\displaystyle \int_{a}^{b}(f(x)+g(x))dx = \int_{a}^{b}f(x)dx + \int_{a}^{b}g(x)dx$
+- $\displaystyle \int_{a}^{b}\alpha f(x)dx = \alpha\int_{a}^{b}f(x)dx$
+- $\displaystyle \int_{a}^{b}f(x)dx = \int_{a}^{c}f(x)dx + \int_{c}^{b}f(x)dx$
+- če je f *liha*, je $\displaystyle \int_{-a}^{a}f(x)dx=0$
+- če je f *soda*, je $\displaystyle \int_{-a}^{a}f(x)dx = 2\int_{0}^{a}f(x)dx$
+
+### Povprečna vrednost funkcije
+**Povprečna vrednost** funkcije f na intervalu [a,b] je $\mu=\frac{1}{b-a} \displaystyle \int_{a}^{b}f(x)dx$. $\mu$ je višina pravokotnika z osnovnico [a,b], ki ima ploščino enako kot območje pod grafom $y=f(x)$.
+
+![[Pasted image 20251218085853.png]]
+
+### Uporaba integrala
+Prostornina vrtenine: $f(x)>0$ za $x\in[a,b]$, je $\displaystyle \pi \int_{a}^{b}(f(x))^{2}dx$
+Dolžina loka: $\displaystyle \sum_{i=1}^{n}\sqrt{ (x_{i}-x_{i-1})^{2}+(f(x_{i})-f(x_{i-1}))^{2} }$
+$h = \frac{b-a}{n} = x_{i}-x_{i-1}$
+$\displaystyle \sum_{i=1}^{n}\sqrt{ h^{2}+h^{2}\left( \frac{f(x_{i})-f(x_{i-1})}{h^{2}} \right)^{2} } =$
+$\displaystyle \sum_{i=1}^{n}h\sqrt{ 1+\left( \frac{f(x_{i}-f(x_{i-1}))}{h} \right)^{2} }$
+
+# Vektorji
+**Vektor** je določen s smerjo in dolžino. Dve točki določata vektor. Dva vektorja, ki sta vzporedna in enako dolga, sta enaka. (Imata isto smer in dolžino!)
+
+![[Drawing 2025-12-18 09.32.02.excalidraw]]
+
+- Vektorje v ravnini zapišemo s koordinatama $\overrightarrow{a}=(a,b)$, vektor $\overrightarrow{a}=(a,b)$, pomeni vektor od točke (0,0), do točke (a,b)
+- $a_{1},a_{2},a_{3}$ so **koordinate** ali **komponente** vektorja $\overrightarrow{a}=(a_{1},a_{2},a_{3})$
+## Krajevni vektor
+- vektor $\overrightarrow{r_{A}} = (a_{1},a_{2})$ v ravnini imenujemo **krajevni vektor** točke $A(a_{1},a_{2})$
+- vektor $\overrightarrow{r_{A}}=(a_{1},a_{2},a_{3})$ v prostoru imenujemo **krajevni vektor** točke $A(a_{1},a_{2},a_{3})$
+
+![[Pasted image 20251218093910.png]]
+
+## Seštevanje vektorjev
+- $\overrightarrow{a}+\overrightarrow{b}=(a_{1},a_{2})+(b_{1},b_{2}) = (a_{1}+b_{1},a_{2}+b_{2})$
+- Enako za 3D
+
+![[Pasted image 20251218094032.png]]
+
+### Lastnosti seštevanja vektorjev
+- $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
+- $(\vec{a}+\vec{b})+\vec{c} = \vec{a}+(\vec{b}+\vec{c})$
+## Množenje vektorja s številom (skalarjem)
+$\alpha \cdot \vec{a} = \alpha \cdot (a_{1},a_{2}) = (\alpha \cdot a_{1},\alpha \cdot a_{2})$
+Isto za 3D
+
+![[Pasted image 20251218094224.png]]
+
+## Vektor med točkama
+- vektor $\overrightarrow{AB}=\overrightarrow{r_{B}}-\overrightarrow{r_{A}}$
+![[Pasted image 20251218094536.png]]
+
+## Dolžina vektorja
+Označimo z $|\overrightarrow{a}|$ ali $||\overrightarrow{a}||$
+$|\overrightarrow{a}|=\sqrt{ a_{1}^{2}+a_{2}^{2}+a_{3}^{2} }$
+
+---
+[zapiši manjkajoče]
+
+---
+# Matrike
+
+So (pravokotne) tabele števil.
+Matrika velikosti $2\times 3$ je pravokotna tabela $2 \cdot 3 = 6$ števil, razporejenih v 2 vrstici in 3 stolpce.
+
+$A = A_{2\times 3}\begin{bmatrix} 1 & 0 & -1 \\ -2 & 3 & 4 \end{bmatrix}$
+
+Matrika z enim stolpcem je *stolpčni vektor*, matrika z eno samo vrsto je *vrstični vektor*. Rečemo tudi samo *stolpec* oziroma *vrstica*.
+
+*Ničelna matrika* je matrika, ki ima vse elemente enake 0.
+## Transportiranje matrike
+
+![[Drawing 2026-01-08 08.55.58.excalidraw]]
+
+## Računanje z matrikami
+- *množenje* matrike s številom (skalarjem): vsak element matrike pomnožimo s številom
+- *seštevanje* matrik: seštejemo lahko le matrike *enakih* velikosti (podobno kot pri vektorjih). Seštevamo istoležna števila.
+### Množenje matrik
+$A \in \mathbb{R}^{m\times n}$
+$B \in \mathbb{R}^{p \times q}$
+A in B lahko zmnožimo, če $n=p$, tj. št. stolpcev matrike A mora biti enako kot je št. vrstic matrike B ($p=n$).
+$$
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+=
+\begin{bmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{bmatrix}
+$$
+![[Drawing 2026-01-08 09.41.03.excalidraw]]
+
+- Ne velja nujno $A \cdot B = B \cdot A$
+- Iz $A\cdot B$ *ne sledi* $A \ne 0$ ali $B \ne 0$
+- $A \cdot(B\cdot C) = (A\cdot B)\cdot C$
+- $(A+B)\cdot C=A\cdot C+B\cdot C$ in $A\cdot(B+C)=A\cdot B+A\cdot C$
+- *Enotska matrika* ali *identiteta*: Kvadratna matrika, ki ima enice po diagonali, sicer pa same ničle.
+- Za nekatere matrike A obstaja *inverzna matrika* $A^{-1}$, za katero velja: $A\cdot A^{-1}=A^{-1}\cdot A=I$
+

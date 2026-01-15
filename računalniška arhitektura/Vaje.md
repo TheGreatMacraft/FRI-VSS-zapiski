@@ -730,3 +730,427 @@ Shrani 32-bitno spremenljivko iz r1 v pomnilniško besedo, katere naslov je r6+8
 16
 ```
 
+---
+
+# Skočni Ukazi
+
+1. Za podane programe v zbirniku za procesor ARM izpišite zastavice N, Z, C, V in preverite kateri od naslednjih programov se vrti v zanki, če je podana 8-bitna spremenljivka a = 0x7F.
+
+```asm
+ZANKA A:
+ldr r0, =a
+ldrb r1, [r0]
+cmp r1, #0
+bne ZANKA
+
+ZANKA B:
+ldr r0, =a
+ldrb r1, [r0]
+tst r1, #0
+beq ZANKA
+
+ZANKA C:
+ldr r0, =a
+ldrb r1, [r0]
+cmp r1, #0
+ZANKA1:
+mov r2, #0
+tst r1, r2
+bne ZANKA
+
+ZANKA D:
+ldr r0, =a
+ldrb r1, [r0]
+tst r1, #0
+ZANKA1:
+mov r2, #0
+cmp r1, r2
+beq ZANKA
+```
+
+
+```spoiler-markdown
+|     | N   | Z   | C   | V   | Program se vrti v zanki |
+| --- | --- | --- | --- | --- | ----------------------- |
+| a)  | 0   | 0   | 1   | 0   | da                      |
+| b)  | 0   | 1   | 0   | 0   | da                      |
+| c)  | 0   | 0   | 1   | 0   |                         |
+|     | 0   | 1   | 1   | 0   | ne                      |
+| d)  | 0   | 1   | 0   | 0   |                         |
+|     | 0   | 0   | 1   | 0   | ne                      |
+```
+
+2. Podana so tri 32-bitna števila vrednosti STEV 1 = 0xFFFFFEFD, STEV2 = 0x257A in STEV3 = 259. Napišite zaporedje ukazov v zbirniku za procesor ARM, ki preveri ali obstajata dve števili, ki imata enako absolutno vrednost in se razlikujeta po predznaku. Če obstajata takšni števili, potem v register R5 vpišite konstanto 2.
+
+```spoiler-markdown
+        .global _start
+
+        .text
+        .org 0x00000000
+_start:
+
+ldr r0,=a
+ldr r1,[r0]
+ldr r2,[r0,#4]
+ldr r3,[r0,#4]
+
+add r4,r1,r2
+cmp r4,#0
+bne skip
+
+mov r5,#2
+skip:
+
+add r4,r1,r3
+cmp r4,#0
+bne skip1
+
+mov r5,#2
+skip1:
+
+add r4,r2,r3
+cmp r4,#0
+bne skip2
+
+mov r5,#2
+skip2:
+
+_end:
+        B _end
+
+
+        .data
+a:  	.word  0xfffffefd
+b:		.word  0xFFFFEFDa
+c:		.word  0x103
+
+```
+
+3. V pomnilniku je podanih sedem 8-bitnih vrednosti (bajtov):
+	TABELA: 0x20, 0xF3, 0x2A, 0x4A, 0x48, 0x2C, 0x5F
+	Napišite zaporedje ukazov v zbirniku za procesor ARM, ki preveri ali je v tabeli shranjena vrednost STEV=0x4A. Če jo najde, se izvajanje programa zaključi in v register R4 vpišite naslov na katerem se nahaja ta vrednost.
+
+```spoiler-markdown
+	    .global _start
+
+        .text
+        .org 0x00000000
+_start:
+
+ldr r0,=tabela
+mov r1, #0
+ldrb r2, [r0,#7]
+
+loop:
+
+ldrb r3,[r0,r1]
+
+cmp r3,r2
+beq shrani
+
+add r1,r1,#1
+cmp r1,#7
+beq _end
+b loop
+
+
+shrani:
+add r4,r0,r1
+
+
+_end:
+        B _end
+
+
+        .data
+tabela: .byte 0x20, 0xF3, 0x2A, 0x4A, 0x48, 0x2C, 0x5F
+stev: 	.byte 0x4a
+
+```
+
+---
+
+1. Napišite zaporedje ukazov v zbirniku za processor ARM, ki izračuna izraz STEV1 = MAKS(STEV2, STEV3). Vse spremenljivke so 32-bitne in nepredznačene. Program preizkusite z vrednostmi STEV2 in STEV3:
+	- STEV2 = 10, STEV3 = 25
+	- STEV2 = 0xF0000002, STEV3 = 0xF0000000 
+	Uporabite pogojni skok. Program naj bo naslednje oblike: 
+	STEV1 = STEV2 
+	IF STEV2 > STEV3 THEN GOTO DALJE 
+	STEV1 = STEV3
+	DALJE:
+
+```spoiler-markdown
+		.global _start
+
+		.text
+		.org 0x00000000
+_start:
+
+ldr r0,=stev1
+ldr r1, [r0,#4]
+ldr r2, [r0,#8]
+
+cmp r1,r2
+bcs prvi
+
+str r2,[r0]
+b _end
+
+prvi:
+str r1,[r0]
+
+_end:
+		B _end
+
+
+		.data
+stev1:	.space 4
+stev2:	.word	0xf0000002
+stev3:	.word	0xf0000000
+```
+
+2. Imamo 32-bitno spremenljivko a. Glede na vrednost spremenljivke nastavite register R1 na naslednji način:
+	- r1 = -1, če je a < 0
+	- r1 = 0, če je a = 0
+	- r1 = 1, če je a > 0
+	Preizkusite za vrednosti a = 10, a = -18, a = 0 in a = 0xFFFFF3EC.
+
+```spoiler-markdown
+		.global _start
+
+		.text
+		.org 0x00000000
+_start:
+
+ldr r0,=a
+ldr r0,[r0]
+
+cmp r0,#0
+beq enako
+bgt vecje
+
+mov r1, #-1
+b _end
+
+enako:
+mov r1,#0
+b _end
+
+vecje:
+mov r1,#1
+b _end
+
+_end:
+		B _end
+
+
+		.data
+a:	.word	0
+```
+
+3. Napišite program, ki preveri, ali je med odštevanjem dveh 32-bitnih spremenljivk a in b prišlo do prekoračitve (overflow). Če pride do overflowa, nastavite register R3 = 1, sicer R3 = 0.
+	Poskusite za vrednosti:
+	a = 0x7FFFFFFF, b = -1
+	a=100, b=50
+
+```spoiler-markdown
+		.global _start
+
+		.text
+		.org 0x00000000
+_start:
+
+ldr r0,=a
+ldr r1,[r0]
+ldr r2,[r0,#4]
+
+cmp r1,r2
+bvs overflow
+
+mov r3,#0
+b _end
+
+overflow:
+mov r3,#1
+
+_end:
+		B _end
+
+
+		.data
+a:	.word	0x7fffffff
+b:	.word	-1
+```
+
+4. Zapišite ukaz(e) v zbirniku za procesor ARM, ki v register:
+	- Nepredznačeno naloži 16-bitno vrednost 0xF123 v register R4.
+	- Predznačeno naloži 16-bitno vrednost 0xF123 v register R5.
+	Naložite 16-bitno spremenljivko iz pomnilnika kot dve 8-bitni spremenljivki
+
+```spoiler-markdown
+		.global _start
+
+		.text
+		.org 0x00000000
+_start:
+
+ldr r0,=a
+ldrb r4,[r0]
+ldrb r5,[r0,#1]
+
+lsl r5,r5,#24
+asr r5,r5,#24
+
+_end:
+		B _end
+
+
+		.data
+a:	.hword	0xf123
+```
+
+5. Iz tabele 8-bitnih števil izračunaj število sodih vrednosti Dana je tabela 8-bitnih števil 2,7,12, 0xFF. Sestavi program, ki:
+	- Prebere vsak element.
+	- S pomočjo LSR #1 preveri, ali je originalno število sodo (LSB == 0).
+	- Če je sodo, poveča števec.
+	- Rezultat shrani v registru R0.
+
+```spoiler-markdown
+		.global _start
+
+		.text
+		.org 0x00000000
+_start:
+
+ldr r0,=tabela
+mov r1,#0
+mov r2,#0
+
+loop:
+ldrb r3,[r0,r1]
+
+mov r4,r3
+
+lsr r3,r3,#1
+lsl r3,r3,#1
+
+
+cmp r3,r4
+bne naprej
+
+add r2,r2,#1
+
+naprej:
+cmp r1,#4
+beq _end
+
+add r1,r1,#1
+b loop
+
+_end:
+		B _end
+
+
+		.data
+tabela: .byte 2,7,12,0xff
+```
+
+6. Dana je vhodna tabela A 32-bitnih predznačenih celih števil 32, -7, 0x55, 3, -2 in izhodna tabela B enake dolžine. Napiši ARMv7 program, ki iz vhodne tabele izračuna absolutne vrednosti in jih shrani v izhodno tabelo.
+	- Preberi element iz vhodne tabele.
+	- Uporabi ASR #31 za ekstrakcijo predznaka (ostane maska −1 ali 0).
+	- Če je negativen, pretvori v pozitivnega (izračunaj eniški complement z uporabo XOR, potem seštej 1 za dvojiški komplement).
+	- Rezultat shrani v izhodno tabelo.
+
+```spoiler-markdown
+.global _start
+
+		.text
+		.org 0x00000000
+_start:
+
+ldr r0,=a
+ldr r8,=b
+mov r1,#0
+
+loop:
+cmp r1,#16
+beq _end
+
+ldr r2,[r0,r1]
+mov r3,r2
+asr r3,r3,#31
+cmp r3,#0
+beq nadaljuj
+
+eor r2,r2,r3
+add r2,r2,#1
+
+nadaljuj:
+str r2,[r8,r1]
+
+add r1,#4
+b loop
+
+_end:
+		B _end
+
+
+		.data
+a:	.word -7,0x55,3,-2
+b:	.space 16
+	
+	
+```
+
+---
+
+1. V zbirniku napišite program za procesor ARM, ki izračuna vsoto 8-bitnih števil. Rezultat shranite v 32- bitno spremenljivko VSOTA. 
+	Rešitev preverite s števili v dveh tabelah:
+	-  TABELA1 = [20, -18, 19, -105]
+	-  TABELA2 = [20, 90, -1, 50, 97]
+
+```spoiler-markdown
+        .global _start
+
+        .text
+        .org 0x00000000
+_start:
+
+ldr r0,=tabela1
+mov r1,#0
+mov r3,#0
+
+loop:
+ldrb r2,[r0,r3]
+
+add r1,r1,r2
+
+
+add r3,r3,#1
+ldrb r4,[r0,r3]
+cmp r4,#0
+bne loop
+
+lsl r5,r1,#24
+asr r5,r5,#24
+
+strb r1,[r0,r3]
+
+_end:
+        B _end
+
+
+        .data
+tabela1:  	.byte  20, 90, -1, 50, 97
+vsota: 		.word
+```
+
+2. Podana je tabela 32-bitnih predznačenih števil (TABELA: .word 24, -3, 56, -201, 469).
+	- Definirajte podprogram, ki vrne minimalno vrednost MIN (a,b). Vaš podprogram naj posnema naslednjo Python funkcijo:
+		def abmin (a:int, b:int):
+			return MIN(a, b)
+	- Z uporabo podprograma zapišite program v zbirniku za procesor ARM tako, da poišče minimalno vrednost v tabeli in jo zapiše na konec tabele v spremenljivko STMIN.
+
+```spoiler-markdown
+
+```

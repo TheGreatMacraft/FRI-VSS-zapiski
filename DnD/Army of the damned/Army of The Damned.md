@@ -174,6 +174,7 @@ Serves as the town hall, courtroom jail and Town Guard HQ, housing 20 guards (th
 A small stone tower adjacent to Visgaurd Grounds, 30 feet tall. It holds armor and weapons for the town milia - *spears, light wooden shield, leather armor, studded leather armor, longswords and crossbows*. Beside the armory, there grows an ancient hawthorn tree with a very thick trunk, called Eldertree. Cathars carve the outlines of stakes and spears into its trunk, so they can be used as *[[armyofthedamned.pdf#page=63|living wood]]* for the next 2 days.
 ### Chapel
 The focal point of the village. Most villagers worship here several times per week and many pass the chapel daily for a blessing of safety. Tithes and payments are mandatory.
+
 >[!npc] Priestess Flora
 >As a [[Monster Manual.pdf#page=348|priestess]], she oversees everyday administrations of the church with the help of few lower-ranking clergy members. Leading the power of church in Shadowgrange, she is usually busy. She is an old, talkative, outwardly warm and welcoming woman.
 >
@@ -292,6 +293,13 @@ If Ralph's ghost is destroyed or appeased, the darkness disappears and [[#^flora
 **THE CHARACTER'S CAN'T PROGRESS TO THE NEXT PART, IF STRIONIC RESONATOR ISN'T FOUND!**
 
 # Night of the Dead
+
+## Recap
+- Party made their way into Shadowgrange
+- They met the 2 guards guarding the entrance, they were hesitant to let the PCs in, but after making sure they aren't monsters one of them, Lars became very chatty and jolly. The other guard, Sven was grumpy and deemed this "unprofessional".
+- PCs entered the Silver Rose Inn, the town's tavern, where they met Eckhardt Sheck, the muscled Innkeeper, without an arm, which he lost in his fight with the ghouls. Regardless of his permanent scowl, he is a kind hearted soul.
+- PCs met Silvia, Emma & Sybille, the 3 sisters called "The Moontouched Sisters", who despite being in late 50's still looked half their age. They are all very skilled hunters and together run a ranged arms shop.
+
 Siegfried's skaab army is making its way towards Shadowgrange. It is lead by Rinelda Smitt, a young necromancer and a Siegfried's partner in crime.
 
 ## Refuges
@@ -326,7 +334,7 @@ One of the refuges, shivering on the chapel's stairs, clutching a cup of tea. Hi
 	A man by that name came through our village a few months ago. He was in a foul mood and avoided small talk. He rested, stocked up on supplies, and then headed into the farbog to the north, despite us telling him it was a suicidie mission. Never heard anything of him since then.
 
 - When players try to leave:
-	"Wait," he struggles to stand up and limps towards you, "towering above all the undead were 2 *other* creatures... Huge abominations, each grafted from hundreds of human arms, legs...",he leans closer to most trustworthy PC and whispers, "we saw one pick up a man by his waist, as it simultaneously used it's many arms to rip a man's arms and legs and a... a head from his body. All gone in a second.", he looks down and stands up on his own again, looking at all of the PCs again saying, "I don't know what I saw, I don't know what they want. But I know they are coming here and they aren't far behind. Im sorry,... but Shadowgrange will fall.", he turns and begins limping back, "Better run for the hills while you can."
+	"Wait," he struggles to stand up and limps towards you, "towering above all the undead were 2 *other* creatures... Huge abominations, each grafted from hundreds of human arms, legs...", he leans closer to most trustworthy PC and whispers, "we saw one pick up a man by his waist, as it simultaneously used it's many arms to rip a man's arms and legs and a... a head from his body. All gone in a second.", he looks down and stands up on his own again, looking at all of the PCs again saying, "I don't know what I saw, I don't know what they want. But I know they are coming here and they aren't far behind. Im sorry,... but Shadowgrange will fall.", he turns and begins limping back, "Better run for the hills while you can."
 
 Soon after, [[#^Levi|Levi]] comes with a couple guards and forces the curious crowd to back off from the refuges, so the guards can properly interrogate them.
 
@@ -351,8 +359,8 @@ When the PCs accept Flora's proposal:
 
 While walking towards the town hall read this:
 
->[!scroll] Ghost Town
->As you rush after Flora towards the town hall, you notice the nervous villagers leaving their homes, taking the bare necessities and leaving Shadowgrange with carriages and horses. The chaos takes you aback, since the streets were always quiet and people very stoic, as is the norm for Stensians. Seeing these, usually cold-hearted people panic to such an extent sends shivers down your spine for the unavoidable battle ahead.
+>[!scroll] Rouge Town
+>As you rush after Flora towards the town hall, you notice the nervous villagers running all over the streets. Some are defending their homes with whatever tools they got, others are harassing the guards, wondering about the approaching terror, while some are getting ready the horses, for a desperate getaway. The chaos takes you aback, since the streets were always quiet and people very stoic, as is the norm for Stensians. Seeing these, usually cold-hearted and collected people panic to such an extent sends shivers down your spine for the unavoidable battle ahead.
 
 ## Ill Tidings
 
@@ -363,4 +371,162 @@ Flora starts the meeting:
 
 "Well, you all know why we're here. If what the refuges from Mordov say is true, there's a horde of undead rampaging through the countryside as we speak. We expect the attack any day now. It is our duty to figure out what is to be done.", *as Flora finishes she looks towards Levi and gives him a nod. Levi, slouched in his chair looks towards the rest of the council:* "I have 38 trained men in the town's army, which is but a spit in the face of hundreds of undead, estimated to make up the coming army. If we decide to fight this menace, I can conjure up about 100 of townsmen with some sort of combat experience. We don't have a whole lot of arms, but we can check if [[#^marcus|Marcus]] managed to bless the silver.", *give the PCs a moment to respond to this*
 
-*Flora:* "Your brave men would be backed by me, the other 10 clerks and the divine support of Avacyn's holy power. We can also rally the Moontouched Sisters. Their hunting skills would surely prove useful in this situation.", *she pauses for a second as she suggests the alternate option*, "On the contrary"
+*Flora:* "Your brave men would be backed by me, the other 10 clerks along with the divine support of Avacyn's holy power. We can also rally the Moontouched Sisters. Their hunting skills would surely prove useful in this situation.", *she pauses for a second as she suggests the alternate option*, "On the contrary, it might prove wiser to evacuate the city, avoiding the coming fight completely. There are a couple smaller settlements south of here, within a day's journey. However, none of these settlements could hold so many people for more than a couple days. So we will have to make our way to Lammas, once we are rested and nurished.", *as she is talking Eckhardt interrupts her*, "Are you seriously suggesting running away? You know this army won't give up, no matter how far we go. We all heard about their attack. They didn't plunder and steal. It's not the gold or land they are after. It's the people.", *he pauses for a moment*, "We won't be safe in any town, we manage to get to. The army won't stop.", *Flora responds*, "Well what are you suggesting?", *Eckhardt continues*, "3 days on foot to the east is a small military strength, Silbern. It's built around Silbern Tower. They have about a hundred trained guards, I was there a couple of times, it's small but i think if there is one place that could hold off an army headed our way, it's this one.", *as he finished Levi joins the discussion about evacuation*, "Let me remind you all about the wicked monsters patrolling the roads at night. Protecting hundreds of evacuating villagers, would result in countless casualties on the way.", *Eckhardt turns to face Levi, with a bewildered expression*, "And defending the Shadowgrange would result in hundreds. Not to mention the troops we are guaranteed to lose. The number of our warriors is already insufficient for the amount of villagers we are housing. Do you really wish to have any less?", *Flora jumps in to defend Levi*, "I am sorry Eckhardt, but I will have to agree with Levi on that one. Countless generations are resting here, in their Blessed Sleep. Abandoning the Shadowgrange would mean the brave soldiers, clerks and the innocent, who have given their life for this place, would be ripped out of their eternal rest, due to our cowardness. I won't leave them. As far as I am concerned, our fate is in the hands of Avacyn."
+
+[Branch to the next chapter of whatever decision has been made]
+
+---
+
+>[!treasure] Experience
+>If the players convince the council to do as they command, the party gets 600 XP
+
+After the meeting, [[#^huntersisters|Silvia]] enters the town hall, informing the PCs that the zombie horde is approaching Shadowgrange from the North. It is made of 400 zombies, 3 large stitched abominations, 2 dozen skeletons and a female human, seemingly guiding them. They should be arriving within 2 days.
+
+As the council members are leaving the town hall in preparation, Silvia grabs the players and brings them closer to herself. "I know Flora, Levi and Eckhardt would never approve this, but you need to go after the undead. Their numbers are simply too great for the towns soldiers. If only you could slow them down, shaving off a few of their troops and giving some much needed hope to this cursed town. So please, for the sake of giving Shadowgrange a fighting chance, will you do this?"
+
+Silvia provides players with horses and some ranged artillery.
+
+
+## Attacking the Horde
+
+- zombies are dumb - attack on sight, if any zombie notices a zombie engaging in combat, they do the same the very next turn. Players can bait chase from the easily, but zombies will give up chase and return to the horde when losing line of sight or when they go too far from the horde.
+- after a wave begins combat with players, the next wave will notice in 1d6 rounds
+- if players flee, horde chases for a few rounds before returning to the march
+- if Rinelda is defeated, the horde carries on marching, but 50 zombies get lost in the woods
+
+>[!enemy] Rinelda Smitt
+>[[armyofthedamned.pdf#page=70|Rinelda Smitt]] is insane. She lost her parents young and survived in the wilderness off of her talents in necromancy. She sees humans as a resource and only respects power. She wishes to learn as much as possible from Siegfried, before stabbing him in the back.
+>
+>She carries clothing, food, a *[[armyofthedamned.pdf#page=65|ghoulcaller’s bell]]* and a large pouch with 90 sp and 70 gp. She also has a note from Siegfried, reminding her to collect everything from his shop's basement, from papers to alchemical supplies.
+
+- [[Monster Manual.pdf#page=317|Zombie]]
+- [[Monster Manual.pdf#page=273|Skeleton]]
+- [[armyofthedamned.pdf#page=71|Skaab Goliath]]
+
+## Defending Shadowgrange
+Players can discuss plans for defending the village with council members. The council members still share their opinion and give their suggestions:
+- **Warding the Walls** - Flora thinks she can re-ignite the holy wards that used to protect the Shadowgrange walls. Any character proficient in Religion, can aid the ritual. Base time for doing that is 8h, but with every additional character helping, it goes down by 4h. If successful, zombies and skeletons are repelled from the walls and skaab goliaths take longer to destroy the gate.
+- **Finding Runners** - Levi suggests finding suitable messengers amongst the townsfolk to relay information between council members and players in battle. If successful, the players will be warned of attack sooner.
+- **Boosting Morale** - Eckhardt suggests boosting morale of townsfolk. Players can do this in a number of creative ways. Villagers inspired by players will fight more effectively.
+- **More Conscripts** - Levi asks the players to help rally the children and elderly to help in the coming fight. Children and elderly convinced to fight, will deal additional damage against the skaab goliaths.
+
+As players go to prepare the defense:
+- adult men go to town square with semi-weapons (pitchforks, hoes, axes, etc.)
+- other people evacuate their belongings from their homes, surrounding the Shadogrange's walls.
+- Noncombatants are sent into the chapel, which is reinforced with makeshift barricades
+- cathars and soldiers are reinforcing the gate
+
+Clerks give the players 4 healing potions for the fight.
+
+>[!treasure] Experience Points
+>Divide 900 XP if the players help aid the town.
+
+## Evacuation
+No settlement next to Shadowgrange has it's defensive walls, but they are surrounded by thick forest. Players can go to:
+- Lammas, a rancher comumunity stable village 2 days away
+- Silbern, a small community build around Silbern Tower - base of operations for a local group of cathars called the Silbern Guard, 3 days away.
+
+## Running the Siege
+Majority of zombies and 2 skaabs attack the front gate, while skeleton archers fire at any defenders they see.
+
+Another group of zombies along with a skaab, breach the wall, away from the main fighting at the gate.
+
+Undead breach the city walls and begin wreaking havoc.
+
+The horde forces their way towards the chapel.
+
+Rinelda leads an assault on the chapel.
+### Assault on the Gate
+- its night and no defenders have night vision
+- Levi orders crossbowmen and archers to hold fire until they get a clear shot
+>[!scroll] Attack
+>*They arrive in the dead of night: hundreds of shambling humanoids. In the moonlight, their figures silhouettes can be seen, along with glimpses of their rotted faces. As they near the walls, torches illuminate their hideous appearances. The zombies move towards Shadowgrange with a strange urgency; splashing and flailing in the moat’s waters, scrambling over each other to reach the walls, lashing at the gate, tearing, ripping, growling.*
+>
+>*Lumbering forward, towering over the other zombies, are two stitched abominations. Six powerful arms and three heads are attached to each mass of muscle. These creatures stride easily through the moat’s waters and move towards Shadowgrange’s gates, where they start pummeling it with armor-plated fists, shaking the barricade with each blow. Captain Levi begins to yell and wave a torch to get attention. “Bowmen! Take out those beasts! Now!”*
+
+- gate can take 10 hits (or 12 if it was previously reinforced) and both skaab goliaths smash at the gate each round
+- captain Levi will bark orders to take the skaabs down, seeing the threat they pose
+- archers and crossbowmen shoot at the skaabs, dealing 22 damage per round divided between them, unless they are ordered to target specifically one. If morale was boosted or children and elderly were convinced to join the fight, damage is increased by 4 for each of those
+- 20 skeletons begin firing from 40 feet at the bowmen. For each 2 skeletons defeated, the archers deal 1 damage more.
+
+The skaabs are taken out:
+- normal zombies try to break down the gate, but they are far weaker than the skaabs
+The gate is breached:
+- Eckhardt and his soldiers: some cathars and conscripts attack the surge of undead, trying to push them back in the attempt to fix the broken gate
+If players enlisted any runners, they will be waned of the unexpected breach of walls from the other side of the city before it happens, if not, it already happened.
+
+### Defending the Breach
+If the character decide to defend the breach:
+
+>[!scroll]
+>*The warm glow of fire can be seen over the rooftops ahead of you, where the sounds of fighting can be heard. As you turn the corner, you see two wooden cabins aflame next to the wall, illuminating the scene in front of you. Fighting amidst the bright glow in a tight formation are the cathars, clashing with dozens of undead humanoids. More still pour into the street from a breach in the wall 10 feet wide, clambering over the stone debris and eagerly rushing to the living defenders. “By Avacyn’s Might, we hold!” shouts a cathar, even as the soldiers are slowly pushed back.*
+
+If the players arrive early, 11 [[Monster Manual.pdf#page=348|cathars]] and 1 [[Monster Manual.pdf#page=349|priest]] without Divine Eminence, only 1. level spells and 10 HP are at the scene. If they arrive late, 5 cathars are already dead.
+
+Cathars fight their own battle:
+- each round roll 2d6's if 11 cathars are alive or 1d6 if only 6 are.
+- each round roll 3d6 for enemies
+For every:
+- 6 that side affects the players fight in a way (monsters - bad, cathars - good)
+- 5 that side affects the party, but at the cost of their own success
+
+#### Waves
+1. Wave:
+	3 [[Monster Manual.pdf#page=317|zombies]] rush to attack PCs up close, while 3 [[Monster Manual.pdf#page=273|skeletons]] hold back and fire at PCs with their shortbows.
+	Remove 1d6 from enemy influence die, when the wave is defeated
+
+>[!scroll] First wave defeated
+>*Many undead fall, yet more pour in through the breach. An anguished, unearthly chorus of shrieks is heard from above. Swooping down into the battle is a spectral humanoid figure draped in tattered rags and dangling iron chains. The shrieking emits from large gaping mouths all over its body that glow an intense bright blue.*
+
+2. Wave
+	- 1 shriekgeist - [[Monster Manual.pdf#page=280|specter]] has taken an interest in the fight and is now a part of it
+	- 2 zombies and 2 skeletons also join
+	Remove another enemy dice after the wave is defeated
+
+>[!scroll] Second wave defeated
+>*A low, booming roar is heard from the wall, followed by shouts of surprise and despair as a hulking stitched abomination heaves itself through the breach. It swings morningstar down at the nearest cathar, slamming the poor human deep into the earth with a sickening crunch and a spatter of blood. More zombies squeeze through as the skaab moves forward.*
+
+3. Wave
+	- 2 zombies
+	- 1 skeleton
+	- 1 [[armyofthedamned.pdf#page=71|Skaab Goliath]]
+
+If all the waves are defeated, the cathars defeat the rest of the undead and barricade the breach with wood and stone debris.
+
+If the adventurers retreat from battle, more zombies enter Shadowgrange through the breach. Surviving cathars inform Levi of the situation and he sends more of his men to reclaim the area.
+
+- if both entrances were defended successfully, Rinelda scales the wall in hopes of defeating the players herself.
+- if one entrance has fallen, Rindelda enters trough that entrance with the remaining troops
+- if both gate and breach are breached, a messenger comes to the PCs, ordering them to regroup at the chapel
+
+Adventurers have the time for a short rest before Rinelda executes the assault against the chapel.
+
+### Necromancer Confrontation
+Messenger from Levi informs PCs that a necromancer is cutting through his troops.
+[[Monster Manual.pdf#page=351|Levi]] has 1 level of exhaustion, 10 HP and is being stabbed by Rinelda's *spiritual weapon*.
+
+[[armyofthedamned.pdf#page=70|Rinelda]] travels with 3 zombies. If attacked directly, she will use her reaction to shove a zombie to block the attack. She prefers ranged attacks, casting *[hold person](https://roll20.net/compendium/dnd5e/Hold%20Person#content)* and *[sacred flames](https://roll20.net/compendium/dnd5e/Sacred%20Flame#content)* as appropriate, while swinging with her *[[Player's Handbook.pdf#page=279|spiritual weapon]]* spell. She can be baited into fighting recklessly and when pressed into melee, she casts *[inflict wounds](https://roll20.net/compendium/dnd5e/Inflict%20Wounds#content)*.
+
+## Victory
+As Rinelda is killed, the undead are taken aback. A loud cheer erupts from the nearby defenders as they realize the victory. The people now fight fiercer as they know the victory is already theirs and the undead are now lost without their leader. It takes about 2 hours to clear out any undead that are still present.
+
+Captain Levi is badly injured, Flora rushes to him, casting cure wounds.
+
+- celebration
+- Flora thanks the PCs
+
+>[!treasure] Coin
+>2.100cp, 1.050 sp and 260 gp
+>
+
+- Eckhardt gifts the party a weapon and a shield/armor
+## Defeat
+- If the characters retreat, they are cornered to take one last stand at the chapel, where they have time for a short rest.
+- If Rinelda forces her way into the chapel, priestess Flora rallies the townsfolk to escape. Doing so results in countless casualties. Flora thanks the PCs, but she is obviously bitter over the lost city and dead Levi.
+
+## Ending
+After finding the corpse wagons, Flora deduces that this army was a precursor for a larger one to come. She asks of players to venture north, to the Maurer Estate, considering it to be the most likely source of this army, housing many mad wizards and necro-alchemists in the past.
+
+>[!treasure] Experience Points
+>Split 2.000 XP equally among the party for helping save the townsfolk and another 4.800 XP for defeating the army.
+

@@ -317,7 +317,7 @@ $\sqrt{3}+1$
 ```spoiler-markdown
 ![[Drawing 2025-11-05 11.27.20.excalidraw]]
 ```
-3. Izračunaj limito zaporedja $a_n = \frac{5n^2+n-1}{5n^2+2n+1}$ in poišči prvi člen tega zaporedja, ki je znotraj $\epsilon$-okolice limite za $epsilon = \frac{1}{50}$.
+3. Izračunaj limito zaporedja $a_n = \frac{5n^2+n-1}{5n^2+2n+1}$ in poišči prvi člen tega zaporedja, ki je znotraj $\epsilon$-okolice limite za $\psi = \frac{1}{50}$.
 ```spoiler-markdown
 ![[Drawing 2025-11-05 11.35.35.excalidraw]]
 ```
@@ -361,7 +361,7 @@ Vrsta je vsota členov zaporedja.
 ```
 
 2. Poišči predpis za inverz (inverzna funkcija):
-- $f(x) = \\frac{x+1}{2x-3}$
+- $f(x) = \frac{x+1}{2x-3}$
 ```spoiler-markdown
 ![[Drawing 2025-11-18 16.10.04.excalidraw]]
 ```
@@ -475,3 +475,309 @@ f(x) = 0.70; x=0.79
 $f^{-1}(0.38) = f(x) = 0.38; x=0.3$
 ```
 ---
+
+1. Dolči Df, sodost/lihost, injektivnost, surjektivnost in nariši graf
+	- $y = 3-2x^{2}$
+
+```spoiler-markdown
+![[Drawing 2025-11-26 08.45.02.excalidraw]]
+```
+# Hitri test 8
+
+```spoiler-markdown
+![[Drawing 2025-11-27 09.22.54.excalidraw]]
+```
+
+---
+# domača naloga: 8. teden
+
+1. Funkcija $f$ je dana s predpisom $$f(x) \begin{cases}
+-a +2x - 8 : x<-1 \\
+x^{2}-b: -1\le x\le 1 \\
+ax-12: x>1
+\end{cases}$$ določi vrednosti za a in b, da bo funkcija f zvezna.
+
+```spoiler-markdown
+![[Drawing 2025-11-30 10.34.18.excalidraw]]
+```
+
+2. Za funkcijo $$f(x)=\begin{cases}
+-2+2x+x^{2}:x\le 1 \\
+ax+2:x\ge 1
+\end{cases}$$ določi a tako, da bo funkcija zvezna.
+
+```spoiler-markdown
+![[Drawing 2025-11-30 10.46.01.excalidraw]]
+```
+
+---
+# domača naloga: 9. teden
+
+1. Izračunaj odvod funkcije $f(x) = -\frac{33800x}{3(x^{2}+1)}$ v točki $x=5$
+
+```spoiler-markdown
+![[Drawing 2025-11-30 10.49.23.excalidraw]]
+```
+
+2. Krivulji podani z grafom funkcije $g(x) = x^{3}-x^{2}+\frac{1}{14}$ izračunaj tangento v točki $x=\frac{13}{14}$ in normalo v točki $x=-\left( \frac{1}{14} \right)$. Nato izračunaj, kje se tangenta in normala sekata.
+
+```spoiler-markdown
+![[Drawing 2025-11-30 11.21.57.excalidraw]]
+```
+
+3. Podano imate enačbo $f(x) = 8\sqrt[5]{ x }$. Določite a in b v enačbi $y=ax + b$ tako, da bo to enačba tangente na graf funkcije f v točki $\left( \frac{18}{7},f(\frac{18}{7}) \right)$.
+
+```spoiler-markdown
+
+```
+
+# Vaje
+1. Kompleksno število $z = \frac{1+5i}{1-i}$ zapiši v obliki $x +yi$, izračunaj $|z|$.
+
+```spoiler-markdown
+![[Drawing 2025-12-02 08.48.34.excalidraw]]
+```
+
+2. Prevedi v polarno obliko, nato pa z uporabo Eulerjeve formule izračunaj:
+- $(-\frac{1}{2}+\frac{i}{2})^{8}$
+- $(1+i\sqrt{ 3 })^{20}$
+- $(1-i)^{20}$
+- $(\frac{1+i\sqrt{ 3 }}{1-i})^{20}$
+
+```spoiler-markdown
+![[Drawing 2025-12-02 09.01.32.excalidraw]]
+```
+
+3. Izračunaj spodnje limite:
+- $\displaystyle \lim_{ n \to \infty }\frac{n+1}{2n-1}$
+- $\displaystyle \lim_{ n \to \infty }\frac{n^{2}+2n+2}{1-2n^{2}}$
+- $\displaystyle \lim_{ n \to \infty }(\sqrt{ n+1 }-\sqrt{ n })$
+- $\displaystyle \lim_{ n \to \infty }\frac{2^{n+1}+3^{n}}{2^{n}-3^{n-1}}$
+- $\displaystyle \lim_{ n \to \infty }\frac{\sqrt{ 2^{n}+2 }}{2^{n}+1}$
+- $\displaystyle \lim_{ n \to \infty }\frac{\sqrt{ 4^{n}+4 }}{2^{n}+1}$
+
+```spoiler-markdown
+![[Drawing 2025-12-02 12.29.37.excalidraw]]
+```
+
+4. Naj bo zaporedje $a_{n} = \frac{1}{n(n+1)}$
+- Poišči $\displaystyle \lim_{ n \to \infty }a_{n}$
+- Seštej vrsto.
+
+```spoiler-markdown
+![[Drawing 2025-12-02 13.08.59.excalidraw]]
+```
+
+5. Izračunaj:
+- $\displaystyle \sum_{n=0}^{\infty}\frac{1}{4^{n}}$
+- $\displaystyle \sum_{n=0}^{\infty}\frac{10}{3^{n}}$
+- $\displaystyle \sum_{n=0}^{\infty}\frac{2^{n}}{3^{2n-1}}$
+- $\displaystyle \sum_{n=1}^{\infty}\frac{(-2)^{n}}{3\cdot 2^{3n-2}}$
+- $\displaystyle \sum_{n=1}^{\infty}(\frac{x}{2})^{3n}$
+
+```spoiler-markdown
+![[Drawing 2025-12-02 13.21.18.excalidraw]]
+```
+
+6. Kateri racionalni ulomek ima decimalni zapis $0,\bar{12}$? Pomagaj si s primerno geometrijsko vrsto.
+
+```spoiler-markdown
+![[Drawing 2025-12-03 08.09.18.excalidraw]]
+```
+
+7. Poišči definicijska obmčcja funkcij s spodnjimi predpisi.
+- $x^{2}-2x+1$
+- $\sqrt{ -x^{2} -x+2}$
+- $\frac{x}{2x^{2}-8}$
+- $\log_{2}(\log_{3}(\log_{4}x))$
+- $\log(x-1)$
+- $\sqrt{ -x }+\log(4+x)$
+- $\log(\frac{2+x}{2-x})$
+- $\sqrt[3]{ \frac{2}{x-3} }$
+
+```spoiler-markdown
+![[Drawing 2025-12-03 08.17.17.excalidraw]]
+```
+
+8. Poišči predpise za inverze $f^{-1}(x)$, spodnji funkciji. Na katerih območjih v $\mathbb{R}$ imajo ti predpisi smisel.
+- $f(x)=\frac{x+1}{2x-3}$
+- $f(x)=\frac{2x}{x^{2}+1}$
+- $f(x)=\log(2x-1)$
+- $f(x)=\sqrt{ x^{2}+1 }$
+
+```spoiler-markdown
+![[Drawing 2025-12-03 08.42.05.excalidraw]]
+```
+
+9. Katere od spodnjih funkcij so sode oz. lihe?
+- $\sqrt{ 1-x^{2} }$
+- $-x^{2}-2|x|+1$
+- $\log(2-x)$
+- $\log(\frac{1+x}{1-x})$
+- $\frac{e^{x}-e^{ -x }}{2}$
+
+---
+
+1. Poišči vse rešitve enačb:
+- $x+\frac{1}{x}=2$
+- $x^{3}+x^{2}-x-1=0$
+- $|x+1|=\frac{1}{2}x+1$
+
+```spoiler-markdown
+![[Drawing 2025-12-03 11.15.09.excalidraw]]
+```
+
+2. Reši naslednje neenačbe:
+- $x > \frac{1}{x}$
+- $x^{2}\le 3x - 2$
+- $\sin(x) > \frac{1}{2}$ za $x \in [0,2\pi)$
+- $|x-1|<1$
+- $|1-x|>|x|-2$
+
+```spoiler-markdown
+![[Drawing 2025-12-03 11.21.13.excalidraw]]
+```
+
+3. Reši spodnja sistema enačb:
+- $a-b=2,ab=1$
+- $x^{2}+y^{2}=1,x^{2}-y^{2}=2x$
+
+```spoiler-markdown
+![[Drawing 2025-12-03 11.51.43.excalidraw]]
+```
+
+---
+# Odvodi
+1. $g(x) = \frac{x}{1+x^{2}}$ - tangente, vzporedne z x osjo.
+
+```spoiler-markdown
+![[Drawing 2025-12-10 08.19.11.excalidraw]]
+```
+
+2. Z uporabo diferenciala izračunaj približno vrednost:
+- $\sqrt{ 4,1 }$
+```spoiler-markdown
+![[Drawing 2025-12-10 08.30.37.excalidraw]]
+```
+- $\log(0,9)$
+```spoiler-markdown
+![[Drawing 2025-12-10 08.43.03.excalidraw]]
+```
+
+3. Izračunaj:
+- $\displaystyle \lim_{ x \to \infty }\frac{\log x}{x}$
+```spoiler-markdown
+![[Drawing 2025-12-10 08.49.58.excalidraw]]
+```
+- $\lim_{ x \to 0 }\frac{e^{x}-e^{-x}}{\sin x}$
+```spoiler-markdown
+![[Drawing 2025-12-10 08.59.36.excalidraw]]
+```
+
+4. Čim bolj natančno nariši graf
+- $f(x) = \frac{e^{-\frac{2}{x^{2}}}}{x}$
+```spoiler-markdown
+![[Drawing 2025-12-10 09.06.46.excalidraw]]
+```
+
+---
+  
+# domača naloga: 10. teden
+
+1. Poznamo vrednosti $f(1) = 2$ in $f'(1) = -2$. Z diferencialom približno oceni vrednost $f(1.03)$
+
+```spoiler-markdown
+![[Drawing 2025-12-11 11.20.12.excalidraw]]
+```
+
+2. Za polinom $p(x) = 2x^{3}-3x^{2}-18x+27$ poišči:
+- lokalni maksimum
+- lokalni minimum
+- točko na grafu p, ki je najbližja koordinatnemu izhodišču
+- razdalja od izhodišča do najbližje točke na grafu
+
+```spoiler-markdown
+![[Drawing 2025-12-11 11.29.05.excalidraw]]
+```
+
+3. Poišči največjo in najmanjšo vrednost funkcije $f(x) = 2x^{3}-3x^{2}-36x-31$ na intervalu [-2,4].
+
+```spoiler-markdown
+![[Drawing 2025-12-11 12.12.01.excalidraw]]
+```
+
+# Vaje
+
+1. Med vsemi enakokrakimi trikotniki z obsegom x poiščite tistega z največjo ploščino.
+
+```spoiler-markdown
+![[Drawing 2025-12-16 09.34.27.excalidraw]]
+```
+
+2. $f(x) = 3x^{5} - 5x^{3}$ poišči min in max na intervalu $[-\frac{4}{3},2]$
+
+```spoiler-markdown
+![[Drawing 2025-12-16 10.03.09.excalidraw]]
+```
+
+# Integrali
+
+Znani integrali:
+- $\int x^{n}dx, n \in \mathbb{R} - \{0,-1\}= \frac{x^{n+1}}{n+1} + C \implies \text{konstanta}$
+-  $\int \sin x \cdot dx = -\cos x + C$
+- $\int \cos x \cdot dx = \sin x+C$
+- $\int \frac{1}{x}dx = \log |x| + C$
+- $\int \sqrt{ x }\cdot dx = \int x^{\frac{1}{2}}\cdot dx = \frac{x^{\frac{3}{2}}}{\frac{3}{2}} + C$
+- $\int 1dx = x + C$
+- $\int a\cdot f(x)dx = a\int f(x)dx$
+- $\int (f(x)\pm g(x))dx = \int f(x)dx\pm \int g(x)dx$
+
+1. $\int(3x^{2}-5x-\frac{1}{\sqrt{ 1-x^{2} }}+1-\cos x)dx$
+
+```spoiler-markdown
+![[Drawing 2025-12-16 10.25.46.excalidraw]]
+```
+
+2. $\int(x^{6}-2)^{2}dx$
+
+```spoiler-markdown
+![[Drawing 2025-12-16 10.41.12.excalidraw]]
+```
+
+# Vaje
+
+1. Naj bo $F(x) = \int f(x)dx$ tisti nedoločeni integral funkcije $f(x) = \frac{x^{3}}{x^{2}+2}$ za katerega velja $F(0) = -1.$ Koliko je $F(2)$?
+
+```spoiler-markdown
+![[Drawing 2025-12-28 09.57.45.excalidraw]]
+```
+
+2. Naj bo $F(x)$ tisti nedoločeni integral funkcije $f(x) = 2 - 2x$, za katerega velja $F(0)=5$. Koliko je $F(2)$?
+
+```spoiler-markdown
+![[Drawing 2025-12-28 09.34.38.excalidraw]]
+```
+
+3. Naj bo $F(x)$ tisti nedoločeni integral funkcije $f(x) = x^{2}-2x+3$, za katerega velja $F(0) = 3$. Koliko je $F(3)$?
+
+```spoiler-markdown
+![[Drawing 2025-12-28 09.54.09.excalidraw]]
+```
+
+4. Izračunaj $\displaystyle \int_{0}^3\frac{3x^{2}}{\sqrt{ x^{3}+9 }}dx$.
+```spoiler-markdown
+![[Drawing 2025-12-28 10.38.51.excalidraw]]
+```
+
+5. Dani sta funkciji $f(x) = x^{3}-5x^{2}+2x+9$ in $g(x) = x^{4}-6x^{3}+7x^{2}+6x-7$. Izračunaj $\displaystyle \int_{0}^{3}f(x)dx$. Izračunaj presečišča funkcij $f(x)$ in $g(x)$. Vpiši ploščino največjega končnega območja, ki ga omejujeta $f(x)$ in $g(x)$.
+
+```spoiler-markdown
+![[Drawing 2025-12-28 10.52.55.excalidraw]]
+```
+
+3. Izračunaj prostornino vrtenine, ki jo dobimo, če funkcijo $\frac{10(6x^{2}+\frac{10}{x})}{\sqrt{ \pi }}$ zavrtimo okoli x osi na intervalu [1,2].
+
+```spoiler-markdown
+![[Drawing 2025-12-28 11.32.05.excalidraw]]
+```
+

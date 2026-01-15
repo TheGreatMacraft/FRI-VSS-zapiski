@@ -576,9 +576,6 @@ Dvojiški komplement
 | OUT 130      | 1110 0010000010 |
 ```
 
-20. V kratkih črtah opišite prihodnost programskega inženirstva. Kakšne aplikacije bomo razvijali v bodoče? Kakšne tehnologije bomo uporabljali v ta namen? Na kakšen način? Kakšne bodo zahteve novih aplikacij?
+---
 
-```spoiler-markdown
-
-```
 
